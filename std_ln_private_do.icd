@@ -1,0 +1,1231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SCL xmlns="http://www.iec.ch/61850/2003/SCL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.iec.ch/61850/2003/SCL SCL.xsd" version="2007" revision="B" release="4">
+  <Header id="StdLnPrivateDo" version="1" revision="1" toolID="gen_std_ln_private_do.py" nameStructure="IEDName" />
+  <Communication>
+    <SubNetwork name="subnetwork1" type="8-MMS">
+      <ConnectedAP iedName="PVTIED" apName="AP1">
+        <Address>
+          <P type="IP">10.0.0.3</P>
+          <P type="IP-SUBNET">255.255.255.0</P>
+          <P type="IP-GATEWAY">10.0.0.101</P>
+          <P type="OSI-TSEL">0001</P>
+          <P type="OSI-PSEL">00000001</P>
+          <P type="OSI-SSEL">0001</P>
+        </Address>
+      </ConnectedAP>
+    </SubNetwork>
+  </Communication>
+  <IED name="PVTIED" originalSclVersion="2007" originalSclRevision="B" originalSclRelease="4">
+    <Services nameLength="64">
+      <DynAssociation />
+      <ConfDataSet max="22" maxAttributes="60" modify="false" />
+      <ReportSettings cbName="Fix" datSet="Fix" rptID="Fix" optFields="Fix" bufTime="Fix" trgOps="Fix" intgPd="Fix" />
+      <ConfReportControl max="34" bufMode="both" bufConf="false" />
+    </Services>
+    <AccessPoint name="AP1">
+      <Server>
+        <Authentication />
+        <LDevice inst="LD1">
+          <LN0 lnClass="LLN0" lnType="T_LLN0" inst="">
+            <DataSet name="DS_STD">
+              <FCDA ldInst="LD1" lnClass="LLN0" fc="ST" doName="Beh" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="LPHD" lnInst="1" fc="ST" doName="PhyHealth" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="GGIO" lnInst="1" fc="ST" doName="Beh" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="GGIO" lnInst="1" fc="ST" doName="Health" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="MMXU" lnInst="1" fc="ST" doName="Beh" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="MMXU" lnInst="1" fc="ST" doName="Health" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="MMTR" lnInst="1" fc="ST" doName="Beh" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="MMTR" lnInst="1" fc="ST" doName="Health" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="XCBR" lnInst="1" fc="ST" doName="Beh" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="XCBR" lnInst="1" fc="ST" doName="Health" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="XSWI" lnInst="1" fc="ST" doName="Beh" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="XSWI" lnInst="1" fc="ST" doName="Health" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="CSWI" lnInst="1" fc="ST" doName="Beh" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="CSWI" lnInst="1" fc="ST" doName="Health" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="PTOC" lnInst="1" fc="ST" doName="Beh" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="PTOC" lnInst="1" fc="ST" doName="Health" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="PTRC" lnInst="1" fc="ST" doName="Beh" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="PTRC" lnInst="1" fc="ST" doName="Health" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="STMP" lnInst="1" fc="ST" doName="Beh" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="STMP" lnInst="1" fc="ST" doName="Health" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="MSQI" lnInst="1" fc="ST" doName="Beh" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="MSQI" lnInst="1" fc="ST" doName="Health" daName="stVal" />
+            </DataSet>
+            <DataSet name="DS_GGIO">
+              <FCDA ldInst="LD1" lnClass="GGIO" lnInst="1" fc="ST" doName="Beh" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="GGIO" lnInst="1" fc="ST" doName="PvtSp01" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="GGIO" lnInst="1" fc="ST" doName="PvtIn02" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="GGIO" lnInst="1" fc="MX" doName="PvtMv03" daName="mag.f" />
+              <FCDA ldInst="LD1" lnClass="GGIO" lnInst="1" fc="ST" doName="PvtEn04" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="GGIO" lnInst="1" fc="ST" doName="PvtSp05" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="GGIO" lnInst="1" fc="ST" doName="PvtIn06" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="GGIO" lnInst="1" fc="MX" doName="PvtMv07" daName="mag.f" />
+              <FCDA ldInst="LD1" lnClass="GGIO" lnInst="1" fc="ST" doName="PvtEn08" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="GGIO" lnInst="1" fc="ST" doName="PvtSp09" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="GGIO" lnInst="1" fc="ST" doName="PvtIn10" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="GGIO" lnInst="1" fc="MX" doName="PvtMv11" daName="mag.f" />
+              <FCDA ldInst="LD1" lnClass="GGIO" lnInst="1" fc="ST" doName="PvtEn12" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="GGIO" lnInst="1" fc="ST" doName="PvtSp13" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="GGIO" lnInst="1" fc="ST" doName="PvtIn14" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="GGIO" lnInst="1" fc="MX" doName="PvtMv15" daName="mag.f" />
+              <FCDA ldInst="LD1" lnClass="GGIO" lnInst="1" fc="ST" doName="PvtEn16" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="GGIO" lnInst="1" fc="ST" doName="PvtSp17" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="GGIO" lnInst="1" fc="ST" doName="PvtIn18" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="GGIO" lnInst="1" fc="MX" doName="PvtMv19" daName="mag.f" />
+              <FCDA ldInst="LD1" lnClass="GGIO" lnInst="1" fc="ST" doName="PvtEn20" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="GGIO" lnInst="1" fc="ST" doName="PvtSp21" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="GGIO" lnInst="1" fc="ST" doName="PvtIn22" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="GGIO" lnInst="1" fc="MX" doName="PvtMv23" daName="mag.f" />
+              <FCDA ldInst="LD1" lnClass="GGIO" lnInst="1" fc="ST" doName="PvtEn24" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="GGIO" lnInst="1" fc="ST" doName="PvtSp25" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="GGIO" lnInst="1" fc="ST" doName="PvtIn26" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="GGIO" lnInst="1" fc="MX" doName="PvtMv27" daName="mag.f" />
+              <FCDA ldInst="LD1" lnClass="GGIO" lnInst="1" fc="ST" doName="PvtEn28" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="GGIO" lnInst="1" fc="ST" doName="PvtSp29" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="GGIO" lnInst="1" fc="ST" doName="PvtIn30" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="GGIO" lnInst="1" fc="MX" doName="PvtMv31" daName="mag.f" />
+              <FCDA ldInst="LD1" lnClass="GGIO" lnInst="1" fc="ST" doName="PvtEn32" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="GGIO" lnInst="1" fc="ST" doName="PvtSp33" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="GGIO" lnInst="1" fc="ST" doName="PvtIn34" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="GGIO" lnInst="1" fc="MX" doName="PvtMv35" daName="mag.f" />
+              <FCDA ldInst="LD1" lnClass="GGIO" lnInst="1" fc="ST" doName="PvtEn36" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="GGIO" lnInst="1" fc="ST" doName="PvtSp37" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="GGIO" lnInst="1" fc="ST" doName="PvtIn38" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="GGIO" lnInst="1" fc="MX" doName="PvtMv39" daName="mag.f" />
+              <FCDA ldInst="LD1" lnClass="GGIO" lnInst="1" fc="ST" doName="PvtEn40" daName="stVal" />
+            </DataSet>
+            <DataSet name="DS_MMXU">
+              <FCDA ldInst="LD1" lnClass="MMXU" lnInst="1" fc="ST" doName="Beh" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="MMXU" lnInst="1" fc="ST" doName="PvtSp01" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="MMXU" lnInst="1" fc="ST" doName="PvtIn02" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="MMXU" lnInst="1" fc="MX" doName="PvtMv03" daName="mag.f" />
+              <FCDA ldInst="LD1" lnClass="MMXU" lnInst="1" fc="ST" doName="PvtEn04" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="MMXU" lnInst="1" fc="ST" doName="PvtSp05" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="MMXU" lnInst="1" fc="ST" doName="PvtIn06" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="MMXU" lnInst="1" fc="MX" doName="PvtMv07" daName="mag.f" />
+              <FCDA ldInst="LD1" lnClass="MMXU" lnInst="1" fc="ST" doName="PvtEn08" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="MMXU" lnInst="1" fc="ST" doName="PvtSp09" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="MMXU" lnInst="1" fc="ST" doName="PvtIn10" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="MMXU" lnInst="1" fc="MX" doName="PvtMv11" daName="mag.f" />
+              <FCDA ldInst="LD1" lnClass="MMXU" lnInst="1" fc="ST" doName="PvtEn12" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="MMXU" lnInst="1" fc="ST" doName="PvtSp13" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="MMXU" lnInst="1" fc="ST" doName="PvtIn14" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="MMXU" lnInst="1" fc="MX" doName="PvtMv15" daName="mag.f" />
+              <FCDA ldInst="LD1" lnClass="MMXU" lnInst="1" fc="ST" doName="PvtEn16" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="MMXU" lnInst="1" fc="ST" doName="PvtSp17" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="MMXU" lnInst="1" fc="ST" doName="PvtIn18" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="MMXU" lnInst="1" fc="MX" doName="PvtMv19" daName="mag.f" />
+              <FCDA ldInst="LD1" lnClass="MMXU" lnInst="1" fc="ST" doName="PvtEn20" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="MMXU" lnInst="1" fc="ST" doName="PvtSp21" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="MMXU" lnInst="1" fc="ST" doName="PvtIn22" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="MMXU" lnInst="1" fc="MX" doName="PvtMv23" daName="mag.f" />
+              <FCDA ldInst="LD1" lnClass="MMXU" lnInst="1" fc="ST" doName="PvtEn24" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="MMXU" lnInst="1" fc="ST" doName="PvtSp25" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="MMXU" lnInst="1" fc="ST" doName="PvtIn26" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="MMXU" lnInst="1" fc="MX" doName="PvtMv27" daName="mag.f" />
+              <FCDA ldInst="LD1" lnClass="MMXU" lnInst="1" fc="ST" doName="PvtEn28" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="MMXU" lnInst="1" fc="ST" doName="PvtSp29" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="MMXU" lnInst="1" fc="ST" doName="PvtIn30" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="MMXU" lnInst="1" fc="MX" doName="PvtMv31" daName="mag.f" />
+              <FCDA ldInst="LD1" lnClass="MMXU" lnInst="1" fc="ST" doName="PvtEn32" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="MMXU" lnInst="1" fc="ST" doName="PvtSp33" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="MMXU" lnInst="1" fc="ST" doName="PvtIn34" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="MMXU" lnInst="1" fc="MX" doName="PvtMv35" daName="mag.f" />
+              <FCDA ldInst="LD1" lnClass="MMXU" lnInst="1" fc="ST" doName="PvtEn36" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="MMXU" lnInst="1" fc="ST" doName="PvtSp37" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="MMXU" lnInst="1" fc="ST" doName="PvtIn38" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="MMXU" lnInst="1" fc="MX" doName="PvtMv39" daName="mag.f" />
+              <FCDA ldInst="LD1" lnClass="MMXU" lnInst="1" fc="ST" doName="PvtEn40" daName="stVal" />
+            </DataSet>
+            <DataSet name="DS_MMTR">
+              <FCDA ldInst="LD1" lnClass="MMTR" lnInst="1" fc="ST" doName="Beh" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="MMTR" lnInst="1" fc="ST" doName="PvtSp01" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="MMTR" lnInst="1" fc="ST" doName="PvtIn02" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="MMTR" lnInst="1" fc="MX" doName="PvtMv03" daName="mag.f" />
+              <FCDA ldInst="LD1" lnClass="MMTR" lnInst="1" fc="ST" doName="PvtEn04" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="MMTR" lnInst="1" fc="ST" doName="PvtSp05" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="MMTR" lnInst="1" fc="ST" doName="PvtIn06" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="MMTR" lnInst="1" fc="MX" doName="PvtMv07" daName="mag.f" />
+              <FCDA ldInst="LD1" lnClass="MMTR" lnInst="1" fc="ST" doName="PvtEn08" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="MMTR" lnInst="1" fc="ST" doName="PvtSp09" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="MMTR" lnInst="1" fc="ST" doName="PvtIn10" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="MMTR" lnInst="1" fc="MX" doName="PvtMv11" daName="mag.f" />
+              <FCDA ldInst="LD1" lnClass="MMTR" lnInst="1" fc="ST" doName="PvtEn12" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="MMTR" lnInst="1" fc="ST" doName="PvtSp13" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="MMTR" lnInst="1" fc="ST" doName="PvtIn14" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="MMTR" lnInst="1" fc="MX" doName="PvtMv15" daName="mag.f" />
+              <FCDA ldInst="LD1" lnClass="MMTR" lnInst="1" fc="ST" doName="PvtEn16" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="MMTR" lnInst="1" fc="ST" doName="PvtSp17" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="MMTR" lnInst="1" fc="ST" doName="PvtIn18" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="MMTR" lnInst="1" fc="MX" doName="PvtMv19" daName="mag.f" />
+              <FCDA ldInst="LD1" lnClass="MMTR" lnInst="1" fc="ST" doName="PvtEn20" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="MMTR" lnInst="1" fc="ST" doName="PvtSp21" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="MMTR" lnInst="1" fc="ST" doName="PvtIn22" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="MMTR" lnInst="1" fc="MX" doName="PvtMv23" daName="mag.f" />
+              <FCDA ldInst="LD1" lnClass="MMTR" lnInst="1" fc="ST" doName="PvtEn24" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="MMTR" lnInst="1" fc="ST" doName="PvtSp25" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="MMTR" lnInst="1" fc="ST" doName="PvtIn26" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="MMTR" lnInst="1" fc="MX" doName="PvtMv27" daName="mag.f" />
+              <FCDA ldInst="LD1" lnClass="MMTR" lnInst="1" fc="ST" doName="PvtEn28" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="MMTR" lnInst="1" fc="ST" doName="PvtSp29" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="MMTR" lnInst="1" fc="ST" doName="PvtIn30" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="MMTR" lnInst="1" fc="MX" doName="PvtMv31" daName="mag.f" />
+              <FCDA ldInst="LD1" lnClass="MMTR" lnInst="1" fc="ST" doName="PvtEn32" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="MMTR" lnInst="1" fc="ST" doName="PvtSp33" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="MMTR" lnInst="1" fc="ST" doName="PvtIn34" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="MMTR" lnInst="1" fc="MX" doName="PvtMv35" daName="mag.f" />
+              <FCDA ldInst="LD1" lnClass="MMTR" lnInst="1" fc="ST" doName="PvtEn36" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="MMTR" lnInst="1" fc="ST" doName="PvtSp37" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="MMTR" lnInst="1" fc="ST" doName="PvtIn38" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="MMTR" lnInst="1" fc="MX" doName="PvtMv39" daName="mag.f" />
+              <FCDA ldInst="LD1" lnClass="MMTR" lnInst="1" fc="ST" doName="PvtEn40" daName="stVal" />
+            </DataSet>
+            <DataSet name="DS_XCBR">
+              <FCDA ldInst="LD1" lnClass="XCBR" lnInst="1" fc="ST" doName="Beh" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="XCBR" lnInst="1" fc="ST" doName="PvtSp01" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="XCBR" lnInst="1" fc="ST" doName="PvtIn02" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="XCBR" lnInst="1" fc="MX" doName="PvtMv03" daName="mag.f" />
+              <FCDA ldInst="LD1" lnClass="XCBR" lnInst="1" fc="ST" doName="PvtEn04" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="XCBR" lnInst="1" fc="ST" doName="PvtSp05" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="XCBR" lnInst="1" fc="ST" doName="PvtIn06" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="XCBR" lnInst="1" fc="MX" doName="PvtMv07" daName="mag.f" />
+              <FCDA ldInst="LD1" lnClass="XCBR" lnInst="1" fc="ST" doName="PvtEn08" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="XCBR" lnInst="1" fc="ST" doName="PvtSp09" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="XCBR" lnInst="1" fc="ST" doName="PvtIn10" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="XCBR" lnInst="1" fc="MX" doName="PvtMv11" daName="mag.f" />
+              <FCDA ldInst="LD1" lnClass="XCBR" lnInst="1" fc="ST" doName="PvtEn12" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="XCBR" lnInst="1" fc="ST" doName="PvtSp13" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="XCBR" lnInst="1" fc="ST" doName="PvtIn14" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="XCBR" lnInst="1" fc="MX" doName="PvtMv15" daName="mag.f" />
+              <FCDA ldInst="LD1" lnClass="XCBR" lnInst="1" fc="ST" doName="PvtEn16" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="XCBR" lnInst="1" fc="ST" doName="PvtSp17" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="XCBR" lnInst="1" fc="ST" doName="PvtIn18" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="XCBR" lnInst="1" fc="MX" doName="PvtMv19" daName="mag.f" />
+              <FCDA ldInst="LD1" lnClass="XCBR" lnInst="1" fc="ST" doName="PvtEn20" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="XCBR" lnInst="1" fc="ST" doName="PvtSp21" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="XCBR" lnInst="1" fc="ST" doName="PvtIn22" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="XCBR" lnInst="1" fc="MX" doName="PvtMv23" daName="mag.f" />
+              <FCDA ldInst="LD1" lnClass="XCBR" lnInst="1" fc="ST" doName="PvtEn24" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="XCBR" lnInst="1" fc="ST" doName="PvtSp25" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="XCBR" lnInst="1" fc="ST" doName="PvtIn26" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="XCBR" lnInst="1" fc="MX" doName="PvtMv27" daName="mag.f" />
+              <FCDA ldInst="LD1" lnClass="XCBR" lnInst="1" fc="ST" doName="PvtEn28" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="XCBR" lnInst="1" fc="ST" doName="PvtSp29" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="XCBR" lnInst="1" fc="ST" doName="PvtIn30" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="XCBR" lnInst="1" fc="MX" doName="PvtMv31" daName="mag.f" />
+              <FCDA ldInst="LD1" lnClass="XCBR" lnInst="1" fc="ST" doName="PvtEn32" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="XCBR" lnInst="1" fc="ST" doName="PvtSp33" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="XCBR" lnInst="1" fc="ST" doName="PvtIn34" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="XCBR" lnInst="1" fc="MX" doName="PvtMv35" daName="mag.f" />
+              <FCDA ldInst="LD1" lnClass="XCBR" lnInst="1" fc="ST" doName="PvtEn36" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="XCBR" lnInst="1" fc="ST" doName="PvtSp37" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="XCBR" lnInst="1" fc="ST" doName="PvtIn38" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="XCBR" lnInst="1" fc="MX" doName="PvtMv39" daName="mag.f" />
+              <FCDA ldInst="LD1" lnClass="XCBR" lnInst="1" fc="ST" doName="PvtEn40" daName="stVal" />
+            </DataSet>
+            <DataSet name="DS_XSWI">
+              <FCDA ldInst="LD1" lnClass="XSWI" lnInst="1" fc="ST" doName="Beh" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="XSWI" lnInst="1" fc="ST" doName="PvtSp01" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="XSWI" lnInst="1" fc="ST" doName="PvtIn02" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="XSWI" lnInst="1" fc="MX" doName="PvtMv03" daName="mag.f" />
+              <FCDA ldInst="LD1" lnClass="XSWI" lnInst="1" fc="ST" doName="PvtEn04" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="XSWI" lnInst="1" fc="ST" doName="PvtSp05" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="XSWI" lnInst="1" fc="ST" doName="PvtIn06" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="XSWI" lnInst="1" fc="MX" doName="PvtMv07" daName="mag.f" />
+              <FCDA ldInst="LD1" lnClass="XSWI" lnInst="1" fc="ST" doName="PvtEn08" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="XSWI" lnInst="1" fc="ST" doName="PvtSp09" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="XSWI" lnInst="1" fc="ST" doName="PvtIn10" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="XSWI" lnInst="1" fc="MX" doName="PvtMv11" daName="mag.f" />
+              <FCDA ldInst="LD1" lnClass="XSWI" lnInst="1" fc="ST" doName="PvtEn12" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="XSWI" lnInst="1" fc="ST" doName="PvtSp13" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="XSWI" lnInst="1" fc="ST" doName="PvtIn14" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="XSWI" lnInst="1" fc="MX" doName="PvtMv15" daName="mag.f" />
+              <FCDA ldInst="LD1" lnClass="XSWI" lnInst="1" fc="ST" doName="PvtEn16" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="XSWI" lnInst="1" fc="ST" doName="PvtSp17" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="XSWI" lnInst="1" fc="ST" doName="PvtIn18" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="XSWI" lnInst="1" fc="MX" doName="PvtMv19" daName="mag.f" />
+              <FCDA ldInst="LD1" lnClass="XSWI" lnInst="1" fc="ST" doName="PvtEn20" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="XSWI" lnInst="1" fc="ST" doName="PvtSp21" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="XSWI" lnInst="1" fc="ST" doName="PvtIn22" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="XSWI" lnInst="1" fc="MX" doName="PvtMv23" daName="mag.f" />
+              <FCDA ldInst="LD1" lnClass="XSWI" lnInst="1" fc="ST" doName="PvtEn24" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="XSWI" lnInst="1" fc="ST" doName="PvtSp25" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="XSWI" lnInst="1" fc="ST" doName="PvtIn26" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="XSWI" lnInst="1" fc="MX" doName="PvtMv27" daName="mag.f" />
+              <FCDA ldInst="LD1" lnClass="XSWI" lnInst="1" fc="ST" doName="PvtEn28" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="XSWI" lnInst="1" fc="ST" doName="PvtSp29" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="XSWI" lnInst="1" fc="ST" doName="PvtIn30" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="XSWI" lnInst="1" fc="MX" doName="PvtMv31" daName="mag.f" />
+              <FCDA ldInst="LD1" lnClass="XSWI" lnInst="1" fc="ST" doName="PvtEn32" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="XSWI" lnInst="1" fc="ST" doName="PvtSp33" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="XSWI" lnInst="1" fc="ST" doName="PvtIn34" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="XSWI" lnInst="1" fc="MX" doName="PvtMv35" daName="mag.f" />
+              <FCDA ldInst="LD1" lnClass="XSWI" lnInst="1" fc="ST" doName="PvtEn36" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="XSWI" lnInst="1" fc="ST" doName="PvtSp37" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="XSWI" lnInst="1" fc="ST" doName="PvtIn38" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="XSWI" lnInst="1" fc="MX" doName="PvtMv39" daName="mag.f" />
+              <FCDA ldInst="LD1" lnClass="XSWI" lnInst="1" fc="ST" doName="PvtEn40" daName="stVal" />
+            </DataSet>
+            <DataSet name="DS_CSWI">
+              <FCDA ldInst="LD1" lnClass="CSWI" lnInst="1" fc="ST" doName="Beh" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="CSWI" lnInst="1" fc="ST" doName="PvtSp01" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="CSWI" lnInst="1" fc="ST" doName="PvtIn02" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="CSWI" lnInst="1" fc="MX" doName="PvtMv03" daName="mag.f" />
+              <FCDA ldInst="LD1" lnClass="CSWI" lnInst="1" fc="ST" doName="PvtEn04" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="CSWI" lnInst="1" fc="ST" doName="PvtSp05" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="CSWI" lnInst="1" fc="ST" doName="PvtIn06" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="CSWI" lnInst="1" fc="MX" doName="PvtMv07" daName="mag.f" />
+              <FCDA ldInst="LD1" lnClass="CSWI" lnInst="1" fc="ST" doName="PvtEn08" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="CSWI" lnInst="1" fc="ST" doName="PvtSp09" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="CSWI" lnInst="1" fc="ST" doName="PvtIn10" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="CSWI" lnInst="1" fc="MX" doName="PvtMv11" daName="mag.f" />
+              <FCDA ldInst="LD1" lnClass="CSWI" lnInst="1" fc="ST" doName="PvtEn12" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="CSWI" lnInst="1" fc="ST" doName="PvtSp13" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="CSWI" lnInst="1" fc="ST" doName="PvtIn14" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="CSWI" lnInst="1" fc="MX" doName="PvtMv15" daName="mag.f" />
+              <FCDA ldInst="LD1" lnClass="CSWI" lnInst="1" fc="ST" doName="PvtEn16" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="CSWI" lnInst="1" fc="ST" doName="PvtSp17" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="CSWI" lnInst="1" fc="ST" doName="PvtIn18" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="CSWI" lnInst="1" fc="MX" doName="PvtMv19" daName="mag.f" />
+              <FCDA ldInst="LD1" lnClass="CSWI" lnInst="1" fc="ST" doName="PvtEn20" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="CSWI" lnInst="1" fc="ST" doName="PvtSp21" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="CSWI" lnInst="1" fc="ST" doName="PvtIn22" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="CSWI" lnInst="1" fc="MX" doName="PvtMv23" daName="mag.f" />
+              <FCDA ldInst="LD1" lnClass="CSWI" lnInst="1" fc="ST" doName="PvtEn24" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="CSWI" lnInst="1" fc="ST" doName="PvtSp25" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="CSWI" lnInst="1" fc="ST" doName="PvtIn26" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="CSWI" lnInst="1" fc="MX" doName="PvtMv27" daName="mag.f" />
+              <FCDA ldInst="LD1" lnClass="CSWI" lnInst="1" fc="ST" doName="PvtEn28" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="CSWI" lnInst="1" fc="ST" doName="PvtSp29" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="CSWI" lnInst="1" fc="ST" doName="PvtIn30" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="CSWI" lnInst="1" fc="MX" doName="PvtMv31" daName="mag.f" />
+              <FCDA ldInst="LD1" lnClass="CSWI" lnInst="1" fc="ST" doName="PvtEn32" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="CSWI" lnInst="1" fc="ST" doName="PvtSp33" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="CSWI" lnInst="1" fc="ST" doName="PvtIn34" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="CSWI" lnInst="1" fc="MX" doName="PvtMv35" daName="mag.f" />
+              <FCDA ldInst="LD1" lnClass="CSWI" lnInst="1" fc="ST" doName="PvtEn36" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="CSWI" lnInst="1" fc="ST" doName="PvtSp37" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="CSWI" lnInst="1" fc="ST" doName="PvtIn38" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="CSWI" lnInst="1" fc="MX" doName="PvtMv39" daName="mag.f" />
+              <FCDA ldInst="LD1" lnClass="CSWI" lnInst="1" fc="ST" doName="PvtEn40" daName="stVal" />
+            </DataSet>
+            <DataSet name="DS_PTOC">
+              <FCDA ldInst="LD1" lnClass="PTOC" lnInst="1" fc="ST" doName="Beh" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="PTOC" lnInst="1" fc="ST" doName="PvtSp01" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="PTOC" lnInst="1" fc="ST" doName="PvtIn02" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="PTOC" lnInst="1" fc="MX" doName="PvtMv03" daName="mag.f" />
+              <FCDA ldInst="LD1" lnClass="PTOC" lnInst="1" fc="ST" doName="PvtEn04" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="PTOC" lnInst="1" fc="ST" doName="PvtSp05" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="PTOC" lnInst="1" fc="ST" doName="PvtIn06" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="PTOC" lnInst="1" fc="MX" doName="PvtMv07" daName="mag.f" />
+              <FCDA ldInst="LD1" lnClass="PTOC" lnInst="1" fc="ST" doName="PvtEn08" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="PTOC" lnInst="1" fc="ST" doName="PvtSp09" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="PTOC" lnInst="1" fc="ST" doName="PvtIn10" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="PTOC" lnInst="1" fc="MX" doName="PvtMv11" daName="mag.f" />
+              <FCDA ldInst="LD1" lnClass="PTOC" lnInst="1" fc="ST" doName="PvtEn12" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="PTOC" lnInst="1" fc="ST" doName="PvtSp13" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="PTOC" lnInst="1" fc="ST" doName="PvtIn14" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="PTOC" lnInst="1" fc="MX" doName="PvtMv15" daName="mag.f" />
+              <FCDA ldInst="LD1" lnClass="PTOC" lnInst="1" fc="ST" doName="PvtEn16" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="PTOC" lnInst="1" fc="ST" doName="PvtSp17" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="PTOC" lnInst="1" fc="ST" doName="PvtIn18" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="PTOC" lnInst="1" fc="MX" doName="PvtMv19" daName="mag.f" />
+              <FCDA ldInst="LD1" lnClass="PTOC" lnInst="1" fc="ST" doName="PvtEn20" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="PTOC" lnInst="1" fc="ST" doName="PvtSp21" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="PTOC" lnInst="1" fc="ST" doName="PvtIn22" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="PTOC" lnInst="1" fc="MX" doName="PvtMv23" daName="mag.f" />
+              <FCDA ldInst="LD1" lnClass="PTOC" lnInst="1" fc="ST" doName="PvtEn24" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="PTOC" lnInst="1" fc="ST" doName="PvtSp25" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="PTOC" lnInst="1" fc="ST" doName="PvtIn26" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="PTOC" lnInst="1" fc="MX" doName="PvtMv27" daName="mag.f" />
+              <FCDA ldInst="LD1" lnClass="PTOC" lnInst="1" fc="ST" doName="PvtEn28" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="PTOC" lnInst="1" fc="ST" doName="PvtSp29" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="PTOC" lnInst="1" fc="ST" doName="PvtIn30" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="PTOC" lnInst="1" fc="MX" doName="PvtMv31" daName="mag.f" />
+              <FCDA ldInst="LD1" lnClass="PTOC" lnInst="1" fc="ST" doName="PvtEn32" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="PTOC" lnInst="1" fc="ST" doName="PvtSp33" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="PTOC" lnInst="1" fc="ST" doName="PvtIn34" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="PTOC" lnInst="1" fc="MX" doName="PvtMv35" daName="mag.f" />
+              <FCDA ldInst="LD1" lnClass="PTOC" lnInst="1" fc="ST" doName="PvtEn36" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="PTOC" lnInst="1" fc="ST" doName="PvtSp37" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="PTOC" lnInst="1" fc="ST" doName="PvtIn38" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="PTOC" lnInst="1" fc="MX" doName="PvtMv39" daName="mag.f" />
+              <FCDA ldInst="LD1" lnClass="PTOC" lnInst="1" fc="ST" doName="PvtEn40" daName="stVal" />
+            </DataSet>
+            <DataSet name="DS_PTRC">
+              <FCDA ldInst="LD1" lnClass="PTRC" lnInst="1" fc="ST" doName="Beh" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="PTRC" lnInst="1" fc="ST" doName="PvtSp01" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="PTRC" lnInst="1" fc="ST" doName="PvtIn02" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="PTRC" lnInst="1" fc="MX" doName="PvtMv03" daName="mag.f" />
+              <FCDA ldInst="LD1" lnClass="PTRC" lnInst="1" fc="ST" doName="PvtEn04" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="PTRC" lnInst="1" fc="ST" doName="PvtSp05" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="PTRC" lnInst="1" fc="ST" doName="PvtIn06" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="PTRC" lnInst="1" fc="MX" doName="PvtMv07" daName="mag.f" />
+              <FCDA ldInst="LD1" lnClass="PTRC" lnInst="1" fc="ST" doName="PvtEn08" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="PTRC" lnInst="1" fc="ST" doName="PvtSp09" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="PTRC" lnInst="1" fc="ST" doName="PvtIn10" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="PTRC" lnInst="1" fc="MX" doName="PvtMv11" daName="mag.f" />
+              <FCDA ldInst="LD1" lnClass="PTRC" lnInst="1" fc="ST" doName="PvtEn12" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="PTRC" lnInst="1" fc="ST" doName="PvtSp13" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="PTRC" lnInst="1" fc="ST" doName="PvtIn14" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="PTRC" lnInst="1" fc="MX" doName="PvtMv15" daName="mag.f" />
+              <FCDA ldInst="LD1" lnClass="PTRC" lnInst="1" fc="ST" doName="PvtEn16" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="PTRC" lnInst="1" fc="ST" doName="PvtSp17" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="PTRC" lnInst="1" fc="ST" doName="PvtIn18" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="PTRC" lnInst="1" fc="MX" doName="PvtMv19" daName="mag.f" />
+              <FCDA ldInst="LD1" lnClass="PTRC" lnInst="1" fc="ST" doName="PvtEn20" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="PTRC" lnInst="1" fc="ST" doName="PvtSp21" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="PTRC" lnInst="1" fc="ST" doName="PvtIn22" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="PTRC" lnInst="1" fc="MX" doName="PvtMv23" daName="mag.f" />
+              <FCDA ldInst="LD1" lnClass="PTRC" lnInst="1" fc="ST" doName="PvtEn24" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="PTRC" lnInst="1" fc="ST" doName="PvtSp25" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="PTRC" lnInst="1" fc="ST" doName="PvtIn26" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="PTRC" lnInst="1" fc="MX" doName="PvtMv27" daName="mag.f" />
+              <FCDA ldInst="LD1" lnClass="PTRC" lnInst="1" fc="ST" doName="PvtEn28" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="PTRC" lnInst="1" fc="ST" doName="PvtSp29" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="PTRC" lnInst="1" fc="ST" doName="PvtIn30" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="PTRC" lnInst="1" fc="MX" doName="PvtMv31" daName="mag.f" />
+              <FCDA ldInst="LD1" lnClass="PTRC" lnInst="1" fc="ST" doName="PvtEn32" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="PTRC" lnInst="1" fc="ST" doName="PvtSp33" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="PTRC" lnInst="1" fc="ST" doName="PvtIn34" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="PTRC" lnInst="1" fc="MX" doName="PvtMv35" daName="mag.f" />
+              <FCDA ldInst="LD1" lnClass="PTRC" lnInst="1" fc="ST" doName="PvtEn36" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="PTRC" lnInst="1" fc="ST" doName="PvtSp37" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="PTRC" lnInst="1" fc="ST" doName="PvtIn38" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="PTRC" lnInst="1" fc="MX" doName="PvtMv39" daName="mag.f" />
+              <FCDA ldInst="LD1" lnClass="PTRC" lnInst="1" fc="ST" doName="PvtEn40" daName="stVal" />
+            </DataSet>
+            <DataSet name="DS_STMP">
+              <FCDA ldInst="LD1" lnClass="STMP" lnInst="1" fc="ST" doName="Beh" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="STMP" lnInst="1" fc="ST" doName="PvtSp01" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="STMP" lnInst="1" fc="ST" doName="PvtIn02" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="STMP" lnInst="1" fc="MX" doName="PvtMv03" daName="mag.f" />
+              <FCDA ldInst="LD1" lnClass="STMP" lnInst="1" fc="ST" doName="PvtEn04" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="STMP" lnInst="1" fc="ST" doName="PvtSp05" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="STMP" lnInst="1" fc="ST" doName="PvtIn06" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="STMP" lnInst="1" fc="MX" doName="PvtMv07" daName="mag.f" />
+              <FCDA ldInst="LD1" lnClass="STMP" lnInst="1" fc="ST" doName="PvtEn08" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="STMP" lnInst="1" fc="ST" doName="PvtSp09" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="STMP" lnInst="1" fc="ST" doName="PvtIn10" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="STMP" lnInst="1" fc="MX" doName="PvtMv11" daName="mag.f" />
+              <FCDA ldInst="LD1" lnClass="STMP" lnInst="1" fc="ST" doName="PvtEn12" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="STMP" lnInst="1" fc="ST" doName="PvtSp13" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="STMP" lnInst="1" fc="ST" doName="PvtIn14" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="STMP" lnInst="1" fc="MX" doName="PvtMv15" daName="mag.f" />
+              <FCDA ldInst="LD1" lnClass="STMP" lnInst="1" fc="ST" doName="PvtEn16" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="STMP" lnInst="1" fc="ST" doName="PvtSp17" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="STMP" lnInst="1" fc="ST" doName="PvtIn18" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="STMP" lnInst="1" fc="MX" doName="PvtMv19" daName="mag.f" />
+              <FCDA ldInst="LD1" lnClass="STMP" lnInst="1" fc="ST" doName="PvtEn20" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="STMP" lnInst="1" fc="ST" doName="PvtSp21" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="STMP" lnInst="1" fc="ST" doName="PvtIn22" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="STMP" lnInst="1" fc="MX" doName="PvtMv23" daName="mag.f" />
+              <FCDA ldInst="LD1" lnClass="STMP" lnInst="1" fc="ST" doName="PvtEn24" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="STMP" lnInst="1" fc="ST" doName="PvtSp25" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="STMP" lnInst="1" fc="ST" doName="PvtIn26" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="STMP" lnInst="1" fc="MX" doName="PvtMv27" daName="mag.f" />
+              <FCDA ldInst="LD1" lnClass="STMP" lnInst="1" fc="ST" doName="PvtEn28" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="STMP" lnInst="1" fc="ST" doName="PvtSp29" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="STMP" lnInst="1" fc="ST" doName="PvtIn30" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="STMP" lnInst="1" fc="MX" doName="PvtMv31" daName="mag.f" />
+              <FCDA ldInst="LD1" lnClass="STMP" lnInst="1" fc="ST" doName="PvtEn32" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="STMP" lnInst="1" fc="ST" doName="PvtSp33" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="STMP" lnInst="1" fc="ST" doName="PvtIn34" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="STMP" lnInst="1" fc="MX" doName="PvtMv35" daName="mag.f" />
+              <FCDA ldInst="LD1" lnClass="STMP" lnInst="1" fc="ST" doName="PvtEn36" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="STMP" lnInst="1" fc="ST" doName="PvtSp37" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="STMP" lnInst="1" fc="ST" doName="PvtIn38" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="STMP" lnInst="1" fc="MX" doName="PvtMv39" daName="mag.f" />
+              <FCDA ldInst="LD1" lnClass="STMP" lnInst="1" fc="ST" doName="PvtEn40" daName="stVal" />
+            </DataSet>
+            <DataSet name="DS_MSQI">
+              <FCDA ldInst="LD1" lnClass="MSQI" lnInst="1" fc="ST" doName="Beh" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="MSQI" lnInst="1" fc="ST" doName="PvtSp01" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="MSQI" lnInst="1" fc="ST" doName="PvtIn02" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="MSQI" lnInst="1" fc="MX" doName="PvtMv03" daName="mag.f" />
+              <FCDA ldInst="LD1" lnClass="MSQI" lnInst="1" fc="ST" doName="PvtEn04" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="MSQI" lnInst="1" fc="ST" doName="PvtSp05" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="MSQI" lnInst="1" fc="ST" doName="PvtIn06" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="MSQI" lnInst="1" fc="MX" doName="PvtMv07" daName="mag.f" />
+              <FCDA ldInst="LD1" lnClass="MSQI" lnInst="1" fc="ST" doName="PvtEn08" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="MSQI" lnInst="1" fc="ST" doName="PvtSp09" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="MSQI" lnInst="1" fc="ST" doName="PvtIn10" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="MSQI" lnInst="1" fc="MX" doName="PvtMv11" daName="mag.f" />
+              <FCDA ldInst="LD1" lnClass="MSQI" lnInst="1" fc="ST" doName="PvtEn12" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="MSQI" lnInst="1" fc="ST" doName="PvtSp13" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="MSQI" lnInst="1" fc="ST" doName="PvtIn14" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="MSQI" lnInst="1" fc="MX" doName="PvtMv15" daName="mag.f" />
+              <FCDA ldInst="LD1" lnClass="MSQI" lnInst="1" fc="ST" doName="PvtEn16" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="MSQI" lnInst="1" fc="ST" doName="PvtSp17" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="MSQI" lnInst="1" fc="ST" doName="PvtIn18" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="MSQI" lnInst="1" fc="MX" doName="PvtMv19" daName="mag.f" />
+              <FCDA ldInst="LD1" lnClass="MSQI" lnInst="1" fc="ST" doName="PvtEn20" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="MSQI" lnInst="1" fc="ST" doName="PvtSp21" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="MSQI" lnInst="1" fc="ST" doName="PvtIn22" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="MSQI" lnInst="1" fc="MX" doName="PvtMv23" daName="mag.f" />
+              <FCDA ldInst="LD1" lnClass="MSQI" lnInst="1" fc="ST" doName="PvtEn24" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="MSQI" lnInst="1" fc="ST" doName="PvtSp25" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="MSQI" lnInst="1" fc="ST" doName="PvtIn26" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="MSQI" lnInst="1" fc="MX" doName="PvtMv27" daName="mag.f" />
+              <FCDA ldInst="LD1" lnClass="MSQI" lnInst="1" fc="ST" doName="PvtEn28" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="MSQI" lnInst="1" fc="ST" doName="PvtSp29" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="MSQI" lnInst="1" fc="ST" doName="PvtIn30" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="MSQI" lnInst="1" fc="MX" doName="PvtMv31" daName="mag.f" />
+              <FCDA ldInst="LD1" lnClass="MSQI" lnInst="1" fc="ST" doName="PvtEn32" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="MSQI" lnInst="1" fc="ST" doName="PvtSp33" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="MSQI" lnInst="1" fc="ST" doName="PvtIn34" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="MSQI" lnInst="1" fc="MX" doName="PvtMv35" daName="mag.f" />
+              <FCDA ldInst="LD1" lnClass="MSQI" lnInst="1" fc="ST" doName="PvtEn36" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="MSQI" lnInst="1" fc="ST" doName="PvtSp37" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="MSQI" lnInst="1" fc="ST" doName="PvtIn38" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="MSQI" lnInst="1" fc="MX" doName="PvtMv39" daName="mag.f" />
+              <FCDA ldInst="LD1" lnClass="MSQI" lnInst="1" fc="ST" doName="PvtEn40" daName="stVal" />
+            </DataSet>
+            <DataSet name="DS_MIXED">
+              <FCDA ldInst="LD1" lnClass="LLN0" fc="ST" doName="Beh" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="GGIO" lnInst="1" fc="ST" doName="Health" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="GGIO" lnInst="1" fc="ST" doName="PvtSp01" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="MMXU" lnInst="1" fc="ST" doName="Health" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="MMXU" lnInst="1" fc="ST" doName="PvtIn02" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="MMTR" lnInst="1" fc="ST" doName="Health" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="MMTR" lnInst="1" fc="MX" doName="PvtMv03" daName="mag.f" />
+              <FCDA ldInst="LD1" lnClass="XCBR" lnInst="1" fc="ST" doName="Health" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="XCBR" lnInst="1" fc="ST" doName="PvtEn04" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="XSWI" lnInst="1" fc="ST" doName="Health" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="XSWI" lnInst="1" fc="ST" doName="PvtSp05" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="CSWI" lnInst="1" fc="ST" doName="Health" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="CSWI" lnInst="1" fc="ST" doName="PvtIn06" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="PTOC" lnInst="1" fc="ST" doName="Health" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="PTOC" lnInst="1" fc="MX" doName="PvtMv07" daName="mag.f" />
+              <FCDA ldInst="LD1" lnClass="PTRC" lnInst="1" fc="ST" doName="Health" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="PTRC" lnInst="1" fc="ST" doName="PvtEn08" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="STMP" lnInst="1" fc="ST" doName="Health" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="STMP" lnInst="1" fc="ST" doName="PvtSp09" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="MSQI" lnInst="1" fc="ST" doName="Health" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="MSQI" lnInst="1" fc="ST" doName="PvtIn10" daName="stVal" />
+            </DataSet>
+            <ReportControl name="urcb_std" datSet="DS_STD" rptID="LD1/LLN0.urcb_std" confRev="1" buffered="false" intgPd="10000">
+              <TrgOps dchg="true" qchg="true" dupd="false" period="true" gi="true" />
+              <OptFields seqNum="true" timeStamp="true" dataSet="true" reasonCode="true" dataRef="true" entryID="true" configRef="true" bufOvfl="true" />
+              <RptEnabled max="2" />
+            </ReportControl>
+            <ReportControl name="brcb_std" datSet="DS_STD" rptID="LD1/LLN0.brcb_std" confRev="1" buffered="true" intgPd="10000" bufTime="100">
+              <TrgOps dchg="true" qchg="true" dupd="false" period="true" gi="true" />
+              <OptFields seqNum="true" timeStamp="true" dataSet="true" reasonCode="true" dataRef="true" entryID="true" configRef="true" bufOvfl="true" />
+              <RptEnabled max="2" />
+            </ReportControl>
+            <ReportControl name="urcb_ggio" datSet="DS_GGIO" rptID="LD1/LLN0.urcb_ggio" confRev="1" buffered="false" intgPd="10000">
+              <TrgOps dchg="true" qchg="true" dupd="false" period="true" gi="true" />
+              <OptFields seqNum="true" timeStamp="true" dataSet="true" reasonCode="true" dataRef="true" entryID="true" configRef="true" bufOvfl="true" />
+              <RptEnabled max="2" />
+            </ReportControl>
+            <ReportControl name="brcb_ggio" datSet="DS_GGIO" rptID="LD1/LLN0.brcb_ggio" confRev="1" buffered="true" intgPd="10000" bufTime="100">
+              <TrgOps dchg="true" qchg="true" dupd="false" period="true" gi="true" />
+              <OptFields seqNum="true" timeStamp="true" dataSet="true" reasonCode="true" dataRef="true" entryID="true" configRef="true" bufOvfl="true" />
+              <RptEnabled max="2" />
+            </ReportControl>
+            <ReportControl name="urcb_mmxu" datSet="DS_MMXU" rptID="LD1/LLN0.urcb_mmxu" confRev="1" buffered="false" intgPd="10000">
+              <TrgOps dchg="true" qchg="true" dupd="false" period="true" gi="true" />
+              <OptFields seqNum="true" timeStamp="true" dataSet="true" reasonCode="true" dataRef="true" entryID="true" configRef="true" bufOvfl="true" />
+              <RptEnabled max="2" />
+            </ReportControl>
+            <ReportControl name="brcb_mmxu" datSet="DS_MMXU" rptID="LD1/LLN0.brcb_mmxu" confRev="1" buffered="true" intgPd="10000" bufTime="100">
+              <TrgOps dchg="true" qchg="true" dupd="false" period="true" gi="true" />
+              <OptFields seqNum="true" timeStamp="true" dataSet="true" reasonCode="true" dataRef="true" entryID="true" configRef="true" bufOvfl="true" />
+              <RptEnabled max="2" />
+            </ReportControl>
+            <ReportControl name="urcb_mmtr" datSet="DS_MMTR" rptID="LD1/LLN0.urcb_mmtr" confRev="1" buffered="false" intgPd="10000">
+              <TrgOps dchg="true" qchg="true" dupd="false" period="true" gi="true" />
+              <OptFields seqNum="true" timeStamp="true" dataSet="true" reasonCode="true" dataRef="true" entryID="true" configRef="true" bufOvfl="true" />
+              <RptEnabled max="2" />
+            </ReportControl>
+            <ReportControl name="brcb_mmtr" datSet="DS_MMTR" rptID="LD1/LLN0.brcb_mmtr" confRev="1" buffered="true" intgPd="10000" bufTime="100">
+              <TrgOps dchg="true" qchg="true" dupd="false" period="true" gi="true" />
+              <OptFields seqNum="true" timeStamp="true" dataSet="true" reasonCode="true" dataRef="true" entryID="true" configRef="true" bufOvfl="true" />
+              <RptEnabled max="2" />
+            </ReportControl>
+            <ReportControl name="urcb_xcbr" datSet="DS_XCBR" rptID="LD1/LLN0.urcb_xcbr" confRev="1" buffered="false" intgPd="10000">
+              <TrgOps dchg="true" qchg="true" dupd="false" period="true" gi="true" />
+              <OptFields seqNum="true" timeStamp="true" dataSet="true" reasonCode="true" dataRef="true" entryID="true" configRef="true" bufOvfl="true" />
+              <RptEnabled max="2" />
+            </ReportControl>
+            <ReportControl name="brcb_xcbr" datSet="DS_XCBR" rptID="LD1/LLN0.brcb_xcbr" confRev="1" buffered="true" intgPd="10000" bufTime="100">
+              <TrgOps dchg="true" qchg="true" dupd="false" period="true" gi="true" />
+              <OptFields seqNum="true" timeStamp="true" dataSet="true" reasonCode="true" dataRef="true" entryID="true" configRef="true" bufOvfl="true" />
+              <RptEnabled max="2" />
+            </ReportControl>
+            <ReportControl name="urcb_xswi" datSet="DS_XSWI" rptID="LD1/LLN0.urcb_xswi" confRev="1" buffered="false" intgPd="10000">
+              <TrgOps dchg="true" qchg="true" dupd="false" period="true" gi="true" />
+              <OptFields seqNum="true" timeStamp="true" dataSet="true" reasonCode="true" dataRef="true" entryID="true" configRef="true" bufOvfl="true" />
+              <RptEnabled max="2" />
+            </ReportControl>
+            <ReportControl name="brcb_xswi" datSet="DS_XSWI" rptID="LD1/LLN0.brcb_xswi" confRev="1" buffered="true" intgPd="10000" bufTime="100">
+              <TrgOps dchg="true" qchg="true" dupd="false" period="true" gi="true" />
+              <OptFields seqNum="true" timeStamp="true" dataSet="true" reasonCode="true" dataRef="true" entryID="true" configRef="true" bufOvfl="true" />
+              <RptEnabled max="2" />
+            </ReportControl>
+            <ReportControl name="urcb_cswi" datSet="DS_CSWI" rptID="LD1/LLN0.urcb_cswi" confRev="1" buffered="false" intgPd="10000">
+              <TrgOps dchg="true" qchg="true" dupd="false" period="true" gi="true" />
+              <OptFields seqNum="true" timeStamp="true" dataSet="true" reasonCode="true" dataRef="true" entryID="true" configRef="true" bufOvfl="true" />
+              <RptEnabled max="2" />
+            </ReportControl>
+            <ReportControl name="brcb_cswi" datSet="DS_CSWI" rptID="LD1/LLN0.brcb_cswi" confRev="1" buffered="true" intgPd="10000" bufTime="100">
+              <TrgOps dchg="true" qchg="true" dupd="false" period="true" gi="true" />
+              <OptFields seqNum="true" timeStamp="true" dataSet="true" reasonCode="true" dataRef="true" entryID="true" configRef="true" bufOvfl="true" />
+              <RptEnabled max="2" />
+            </ReportControl>
+            <ReportControl name="urcb_ptoc" datSet="DS_PTOC" rptID="LD1/LLN0.urcb_ptoc" confRev="1" buffered="false" intgPd="10000">
+              <TrgOps dchg="true" qchg="true" dupd="false" period="true" gi="true" />
+              <OptFields seqNum="true" timeStamp="true" dataSet="true" reasonCode="true" dataRef="true" entryID="true" configRef="true" bufOvfl="true" />
+              <RptEnabled max="2" />
+            </ReportControl>
+            <ReportControl name="brcb_ptoc" datSet="DS_PTOC" rptID="LD1/LLN0.brcb_ptoc" confRev="1" buffered="true" intgPd="10000" bufTime="100">
+              <TrgOps dchg="true" qchg="true" dupd="false" period="true" gi="true" />
+              <OptFields seqNum="true" timeStamp="true" dataSet="true" reasonCode="true" dataRef="true" entryID="true" configRef="true" bufOvfl="true" />
+              <RptEnabled max="2" />
+            </ReportControl>
+            <ReportControl name="urcb_ptrc" datSet="DS_PTRC" rptID="LD1/LLN0.urcb_ptrc" confRev="1" buffered="false" intgPd="10000">
+              <TrgOps dchg="true" qchg="true" dupd="false" period="true" gi="true" />
+              <OptFields seqNum="true" timeStamp="true" dataSet="true" reasonCode="true" dataRef="true" entryID="true" configRef="true" bufOvfl="true" />
+              <RptEnabled max="2" />
+            </ReportControl>
+            <ReportControl name="brcb_ptrc" datSet="DS_PTRC" rptID="LD1/LLN0.brcb_ptrc" confRev="1" buffered="true" intgPd="10000" bufTime="100">
+              <TrgOps dchg="true" qchg="true" dupd="false" period="true" gi="true" />
+              <OptFields seqNum="true" timeStamp="true" dataSet="true" reasonCode="true" dataRef="true" entryID="true" configRef="true" bufOvfl="true" />
+              <RptEnabled max="2" />
+            </ReportControl>
+            <ReportControl name="urcb_stmp" datSet="DS_STMP" rptID="LD1/LLN0.urcb_stmp" confRev="1" buffered="false" intgPd="10000">
+              <TrgOps dchg="true" qchg="true" dupd="false" period="true" gi="true" />
+              <OptFields seqNum="true" timeStamp="true" dataSet="true" reasonCode="true" dataRef="true" entryID="true" configRef="true" bufOvfl="true" />
+              <RptEnabled max="2" />
+            </ReportControl>
+            <ReportControl name="brcb_stmp" datSet="DS_STMP" rptID="LD1/LLN0.brcb_stmp" confRev="1" buffered="true" intgPd="10000" bufTime="100">
+              <TrgOps dchg="true" qchg="true" dupd="false" period="true" gi="true" />
+              <OptFields seqNum="true" timeStamp="true" dataSet="true" reasonCode="true" dataRef="true" entryID="true" configRef="true" bufOvfl="true" />
+              <RptEnabled max="2" />
+            </ReportControl>
+            <ReportControl name="urcb_msqi" datSet="DS_MSQI" rptID="LD1/LLN0.urcb_msqi" confRev="1" buffered="false" intgPd="10000">
+              <TrgOps dchg="true" qchg="true" dupd="false" period="true" gi="true" />
+              <OptFields seqNum="true" timeStamp="true" dataSet="true" reasonCode="true" dataRef="true" entryID="true" configRef="true" bufOvfl="true" />
+              <RptEnabled max="2" />
+            </ReportControl>
+            <ReportControl name="brcb_msqi" datSet="DS_MSQI" rptID="LD1/LLN0.brcb_msqi" confRev="1" buffered="true" intgPd="10000" bufTime="100">
+              <TrgOps dchg="true" qchg="true" dupd="false" period="true" gi="true" />
+              <OptFields seqNum="true" timeStamp="true" dataSet="true" reasonCode="true" dataRef="true" entryID="true" configRef="true" bufOvfl="true" />
+              <RptEnabled max="2" />
+            </ReportControl>
+            <ReportControl name="urcb_mixed" datSet="DS_MIXED" rptID="LD1/LLN0.urcb_mixed" confRev="1" buffered="false" intgPd="10000">
+              <TrgOps dchg="true" qchg="true" dupd="false" period="true" gi="true" />
+              <OptFields seqNum="true" timeStamp="true" dataSet="true" reasonCode="true" dataRef="true" entryID="true" configRef="true" bufOvfl="true" />
+              <RptEnabled max="2" />
+            </ReportControl>
+            <ReportControl name="brcb_mixed" datSet="DS_MIXED" rptID="LD1/LLN0.brcb_mixed" confRev="1" buffered="true" intgPd="10000" bufTime="100">
+              <TrgOps dchg="true" qchg="true" dupd="false" period="true" gi="true" />
+              <OptFields seqNum="true" timeStamp="true" dataSet="true" reasonCode="true" dataRef="true" entryID="true" configRef="true" bufOvfl="true" />
+              <RptEnabled max="2" />
+            </ReportControl>
+            <DOI name="Mod"><DAI name="ctlModel"><Val>status-only</Val></DAI></DOI>
+          </LN0>
+          <LN lnClass="LPHD" lnType="T_LPHD" inst="1" prefix="" />
+          <LN lnClass="GGIO" lnType="T_GGIO" inst="1" prefix="">
+            <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>
+            <DOI name="Mod"><DAI name="ctlModel"><Val>status-only</Val></DAI></DOI>
+            <DOI name="NamPlt"><DAI name="lnNs"><Val>urn:example:private:ns:2025</Val></DAI></DOI>
+          </LN>
+          <LN lnClass="MMXU" lnType="T_MMXU" inst="1" prefix="">
+            <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>
+            <DOI name="Mod"><DAI name="ctlModel"><Val>status-only</Val></DAI></DOI>
+            <DOI name="NamPlt"><DAI name="lnNs"><Val>urn:example:private:ns:2025</Val></DAI></DOI>
+          </LN>
+          <LN lnClass="MMTR" lnType="T_MMTR" inst="1" prefix="">
+            <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>
+            <DOI name="Mod"><DAI name="ctlModel"><Val>status-only</Val></DAI></DOI>
+            <DOI name="NamPlt"><DAI name="lnNs"><Val>urn:example:private:ns:2025</Val></DAI></DOI>
+          </LN>
+          <LN lnClass="XCBR" lnType="T_XCBR" inst="1" prefix="">
+            <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>
+            <DOI name="Mod"><DAI name="ctlModel"><Val>status-only</Val></DAI></DOI>
+            <DOI name="NamPlt"><DAI name="lnNs"><Val>urn:example:private:ns:2025</Val></DAI></DOI>
+          </LN>
+          <LN lnClass="XSWI" lnType="T_XSWI" inst="1" prefix="">
+            <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>
+            <DOI name="Mod"><DAI name="ctlModel"><Val>status-only</Val></DAI></DOI>
+            <DOI name="NamPlt"><DAI name="lnNs"><Val>urn:example:private:ns:2025</Val></DAI></DOI>
+          </LN>
+          <LN lnClass="CSWI" lnType="T_CSWI" inst="1" prefix="">
+            <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>
+            <DOI name="Mod"><DAI name="ctlModel"><Val>status-only</Val></DAI></DOI>
+            <DOI name="NamPlt"><DAI name="lnNs"><Val>urn:example:private:ns:2025</Val></DAI></DOI>
+          </LN>
+          <LN lnClass="PTOC" lnType="T_PTOC" inst="1" prefix="">
+            <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>
+            <DOI name="Mod"><DAI name="ctlModel"><Val>status-only</Val></DAI></DOI>
+            <DOI name="NamPlt"><DAI name="lnNs"><Val>urn:example:private:ns:2025</Val></DAI></DOI>
+          </LN>
+          <LN lnClass="PTRC" lnType="T_PTRC" inst="1" prefix="">
+            <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>
+            <DOI name="Mod"><DAI name="ctlModel"><Val>status-only</Val></DAI></DOI>
+            <DOI name="NamPlt"><DAI name="lnNs"><Val>urn:example:private:ns:2025</Val></DAI></DOI>
+          </LN>
+          <LN lnClass="STMP" lnType="T_STMP" inst="1" prefix="">
+            <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>
+            <DOI name="Mod"><DAI name="ctlModel"><Val>status-only</Val></DAI></DOI>
+            <DOI name="NamPlt"><DAI name="lnNs"><Val>urn:example:private:ns:2025</Val></DAI></DOI>
+          </LN>
+          <LN lnClass="MSQI" lnType="T_MSQI" inst="1" prefix="">
+            <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>
+            <DOI name="Mod"><DAI name="ctlModel"><Val>status-only</Val></DAI></DOI>
+            <DOI name="NamPlt"><DAI name="lnNs"><Val>urn:example:private:ns:2025</Val></DAI></DOI>
+          </LN>
+        </LDevice>
+      </Server>
+    </AccessPoint>
+  </IED>
+  <DataTypeTemplates>
+    <LNodeType id="T_LLN0" lnClass="LLN0">
+      <DO name="Mod" type="ENC_Mod" />
+      <DO name="Beh" type="ENS_Beh" />
+      <DO name="Health" type="ENS_Health" />
+      <DO name="NamPlt" type="LPL_1" />
+    </LNodeType>
+    <LNodeType id="T_LPHD" lnClass="LPHD">
+      <DO name="PhyNam" type="DPL_1" />
+      <DO name="PhyHealth" type="ENS_Health" />
+      <DO name="Proxy" type="SPS_P" />
+    </LNodeType>
+    <LNodeType id="T_GGIO" lnClass="GGIO">
+      <DO name="Mod" type="ENC_Mod" />
+      <DO name="Beh" type="ENS_Beh" />
+      <DO name="Health" type="ENS_Health" />
+      <DO name="NamPlt" type="LPL_1" />
+      <DO name="PvtSp01" type="SPS_P" />
+      <DO name="PvtIn02" type="INS_P" />
+      <DO name="PvtMv03" type="MV_P" />
+      <DO name="PvtEn04" type="ENS_P" />
+      <DO name="PvtSp05" type="SPS_P" />
+      <DO name="PvtIn06" type="INS_P" />
+      <DO name="PvtMv07" type="MV_P" />
+      <DO name="PvtEn08" type="ENS_P" />
+      <DO name="PvtSp09" type="SPS_P" />
+      <DO name="PvtIn10" type="INS_P" />
+      <DO name="PvtMv11" type="MV_P" />
+      <DO name="PvtEn12" type="ENS_P" />
+      <DO name="PvtSp13" type="SPS_P" />
+      <DO name="PvtIn14" type="INS_P" />
+      <DO name="PvtMv15" type="MV_P" />
+      <DO name="PvtEn16" type="ENS_P" />
+      <DO name="PvtSp17" type="SPS_P" />
+      <DO name="PvtIn18" type="INS_P" />
+      <DO name="PvtMv19" type="MV_P" />
+      <DO name="PvtEn20" type="ENS_P" />
+      <DO name="PvtSp21" type="SPS_P" />
+      <DO name="PvtIn22" type="INS_P" />
+      <DO name="PvtMv23" type="MV_P" />
+      <DO name="PvtEn24" type="ENS_P" />
+      <DO name="PvtSp25" type="SPS_P" />
+      <DO name="PvtIn26" type="INS_P" />
+      <DO name="PvtMv27" type="MV_P" />
+      <DO name="PvtEn28" type="ENS_P" />
+      <DO name="PvtSp29" type="SPS_P" />
+      <DO name="PvtIn30" type="INS_P" />
+      <DO name="PvtMv31" type="MV_P" />
+      <DO name="PvtEn32" type="ENS_P" />
+      <DO name="PvtSp33" type="SPS_P" />
+      <DO name="PvtIn34" type="INS_P" />
+      <DO name="PvtMv35" type="MV_P" />
+      <DO name="PvtEn36" type="ENS_P" />
+      <DO name="PvtSp37" type="SPS_P" />
+      <DO name="PvtIn38" type="INS_P" />
+      <DO name="PvtMv39" type="MV_P" />
+      <DO name="PvtEn40" type="ENS_P" />
+    </LNodeType>
+    <LNodeType id="T_MMXU" lnClass="MMXU">
+      <DO name="Mod" type="ENC_Mod" />
+      <DO name="Beh" type="ENS_Beh" />
+      <DO name="Health" type="ENS_Health" />
+      <DO name="NamPlt" type="LPL_1" />
+      <DO name="PvtSp01" type="SPS_P" />
+      <DO name="PvtIn02" type="INS_P" />
+      <DO name="PvtMv03" type="MV_P" />
+      <DO name="PvtEn04" type="ENS_P" />
+      <DO name="PvtSp05" type="SPS_P" />
+      <DO name="PvtIn06" type="INS_P" />
+      <DO name="PvtMv07" type="MV_P" />
+      <DO name="PvtEn08" type="ENS_P" />
+      <DO name="PvtSp09" type="SPS_P" />
+      <DO name="PvtIn10" type="INS_P" />
+      <DO name="PvtMv11" type="MV_P" />
+      <DO name="PvtEn12" type="ENS_P" />
+      <DO name="PvtSp13" type="SPS_P" />
+      <DO name="PvtIn14" type="INS_P" />
+      <DO name="PvtMv15" type="MV_P" />
+      <DO name="PvtEn16" type="ENS_P" />
+      <DO name="PvtSp17" type="SPS_P" />
+      <DO name="PvtIn18" type="INS_P" />
+      <DO name="PvtMv19" type="MV_P" />
+      <DO name="PvtEn20" type="ENS_P" />
+      <DO name="PvtSp21" type="SPS_P" />
+      <DO name="PvtIn22" type="INS_P" />
+      <DO name="PvtMv23" type="MV_P" />
+      <DO name="PvtEn24" type="ENS_P" />
+      <DO name="PvtSp25" type="SPS_P" />
+      <DO name="PvtIn26" type="INS_P" />
+      <DO name="PvtMv27" type="MV_P" />
+      <DO name="PvtEn28" type="ENS_P" />
+      <DO name="PvtSp29" type="SPS_P" />
+      <DO name="PvtIn30" type="INS_P" />
+      <DO name="PvtMv31" type="MV_P" />
+      <DO name="PvtEn32" type="ENS_P" />
+      <DO name="PvtSp33" type="SPS_P" />
+      <DO name="PvtIn34" type="INS_P" />
+      <DO name="PvtMv35" type="MV_P" />
+      <DO name="PvtEn36" type="ENS_P" />
+      <DO name="PvtSp37" type="SPS_P" />
+      <DO name="PvtIn38" type="INS_P" />
+      <DO name="PvtMv39" type="MV_P" />
+      <DO name="PvtEn40" type="ENS_P" />
+    </LNodeType>
+    <LNodeType id="T_MMTR" lnClass="MMTR">
+      <DO name="Mod" type="ENC_Mod" />
+      <DO name="Beh" type="ENS_Beh" />
+      <DO name="Health" type="ENS_Health" />
+      <DO name="NamPlt" type="LPL_1" />
+      <DO name="PvtSp01" type="SPS_P" />
+      <DO name="PvtIn02" type="INS_P" />
+      <DO name="PvtMv03" type="MV_P" />
+      <DO name="PvtEn04" type="ENS_P" />
+      <DO name="PvtSp05" type="SPS_P" />
+      <DO name="PvtIn06" type="INS_P" />
+      <DO name="PvtMv07" type="MV_P" />
+      <DO name="PvtEn08" type="ENS_P" />
+      <DO name="PvtSp09" type="SPS_P" />
+      <DO name="PvtIn10" type="INS_P" />
+      <DO name="PvtMv11" type="MV_P" />
+      <DO name="PvtEn12" type="ENS_P" />
+      <DO name="PvtSp13" type="SPS_P" />
+      <DO name="PvtIn14" type="INS_P" />
+      <DO name="PvtMv15" type="MV_P" />
+      <DO name="PvtEn16" type="ENS_P" />
+      <DO name="PvtSp17" type="SPS_P" />
+      <DO name="PvtIn18" type="INS_P" />
+      <DO name="PvtMv19" type="MV_P" />
+      <DO name="PvtEn20" type="ENS_P" />
+      <DO name="PvtSp21" type="SPS_P" />
+      <DO name="PvtIn22" type="INS_P" />
+      <DO name="PvtMv23" type="MV_P" />
+      <DO name="PvtEn24" type="ENS_P" />
+      <DO name="PvtSp25" type="SPS_P" />
+      <DO name="PvtIn26" type="INS_P" />
+      <DO name="PvtMv27" type="MV_P" />
+      <DO name="PvtEn28" type="ENS_P" />
+      <DO name="PvtSp29" type="SPS_P" />
+      <DO name="PvtIn30" type="INS_P" />
+      <DO name="PvtMv31" type="MV_P" />
+      <DO name="PvtEn32" type="ENS_P" />
+      <DO name="PvtSp33" type="SPS_P" />
+      <DO name="PvtIn34" type="INS_P" />
+      <DO name="PvtMv35" type="MV_P" />
+      <DO name="PvtEn36" type="ENS_P" />
+      <DO name="PvtSp37" type="SPS_P" />
+      <DO name="PvtIn38" type="INS_P" />
+      <DO name="PvtMv39" type="MV_P" />
+      <DO name="PvtEn40" type="ENS_P" />
+    </LNodeType>
+    <LNodeType id="T_XCBR" lnClass="XCBR">
+      <DO name="Mod" type="ENC_Mod" />
+      <DO name="Beh" type="ENS_Beh" />
+      <DO name="Health" type="ENS_Health" />
+      <DO name="NamPlt" type="LPL_1" />
+      <DO name="PvtSp01" type="SPS_P" />
+      <DO name="PvtIn02" type="INS_P" />
+      <DO name="PvtMv03" type="MV_P" />
+      <DO name="PvtEn04" type="ENS_P" />
+      <DO name="PvtSp05" type="SPS_P" />
+      <DO name="PvtIn06" type="INS_P" />
+      <DO name="PvtMv07" type="MV_P" />
+      <DO name="PvtEn08" type="ENS_P" />
+      <DO name="PvtSp09" type="SPS_P" />
+      <DO name="PvtIn10" type="INS_P" />
+      <DO name="PvtMv11" type="MV_P" />
+      <DO name="PvtEn12" type="ENS_P" />
+      <DO name="PvtSp13" type="SPS_P" />
+      <DO name="PvtIn14" type="INS_P" />
+      <DO name="PvtMv15" type="MV_P" />
+      <DO name="PvtEn16" type="ENS_P" />
+      <DO name="PvtSp17" type="SPS_P" />
+      <DO name="PvtIn18" type="INS_P" />
+      <DO name="PvtMv19" type="MV_P" />
+      <DO name="PvtEn20" type="ENS_P" />
+      <DO name="PvtSp21" type="SPS_P" />
+      <DO name="PvtIn22" type="INS_P" />
+      <DO name="PvtMv23" type="MV_P" />
+      <DO name="PvtEn24" type="ENS_P" />
+      <DO name="PvtSp25" type="SPS_P" />
+      <DO name="PvtIn26" type="INS_P" />
+      <DO name="PvtMv27" type="MV_P" />
+      <DO name="PvtEn28" type="ENS_P" />
+      <DO name="PvtSp29" type="SPS_P" />
+      <DO name="PvtIn30" type="INS_P" />
+      <DO name="PvtMv31" type="MV_P" />
+      <DO name="PvtEn32" type="ENS_P" />
+      <DO name="PvtSp33" type="SPS_P" />
+      <DO name="PvtIn34" type="INS_P" />
+      <DO name="PvtMv35" type="MV_P" />
+      <DO name="PvtEn36" type="ENS_P" />
+      <DO name="PvtSp37" type="SPS_P" />
+      <DO name="PvtIn38" type="INS_P" />
+      <DO name="PvtMv39" type="MV_P" />
+      <DO name="PvtEn40" type="ENS_P" />
+    </LNodeType>
+    <LNodeType id="T_XSWI" lnClass="XSWI">
+      <DO name="Mod" type="ENC_Mod" />
+      <DO name="Beh" type="ENS_Beh" />
+      <DO name="Health" type="ENS_Health" />
+      <DO name="NamPlt" type="LPL_1" />
+      <DO name="PvtSp01" type="SPS_P" />
+      <DO name="PvtIn02" type="INS_P" />
+      <DO name="PvtMv03" type="MV_P" />
+      <DO name="PvtEn04" type="ENS_P" />
+      <DO name="PvtSp05" type="SPS_P" />
+      <DO name="PvtIn06" type="INS_P" />
+      <DO name="PvtMv07" type="MV_P" />
+      <DO name="PvtEn08" type="ENS_P" />
+      <DO name="PvtSp09" type="SPS_P" />
+      <DO name="PvtIn10" type="INS_P" />
+      <DO name="PvtMv11" type="MV_P" />
+      <DO name="PvtEn12" type="ENS_P" />
+      <DO name="PvtSp13" type="SPS_P" />
+      <DO name="PvtIn14" type="INS_P" />
+      <DO name="PvtMv15" type="MV_P" />
+      <DO name="PvtEn16" type="ENS_P" />
+      <DO name="PvtSp17" type="SPS_P" />
+      <DO name="PvtIn18" type="INS_P" />
+      <DO name="PvtMv19" type="MV_P" />
+      <DO name="PvtEn20" type="ENS_P" />
+      <DO name="PvtSp21" type="SPS_P" />
+      <DO name="PvtIn22" type="INS_P" />
+      <DO name="PvtMv23" type="MV_P" />
+      <DO name="PvtEn24" type="ENS_P" />
+      <DO name="PvtSp25" type="SPS_P" />
+      <DO name="PvtIn26" type="INS_P" />
+      <DO name="PvtMv27" type="MV_P" />
+      <DO name="PvtEn28" type="ENS_P" />
+      <DO name="PvtSp29" type="SPS_P" />
+      <DO name="PvtIn30" type="INS_P" />
+      <DO name="PvtMv31" type="MV_P" />
+      <DO name="PvtEn32" type="ENS_P" />
+      <DO name="PvtSp33" type="SPS_P" />
+      <DO name="PvtIn34" type="INS_P" />
+      <DO name="PvtMv35" type="MV_P" />
+      <DO name="PvtEn36" type="ENS_P" />
+      <DO name="PvtSp37" type="SPS_P" />
+      <DO name="PvtIn38" type="INS_P" />
+      <DO name="PvtMv39" type="MV_P" />
+      <DO name="PvtEn40" type="ENS_P" />
+    </LNodeType>
+    <LNodeType id="T_CSWI" lnClass="CSWI">
+      <DO name="Mod" type="ENC_Mod" />
+      <DO name="Beh" type="ENS_Beh" />
+      <DO name="Health" type="ENS_Health" />
+      <DO name="NamPlt" type="LPL_1" />
+      <DO name="PvtSp01" type="SPS_P" />
+      <DO name="PvtIn02" type="INS_P" />
+      <DO name="PvtMv03" type="MV_P" />
+      <DO name="PvtEn04" type="ENS_P" />
+      <DO name="PvtSp05" type="SPS_P" />
+      <DO name="PvtIn06" type="INS_P" />
+      <DO name="PvtMv07" type="MV_P" />
+      <DO name="PvtEn08" type="ENS_P" />
+      <DO name="PvtSp09" type="SPS_P" />
+      <DO name="PvtIn10" type="INS_P" />
+      <DO name="PvtMv11" type="MV_P" />
+      <DO name="PvtEn12" type="ENS_P" />
+      <DO name="PvtSp13" type="SPS_P" />
+      <DO name="PvtIn14" type="INS_P" />
+      <DO name="PvtMv15" type="MV_P" />
+      <DO name="PvtEn16" type="ENS_P" />
+      <DO name="PvtSp17" type="SPS_P" />
+      <DO name="PvtIn18" type="INS_P" />
+      <DO name="PvtMv19" type="MV_P" />
+      <DO name="PvtEn20" type="ENS_P" />
+      <DO name="PvtSp21" type="SPS_P" />
+      <DO name="PvtIn22" type="INS_P" />
+      <DO name="PvtMv23" type="MV_P" />
+      <DO name="PvtEn24" type="ENS_P" />
+      <DO name="PvtSp25" type="SPS_P" />
+      <DO name="PvtIn26" type="INS_P" />
+      <DO name="PvtMv27" type="MV_P" />
+      <DO name="PvtEn28" type="ENS_P" />
+      <DO name="PvtSp29" type="SPS_P" />
+      <DO name="PvtIn30" type="INS_P" />
+      <DO name="PvtMv31" type="MV_P" />
+      <DO name="PvtEn32" type="ENS_P" />
+      <DO name="PvtSp33" type="SPS_P" />
+      <DO name="PvtIn34" type="INS_P" />
+      <DO name="PvtMv35" type="MV_P" />
+      <DO name="PvtEn36" type="ENS_P" />
+      <DO name="PvtSp37" type="SPS_P" />
+      <DO name="PvtIn38" type="INS_P" />
+      <DO name="PvtMv39" type="MV_P" />
+      <DO name="PvtEn40" type="ENS_P" />
+    </LNodeType>
+    <LNodeType id="T_PTOC" lnClass="PTOC">
+      <DO name="Mod" type="ENC_Mod" />
+      <DO name="Beh" type="ENS_Beh" />
+      <DO name="Health" type="ENS_Health" />
+      <DO name="NamPlt" type="LPL_1" />
+      <DO name="PvtSp01" type="SPS_P" />
+      <DO name="PvtIn02" type="INS_P" />
+      <DO name="PvtMv03" type="MV_P" />
+      <DO name="PvtEn04" type="ENS_P" />
+      <DO name="PvtSp05" type="SPS_P" />
+      <DO name="PvtIn06" type="INS_P" />
+      <DO name="PvtMv07" type="MV_P" />
+      <DO name="PvtEn08" type="ENS_P" />
+      <DO name="PvtSp09" type="SPS_P" />
+      <DO name="PvtIn10" type="INS_P" />
+      <DO name="PvtMv11" type="MV_P" />
+      <DO name="PvtEn12" type="ENS_P" />
+      <DO name="PvtSp13" type="SPS_P" />
+      <DO name="PvtIn14" type="INS_P" />
+      <DO name="PvtMv15" type="MV_P" />
+      <DO name="PvtEn16" type="ENS_P" />
+      <DO name="PvtSp17" type="SPS_P" />
+      <DO name="PvtIn18" type="INS_P" />
+      <DO name="PvtMv19" type="MV_P" />
+      <DO name="PvtEn20" type="ENS_P" />
+      <DO name="PvtSp21" type="SPS_P" />
+      <DO name="PvtIn22" type="INS_P" />
+      <DO name="PvtMv23" type="MV_P" />
+      <DO name="PvtEn24" type="ENS_P" />
+      <DO name="PvtSp25" type="SPS_P" />
+      <DO name="PvtIn26" type="INS_P" />
+      <DO name="PvtMv27" type="MV_P" />
+      <DO name="PvtEn28" type="ENS_P" />
+      <DO name="PvtSp29" type="SPS_P" />
+      <DO name="PvtIn30" type="INS_P" />
+      <DO name="PvtMv31" type="MV_P" />
+      <DO name="PvtEn32" type="ENS_P" />
+      <DO name="PvtSp33" type="SPS_P" />
+      <DO name="PvtIn34" type="INS_P" />
+      <DO name="PvtMv35" type="MV_P" />
+      <DO name="PvtEn36" type="ENS_P" />
+      <DO name="PvtSp37" type="SPS_P" />
+      <DO name="PvtIn38" type="INS_P" />
+      <DO name="PvtMv39" type="MV_P" />
+      <DO name="PvtEn40" type="ENS_P" />
+    </LNodeType>
+    <LNodeType id="T_PTRC" lnClass="PTRC">
+      <DO name="Mod" type="ENC_Mod" />
+      <DO name="Beh" type="ENS_Beh" />
+      <DO name="Health" type="ENS_Health" />
+      <DO name="NamPlt" type="LPL_1" />
+      <DO name="PvtSp01" type="SPS_P" />
+      <DO name="PvtIn02" type="INS_P" />
+      <DO name="PvtMv03" type="MV_P" />
+      <DO name="PvtEn04" type="ENS_P" />
+      <DO name="PvtSp05" type="SPS_P" />
+      <DO name="PvtIn06" type="INS_P" />
+      <DO name="PvtMv07" type="MV_P" />
+      <DO name="PvtEn08" type="ENS_P" />
+      <DO name="PvtSp09" type="SPS_P" />
+      <DO name="PvtIn10" type="INS_P" />
+      <DO name="PvtMv11" type="MV_P" />
+      <DO name="PvtEn12" type="ENS_P" />
+      <DO name="PvtSp13" type="SPS_P" />
+      <DO name="PvtIn14" type="INS_P" />
+      <DO name="PvtMv15" type="MV_P" />
+      <DO name="PvtEn16" type="ENS_P" />
+      <DO name="PvtSp17" type="SPS_P" />
+      <DO name="PvtIn18" type="INS_P" />
+      <DO name="PvtMv19" type="MV_P" />
+      <DO name="PvtEn20" type="ENS_P" />
+      <DO name="PvtSp21" type="SPS_P" />
+      <DO name="PvtIn22" type="INS_P" />
+      <DO name="PvtMv23" type="MV_P" />
+      <DO name="PvtEn24" type="ENS_P" />
+      <DO name="PvtSp25" type="SPS_P" />
+      <DO name="PvtIn26" type="INS_P" />
+      <DO name="PvtMv27" type="MV_P" />
+      <DO name="PvtEn28" type="ENS_P" />
+      <DO name="PvtSp29" type="SPS_P" />
+      <DO name="PvtIn30" type="INS_P" />
+      <DO name="PvtMv31" type="MV_P" />
+      <DO name="PvtEn32" type="ENS_P" />
+      <DO name="PvtSp33" type="SPS_P" />
+      <DO name="PvtIn34" type="INS_P" />
+      <DO name="PvtMv35" type="MV_P" />
+      <DO name="PvtEn36" type="ENS_P" />
+      <DO name="PvtSp37" type="SPS_P" />
+      <DO name="PvtIn38" type="INS_P" />
+      <DO name="PvtMv39" type="MV_P" />
+      <DO name="PvtEn40" type="ENS_P" />
+    </LNodeType>
+    <LNodeType id="T_STMP" lnClass="STMP">
+      <DO name="Mod" type="ENC_Mod" />
+      <DO name="Beh" type="ENS_Beh" />
+      <DO name="Health" type="ENS_Health" />
+      <DO name="NamPlt" type="LPL_1" />
+      <DO name="PvtSp01" type="SPS_P" />
+      <DO name="PvtIn02" type="INS_P" />
+      <DO name="PvtMv03" type="MV_P" />
+      <DO name="PvtEn04" type="ENS_P" />
+      <DO name="PvtSp05" type="SPS_P" />
+      <DO name="PvtIn06" type="INS_P" />
+      <DO name="PvtMv07" type="MV_P" />
+      <DO name="PvtEn08" type="ENS_P" />
+      <DO name="PvtSp09" type="SPS_P" />
+      <DO name="PvtIn10" type="INS_P" />
+      <DO name="PvtMv11" type="MV_P" />
+      <DO name="PvtEn12" type="ENS_P" />
+      <DO name="PvtSp13" type="SPS_P" />
+      <DO name="PvtIn14" type="INS_P" />
+      <DO name="PvtMv15" type="MV_P" />
+      <DO name="PvtEn16" type="ENS_P" />
+      <DO name="PvtSp17" type="SPS_P" />
+      <DO name="PvtIn18" type="INS_P" />
+      <DO name="PvtMv19" type="MV_P" />
+      <DO name="PvtEn20" type="ENS_P" />
+      <DO name="PvtSp21" type="SPS_P" />
+      <DO name="PvtIn22" type="INS_P" />
+      <DO name="PvtMv23" type="MV_P" />
+      <DO name="PvtEn24" type="ENS_P" />
+      <DO name="PvtSp25" type="SPS_P" />
+      <DO name="PvtIn26" type="INS_P" />
+      <DO name="PvtMv27" type="MV_P" />
+      <DO name="PvtEn28" type="ENS_P" />
+      <DO name="PvtSp29" type="SPS_P" />
+      <DO name="PvtIn30" type="INS_P" />
+      <DO name="PvtMv31" type="MV_P" />
+      <DO name="PvtEn32" type="ENS_P" />
+      <DO name="PvtSp33" type="SPS_P" />
+      <DO name="PvtIn34" type="INS_P" />
+      <DO name="PvtMv35" type="MV_P" />
+      <DO name="PvtEn36" type="ENS_P" />
+      <DO name="PvtSp37" type="SPS_P" />
+      <DO name="PvtIn38" type="INS_P" />
+      <DO name="PvtMv39" type="MV_P" />
+      <DO name="PvtEn40" type="ENS_P" />
+    </LNodeType>
+    <LNodeType id="T_MSQI" lnClass="MSQI">
+      <DO name="Mod" type="ENC_Mod" />
+      <DO name="Beh" type="ENS_Beh" />
+      <DO name="Health" type="ENS_Health" />
+      <DO name="NamPlt" type="LPL_1" />
+      <DO name="PvtSp01" type="SPS_P" />
+      <DO name="PvtIn02" type="INS_P" />
+      <DO name="PvtMv03" type="MV_P" />
+      <DO name="PvtEn04" type="ENS_P" />
+      <DO name="PvtSp05" type="SPS_P" />
+      <DO name="PvtIn06" type="INS_P" />
+      <DO name="PvtMv07" type="MV_P" />
+      <DO name="PvtEn08" type="ENS_P" />
+      <DO name="PvtSp09" type="SPS_P" />
+      <DO name="PvtIn10" type="INS_P" />
+      <DO name="PvtMv11" type="MV_P" />
+      <DO name="PvtEn12" type="ENS_P" />
+      <DO name="PvtSp13" type="SPS_P" />
+      <DO name="PvtIn14" type="INS_P" />
+      <DO name="PvtMv15" type="MV_P" />
+      <DO name="PvtEn16" type="ENS_P" />
+      <DO name="PvtSp17" type="SPS_P" />
+      <DO name="PvtIn18" type="INS_P" />
+      <DO name="PvtMv19" type="MV_P" />
+      <DO name="PvtEn20" type="ENS_P" />
+      <DO name="PvtSp21" type="SPS_P" />
+      <DO name="PvtIn22" type="INS_P" />
+      <DO name="PvtMv23" type="MV_P" />
+      <DO name="PvtEn24" type="ENS_P" />
+      <DO name="PvtSp25" type="SPS_P" />
+      <DO name="PvtIn26" type="INS_P" />
+      <DO name="PvtMv27" type="MV_P" />
+      <DO name="PvtEn28" type="ENS_P" />
+      <DO name="PvtSp29" type="SPS_P" />
+      <DO name="PvtIn30" type="INS_P" />
+      <DO name="PvtMv31" type="MV_P" />
+      <DO name="PvtEn32" type="ENS_P" />
+      <DO name="PvtSp33" type="SPS_P" />
+      <DO name="PvtIn34" type="INS_P" />
+      <DO name="PvtMv35" type="MV_P" />
+      <DO name="PvtEn36" type="ENS_P" />
+      <DO name="PvtSp37" type="SPS_P" />
+      <DO name="PvtIn38" type="INS_P" />
+      <DO name="PvtMv39" type="MV_P" />
+      <DO name="PvtEn40" type="ENS_P" />
+    </LNodeType>
+    <DOType id="LPL_1" cdc="LPL">
+      <DA name="vendor" bType="VisString255" fc="DC" />
+      <DA name="swRev" bType="VisString255" fc="DC" />
+      <DA name="d" bType="VisString255" fc="DC" />
+      <DA name="lnNs" bType="VisString255" fc="EX" />
+    </DOType>
+    <DOType id="DPL_1" cdc="DPL">
+      <DA name="vendor" bType="VisString255" fc="DC" />
+      <DA name="hwRev" bType="VisString255" fc="DC" />
+    </DOType>
+    <DOType id="ENS_Beh" cdc="ENS">
+      <DA name="stVal" bType="Enum" type="BehaviourModeKind" fc="ST" dchg="true" />
+      <DA name="q" bType="Quality" fc="ST" qchg="true" />
+      <DA name="t" bType="Timestamp" fc="ST" />
+    </DOType>
+    <DOType id="ENS_Health" cdc="ENS">
+      <DA name="stVal" bType="Enum" type="HealthKind" fc="ST" dchg="true" />
+      <DA name="q" bType="Quality" fc="ST" qchg="true" />
+      <DA name="t" bType="Timestamp" fc="ST" />
+    </DOType>
+    <DOType id="ENS_P" cdc="ENS">
+      <DA name="stVal" bType="Enum" type="PrivStateKind" fc="ST" dchg="true" />
+      <DA name="q" bType="Quality" fc="ST" qchg="true" />
+      <DA name="t" bType="Timestamp" fc="ST" />
+    </DOType>
+    <DOType id="ENC_Mod" cdc="ENC">
+      <DA name="stVal" bType="Enum" type="BehaviourModeKind" fc="ST" dchg="true" />
+      <DA name="q" bType="Quality" fc="ST" qchg="true" />
+      <DA name="t" bType="Timestamp" fc="ST" />
+      <DA name="ctlModel" bType="Enum" type="CtlModelKind" fc="CF" dchg="true" />
+    </DOType>
+    <DOType id="SPS_P" cdc="SPS">
+      <DA name="stVal" bType="BOOLEAN" fc="ST" dchg="true" />
+      <DA name="q" bType="Quality" fc="ST" qchg="true" />
+      <DA name="t" bType="Timestamp" fc="ST" />
+    </DOType>
+    <DOType id="INS_P" cdc="INS">
+      <DA name="stVal" bType="INT32" fc="ST" dchg="true" />
+      <DA name="q" bType="Quality" fc="ST" qchg="true" />
+      <DA name="t" bType="Timestamp" fc="ST" />
+    </DOType>
+    <DOType id="MV_P" cdc="MV">
+      <DA name="mag" bType="Struct" type="AnalogueValue_P" fc="MX" dchg="true" />
+      <DA name="q" bType="Quality" fc="MX" qchg="true" />
+      <DA name="t" bType="Timestamp" fc="MX" />
+    </DOType>
+    <DAType id="AnalogueValue_P">
+      <BDA name="f" bType="FLOAT32" />
+    </DAType>
+    <EnumType id="BehaviourModeKind">
+      <EnumVal ord="1">on</EnumVal>
+      <EnumVal ord="2">blocked</EnumVal>
+      <EnumVal ord="3">test</EnumVal>
+      <EnumVal ord="4">test/blocked</EnumVal>
+      <EnumVal ord="5">off</EnumVal>
+    </EnumType>
+    <EnumType id="HealthKind">
+      <EnumVal ord="1">Ok</EnumVal>
+      <EnumVal ord="2">Warning</EnumVal>
+      <EnumVal ord="3">Alarm</EnumVal>
+    </EnumType>
+    <EnumType id="CtlModelKind">
+      <EnumVal ord="0">status-only</EnumVal>
+      <EnumVal ord="1">direct-with-normal-security</EnumVal>
+      <EnumVal ord="2">sbo-with-normal-security</EnumVal>
+      <EnumVal ord="3">direct-with-enhanced-security</EnumVal>
+      <EnumVal ord="4">sbo-with-enhanced-security</EnumVal>
+    </EnumType>
+    <EnumType id="PrivStateKind">
+      <EnumVal ord="0">idle</EnumVal>
+      <EnumVal ord="1">running</EnumVal>
+      <EnumVal ord="2">fault</EnumVal>
+      <EnumVal ord="3">unknown</EnumVal>
+    </EnumType>
+  </DataTypeTemplates>
+</SCL>
