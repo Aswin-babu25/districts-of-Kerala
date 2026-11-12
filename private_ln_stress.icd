@@ -28,8 +28,8 @@
         <LDevice inst="LD1">
           <LN0 lnClass="LLN0" lnType="T_LLN0" inst="">
             <DataSet name="DS_STD">
-              <FCDA ldInst="LD1" lnClass="LLN0" lnInst="" fc="ST" doName="Beh" daName="stVal" />
-              <FCDA ldInst="LD1" lnClass="LLN0" lnInst="" fc="ST" doName="Health" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="LLN0" fc="ST" doName="Beh" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="LLN0" fc="ST" doName="Health" daName="stVal" />
               <FCDA ldInst="LD1" lnClass="LPHD" lnInst="1" fc="ST" doName="PhyHealth" daName="stVal" />
               <FCDA ldInst="LD1" lnClass="MMXU" lnInst="1" fc="MX" doName="TotW" daName="mag.f" />
               <FCDA ldInst="LD1" lnClass="MMXU" lnInst="1" fc="MX" doName="Hz" daName="mag.f" />
@@ -932,7 +932,7 @@
               <FCDA ldInst="LD1" lnClass="ZAAA" lnInst="1" fc="ST" doName="Mod" daName="stVal" />
               <FCDA ldInst="LD1" lnClass="ZAAA" lnInst="1" fc="ST" doName="Sp005" daName="stVal" />
               <FCDA ldInst="LD1" lnClass="ZAAT" lnInst="5" fc="MX" doName="Mv003" daName="mag.f" />
-              <FCDA ldInst="LD1" lnClass="LLN0" lnInst="" fc="ST" doName="Beh" daName="stVal" />
+              <FCDA ldInst="LD1" lnClass="LLN0" fc="ST" doName="Beh" daName="stVal" />
             </DataSet>
             <ReportControl name="urcb_std" datSet="DS_STD" rptID="LD1/LLN0.urcb_std" confRev="1" buffered="false" intgPd="10000">
               <TrgOps dchg="true" qchg="true" dupd="false" period="true" gi="true" />
@@ -1182,404 +1182,504 @@
           <LN lnClass="MMXU" lnType="T_MMXU" inst="5" prefix="">
             <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>
           </LN>
-          <LN lnClass="ZAAA" lnType="T_ZAAA" inst="1" prefix="" lnNs="urn:example:private:ns:2025">
-            <Private type="example-private-ln"><ext:Info cls="ZAAA" inst="1" /></Private>
+          <LN lnClass="ZAAA" lnType="T_ZAAA" inst="1" prefix="">
+            <Private type="example-private-ln">ZAAA/1</Private>
+            <DOI name="NamPlt"><DAI name="lnNs"><Val>urn:example:private:ns:2025</Val></DAI></DOI>
             <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>
           </LN>
-          <LN lnClass="ZAAA" lnType="T_ZAAA" inst="2" prefix="" lnNs="urn:example:private:ns:2025">
-            <Private type="example-private-ln"><ext:Info cls="ZAAA" inst="2" /></Private>
+          <LN lnClass="ZAAA" lnType="T_ZAAA" inst="2" prefix="">
+            <Private type="example-private-ln">ZAAA/2</Private>
+            <DOI name="NamPlt"><DAI name="lnNs"><Val>urn:example:private:ns:2025</Val></DAI></DOI>
             <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>
           </LN>
-          <LN lnClass="ZAAA" lnType="T_ZAAA" inst="3" prefix="" lnNs="urn:example:private:ns:2025">
-            <Private type="example-private-ln"><ext:Info cls="ZAAA" inst="3" /></Private>
+          <LN lnClass="ZAAA" lnType="T_ZAAA" inst="3" prefix="">
+            <Private type="example-private-ln">ZAAA/3</Private>
+            <DOI name="NamPlt"><DAI name="lnNs"><Val>urn:example:private:ns:2025</Val></DAI></DOI>
             <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>
           </LN>
-          <LN lnClass="ZAAA" lnType="T_ZAAA" inst="4" prefix="" lnNs="urn:example:private:ns:2025">
-            <Private type="example-private-ln"><ext:Info cls="ZAAA" inst="4" /></Private>
+          <LN lnClass="ZAAA" lnType="T_ZAAA" inst="4" prefix="">
+            <Private type="example-private-ln">ZAAA/4</Private>
+            <DOI name="NamPlt"><DAI name="lnNs"><Val>urn:example:private:ns:2025</Val></DAI></DOI>
             <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>
           </LN>
-          <LN lnClass="ZAAA" lnType="T_ZAAA" inst="5" prefix="" lnNs="urn:example:private:ns:2025">
-            <Private type="example-private-ln"><ext:Info cls="ZAAA" inst="5" /></Private>
+          <LN lnClass="ZAAA" lnType="T_ZAAA" inst="5" prefix="">
+            <Private type="example-private-ln">ZAAA/5</Private>
+            <DOI name="NamPlt"><DAI name="lnNs"><Val>urn:example:private:ns:2025</Val></DAI></DOI>
             <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>
           </LN>
-          <LN lnClass="ZAAB" lnType="T_ZAAB" inst="1" prefix="" lnNs="urn:example:private:ns:2025">
-            <Private type="example-private-ln"><ext:Info cls="ZAAB" inst="1" /></Private>
+          <LN lnClass="ZAAB" lnType="T_ZAAB" inst="1" prefix="">
+            <Private type="example-private-ln">ZAAB/1</Private>
+            <DOI name="NamPlt"><DAI name="lnNs"><Val>urn:example:private:ns:2025</Val></DAI></DOI>
             <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>
           </LN>
-          <LN lnClass="ZAAB" lnType="T_ZAAB" inst="2" prefix="" lnNs="urn:example:private:ns:2025">
-            <Private type="example-private-ln"><ext:Info cls="ZAAB" inst="2" /></Private>
+          <LN lnClass="ZAAB" lnType="T_ZAAB" inst="2" prefix="">
+            <Private type="example-private-ln">ZAAB/2</Private>
+            <DOI name="NamPlt"><DAI name="lnNs"><Val>urn:example:private:ns:2025</Val></DAI></DOI>
             <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>
           </LN>
-          <LN lnClass="ZAAB" lnType="T_ZAAB" inst="3" prefix="" lnNs="urn:example:private:ns:2025">
-            <Private type="example-private-ln"><ext:Info cls="ZAAB" inst="3" /></Private>
+          <LN lnClass="ZAAB" lnType="T_ZAAB" inst="3" prefix="">
+            <Private type="example-private-ln">ZAAB/3</Private>
+            <DOI name="NamPlt"><DAI name="lnNs"><Val>urn:example:private:ns:2025</Val></DAI></DOI>
             <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>
           </LN>
-          <LN lnClass="ZAAB" lnType="T_ZAAB" inst="4" prefix="" lnNs="urn:example:private:ns:2025">
-            <Private type="example-private-ln"><ext:Info cls="ZAAB" inst="4" /></Private>
+          <LN lnClass="ZAAB" lnType="T_ZAAB" inst="4" prefix="">
+            <Private type="example-private-ln">ZAAB/4</Private>
+            <DOI name="NamPlt"><DAI name="lnNs"><Val>urn:example:private:ns:2025</Val></DAI></DOI>
             <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>
           </LN>
-          <LN lnClass="ZAAB" lnType="T_ZAAB" inst="5" prefix="" lnNs="urn:example:private:ns:2025">
-            <Private type="example-private-ln"><ext:Info cls="ZAAB" inst="5" /></Private>
+          <LN lnClass="ZAAB" lnType="T_ZAAB" inst="5" prefix="">
+            <Private type="example-private-ln">ZAAB/5</Private>
+            <DOI name="NamPlt"><DAI name="lnNs"><Val>urn:example:private:ns:2025</Val></DAI></DOI>
             <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>
           </LN>
-          <LN lnClass="ZAAC" lnType="T_ZAAC" inst="1" prefix="" lnNs="urn:example:private:ns:2025">
-            <Private type="example-private-ln"><ext:Info cls="ZAAC" inst="1" /></Private>
+          <LN lnClass="ZAAC" lnType="T_ZAAC" inst="1" prefix="">
+            <Private type="example-private-ln">ZAAC/1</Private>
+            <DOI name="NamPlt"><DAI name="lnNs"><Val>urn:example:private:ns:2025</Val></DAI></DOI>
             <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>
           </LN>
-          <LN lnClass="ZAAC" lnType="T_ZAAC" inst="2" prefix="" lnNs="urn:example:private:ns:2025">
-            <Private type="example-private-ln"><ext:Info cls="ZAAC" inst="2" /></Private>
+          <LN lnClass="ZAAC" lnType="T_ZAAC" inst="2" prefix="">
+            <Private type="example-private-ln">ZAAC/2</Private>
+            <DOI name="NamPlt"><DAI name="lnNs"><Val>urn:example:private:ns:2025</Val></DAI></DOI>
             <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>
           </LN>
-          <LN lnClass="ZAAC" lnType="T_ZAAC" inst="3" prefix="" lnNs="urn:example:private:ns:2025">
-            <Private type="example-private-ln"><ext:Info cls="ZAAC" inst="3" /></Private>
+          <LN lnClass="ZAAC" lnType="T_ZAAC" inst="3" prefix="">
+            <Private type="example-private-ln">ZAAC/3</Private>
+            <DOI name="NamPlt"><DAI name="lnNs"><Val>urn:example:private:ns:2025</Val></DAI></DOI>
             <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>
           </LN>
-          <LN lnClass="ZAAC" lnType="T_ZAAC" inst="4" prefix="" lnNs="urn:example:private:ns:2025">
-            <Private type="example-private-ln"><ext:Info cls="ZAAC" inst="4" /></Private>
+          <LN lnClass="ZAAC" lnType="T_ZAAC" inst="4" prefix="">
+            <Private type="example-private-ln">ZAAC/4</Private>
+            <DOI name="NamPlt"><DAI name="lnNs"><Val>urn:example:private:ns:2025</Val></DAI></DOI>
             <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>
           </LN>
-          <LN lnClass="ZAAC" lnType="T_ZAAC" inst="5" prefix="" lnNs="urn:example:private:ns:2025">
-            <Private type="example-private-ln"><ext:Info cls="ZAAC" inst="5" /></Private>
+          <LN lnClass="ZAAC" lnType="T_ZAAC" inst="5" prefix="">
+            <Private type="example-private-ln">ZAAC/5</Private>
+            <DOI name="NamPlt"><DAI name="lnNs"><Val>urn:example:private:ns:2025</Val></DAI></DOI>
             <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>
           </LN>
-          <LN lnClass="ZAAD" lnType="T_ZAAD" inst="1" prefix="" lnNs="urn:example:private:ns:2025">
-            <Private type="example-private-ln"><ext:Info cls="ZAAD" inst="1" /></Private>
+          <LN lnClass="ZAAD" lnType="T_ZAAD" inst="1" prefix="">
+            <Private type="example-private-ln">ZAAD/1</Private>
+            <DOI name="NamPlt"><DAI name="lnNs"><Val>urn:example:private:ns:2025</Val></DAI></DOI>
             <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>
           </LN>
-          <LN lnClass="ZAAD" lnType="T_ZAAD" inst="2" prefix="" lnNs="urn:example:private:ns:2025">
-            <Private type="example-private-ln"><ext:Info cls="ZAAD" inst="2" /></Private>
+          <LN lnClass="ZAAD" lnType="T_ZAAD" inst="2" prefix="">
+            <Private type="example-private-ln">ZAAD/2</Private>
+            <DOI name="NamPlt"><DAI name="lnNs"><Val>urn:example:private:ns:2025</Val></DAI></DOI>
             <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>
           </LN>
-          <LN lnClass="ZAAD" lnType="T_ZAAD" inst="3" prefix="" lnNs="urn:example:private:ns:2025">
-            <Private type="example-private-ln"><ext:Info cls="ZAAD" inst="3" /></Private>
+          <LN lnClass="ZAAD" lnType="T_ZAAD" inst="3" prefix="">
+            <Private type="example-private-ln">ZAAD/3</Private>
+            <DOI name="NamPlt"><DAI name="lnNs"><Val>urn:example:private:ns:2025</Val></DAI></DOI>
             <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>
           </LN>
-          <LN lnClass="ZAAD" lnType="T_ZAAD" inst="4" prefix="" lnNs="urn:example:private:ns:2025">
-            <Private type="example-private-ln"><ext:Info cls="ZAAD" inst="4" /></Private>
+          <LN lnClass="ZAAD" lnType="T_ZAAD" inst="4" prefix="">
+            <Private type="example-private-ln">ZAAD/4</Private>
+            <DOI name="NamPlt"><DAI name="lnNs"><Val>urn:example:private:ns:2025</Val></DAI></DOI>
             <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>
           </LN>
-          <LN lnClass="ZAAD" lnType="T_ZAAD" inst="5" prefix="" lnNs="urn:example:private:ns:2025">
-            <Private type="example-private-ln"><ext:Info cls="ZAAD" inst="5" /></Private>
+          <LN lnClass="ZAAD" lnType="T_ZAAD" inst="5" prefix="">
+            <Private type="example-private-ln">ZAAD/5</Private>
+            <DOI name="NamPlt"><DAI name="lnNs"><Val>urn:example:private:ns:2025</Val></DAI></DOI>
             <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>
           </LN>
-          <LN lnClass="ZAAE" lnType="T_ZAAE" inst="1" prefix="" lnNs="urn:example:private:ns:2025">
-            <Private type="example-private-ln"><ext:Info cls="ZAAE" inst="1" /></Private>
+          <LN lnClass="ZAAE" lnType="T_ZAAE" inst="1" prefix="">
+            <Private type="example-private-ln">ZAAE/1</Private>
+            <DOI name="NamPlt"><DAI name="lnNs"><Val>urn:example:private:ns:2025</Val></DAI></DOI>
             <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>
           </LN>
-          <LN lnClass="ZAAE" lnType="T_ZAAE" inst="2" prefix="" lnNs="urn:example:private:ns:2025">
-            <Private type="example-private-ln"><ext:Info cls="ZAAE" inst="2" /></Private>
+          <LN lnClass="ZAAE" lnType="T_ZAAE" inst="2" prefix="">
+            <Private type="example-private-ln">ZAAE/2</Private>
+            <DOI name="NamPlt"><DAI name="lnNs"><Val>urn:example:private:ns:2025</Val></DAI></DOI>
             <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>
           </LN>
-          <LN lnClass="ZAAE" lnType="T_ZAAE" inst="3" prefix="" lnNs="urn:example:private:ns:2025">
-            <Private type="example-private-ln"><ext:Info cls="ZAAE" inst="3" /></Private>
+          <LN lnClass="ZAAE" lnType="T_ZAAE" inst="3" prefix="">
+            <Private type="example-private-ln">ZAAE/3</Private>
+            <DOI name="NamPlt"><DAI name="lnNs"><Val>urn:example:private:ns:2025</Val></DAI></DOI>
             <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>
           </LN>
-          <LN lnClass="ZAAE" lnType="T_ZAAE" inst="4" prefix="" lnNs="urn:example:private:ns:2025">
-            <Private type="example-private-ln"><ext:Info cls="ZAAE" inst="4" /></Private>
+          <LN lnClass="ZAAE" lnType="T_ZAAE" inst="4" prefix="">
+            <Private type="example-private-ln">ZAAE/4</Private>
+            <DOI name="NamPlt"><DAI name="lnNs"><Val>urn:example:private:ns:2025</Val></DAI></DOI>
             <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>
           </LN>
-          <LN lnClass="ZAAE" lnType="T_ZAAE" inst="5" prefix="" lnNs="urn:example:private:ns:2025">
-            <Private type="example-private-ln"><ext:Info cls="ZAAE" inst="5" /></Private>
+          <LN lnClass="ZAAE" lnType="T_ZAAE" inst="5" prefix="">
+            <Private type="example-private-ln">ZAAE/5</Private>
+            <DOI name="NamPlt"><DAI name="lnNs"><Val>urn:example:private:ns:2025</Val></DAI></DOI>
             <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>
           </LN>
-          <LN lnClass="ZAAF" lnType="T_ZAAF" inst="1" prefix="" lnNs="urn:example:private:ns:2025">
-            <Private type="example-private-ln"><ext:Info cls="ZAAF" inst="1" /></Private>
+          <LN lnClass="ZAAF" lnType="T_ZAAF" inst="1" prefix="">
+            <Private type="example-private-ln">ZAAF/1</Private>
+            <DOI name="NamPlt"><DAI name="lnNs"><Val>urn:example:private:ns:2025</Val></DAI></DOI>
             <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>
           </LN>
-          <LN lnClass="ZAAF" lnType="T_ZAAF" inst="2" prefix="" lnNs="urn:example:private:ns:2025">
-            <Private type="example-private-ln"><ext:Info cls="ZAAF" inst="2" /></Private>
+          <LN lnClass="ZAAF" lnType="T_ZAAF" inst="2" prefix="">
+            <Private type="example-private-ln">ZAAF/2</Private>
+            <DOI name="NamPlt"><DAI name="lnNs"><Val>urn:example:private:ns:2025</Val></DAI></DOI>
             <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>
           </LN>
-          <LN lnClass="ZAAF" lnType="T_ZAAF" inst="3" prefix="" lnNs="urn:example:private:ns:2025">
-            <Private type="example-private-ln"><ext:Info cls="ZAAF" inst="3" /></Private>
+          <LN lnClass="ZAAF" lnType="T_ZAAF" inst="3" prefix="">
+            <Private type="example-private-ln">ZAAF/3</Private>
+            <DOI name="NamPlt"><DAI name="lnNs"><Val>urn:example:private:ns:2025</Val></DAI></DOI>
             <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>
           </LN>
-          <LN lnClass="ZAAF" lnType="T_ZAAF" inst="4" prefix="" lnNs="urn:example:private:ns:2025">
-            <Private type="example-private-ln"><ext:Info cls="ZAAF" inst="4" /></Private>
+          <LN lnClass="ZAAF" lnType="T_ZAAF" inst="4" prefix="">
+            <Private type="example-private-ln">ZAAF/4</Private>
+            <DOI name="NamPlt"><DAI name="lnNs"><Val>urn:example:private:ns:2025</Val></DAI></DOI>
             <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>
           </LN>
-          <LN lnClass="ZAAF" lnType="T_ZAAF" inst="5" prefix="" lnNs="urn:example:private:ns:2025">
-            <Private type="example-private-ln"><ext:Info cls="ZAAF" inst="5" /></Private>
+          <LN lnClass="ZAAF" lnType="T_ZAAF" inst="5" prefix="">
+            <Private type="example-private-ln">ZAAF/5</Private>
+            <DOI name="NamPlt"><DAI name="lnNs"><Val>urn:example:private:ns:2025</Val></DAI></DOI>
             <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>
           </LN>
-          <LN lnClass="ZAAG" lnType="T_ZAAG" inst="1" prefix="" lnNs="urn:example:private:ns:2025">
-            <Private type="example-private-ln"><ext:Info cls="ZAAG" inst="1" /></Private>
+          <LN lnClass="ZAAG" lnType="T_ZAAG" inst="1" prefix="">
+            <Private type="example-private-ln">ZAAG/1</Private>
+            <DOI name="NamPlt"><DAI name="lnNs"><Val>urn:example:private:ns:2025</Val></DAI></DOI>
             <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>
           </LN>
-          <LN lnClass="ZAAG" lnType="T_ZAAG" inst="2" prefix="" lnNs="urn:example:private:ns:2025">
-            <Private type="example-private-ln"><ext:Info cls="ZAAG" inst="2" /></Private>
+          <LN lnClass="ZAAG" lnType="T_ZAAG" inst="2" prefix="">
+            <Private type="example-private-ln">ZAAG/2</Private>
+            <DOI name="NamPlt"><DAI name="lnNs"><Val>urn:example:private:ns:2025</Val></DAI></DOI>
             <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>
           </LN>
-          <LN lnClass="ZAAG" lnType="T_ZAAG" inst="3" prefix="" lnNs="urn:example:private:ns:2025">
-            <Private type="example-private-ln"><ext:Info cls="ZAAG" inst="3" /></Private>
+          <LN lnClass="ZAAG" lnType="T_ZAAG" inst="3" prefix="">
+            <Private type="example-private-ln">ZAAG/3</Private>
+            <DOI name="NamPlt"><DAI name="lnNs"><Val>urn:example:private:ns:2025</Val></DAI></DOI>
             <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>
           </LN>
-          <LN lnClass="ZAAG" lnType="T_ZAAG" inst="4" prefix="" lnNs="urn:example:private:ns:2025">
-            <Private type="example-private-ln"><ext:Info cls="ZAAG" inst="4" /></Private>
+          <LN lnClass="ZAAG" lnType="T_ZAAG" inst="4" prefix="">
+            <Private type="example-private-ln">ZAAG/4</Private>
+            <DOI name="NamPlt"><DAI name="lnNs"><Val>urn:example:private:ns:2025</Val></DAI></DOI>
             <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>
           </LN>
-          <LN lnClass="ZAAG" lnType="T_ZAAG" inst="5" prefix="" lnNs="urn:example:private:ns:2025">
-            <Private type="example-private-ln"><ext:Info cls="ZAAG" inst="5" /></Private>
+          <LN lnClass="ZAAG" lnType="T_ZAAG" inst="5" prefix="">
+            <Private type="example-private-ln">ZAAG/5</Private>
+            <DOI name="NamPlt"><DAI name="lnNs"><Val>urn:example:private:ns:2025</Val></DAI></DOI>
             <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>
           </LN>
-          <LN lnClass="ZAAH" lnType="T_ZAAH" inst="1" prefix="" lnNs="urn:example:private:ns:2025">
-            <Private type="example-private-ln"><ext:Info cls="ZAAH" inst="1" /></Private>
+          <LN lnClass="ZAAH" lnType="T_ZAAH" inst="1" prefix="">
+            <Private type="example-private-ln">ZAAH/1</Private>
+            <DOI name="NamPlt"><DAI name="lnNs"><Val>urn:example:private:ns:2025</Val></DAI></DOI>
             <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>
           </LN>
-          <LN lnClass="ZAAH" lnType="T_ZAAH" inst="2" prefix="" lnNs="urn:example:private:ns:2025">
-            <Private type="example-private-ln"><ext:Info cls="ZAAH" inst="2" /></Private>
+          <LN lnClass="ZAAH" lnType="T_ZAAH" inst="2" prefix="">
+            <Private type="example-private-ln">ZAAH/2</Private>
+            <DOI name="NamPlt"><DAI name="lnNs"><Val>urn:example:private:ns:2025</Val></DAI></DOI>
             <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>
           </LN>
-          <LN lnClass="ZAAH" lnType="T_ZAAH" inst="3" prefix="" lnNs="urn:example:private:ns:2025">
-            <Private type="example-private-ln"><ext:Info cls="ZAAH" inst="3" /></Private>
+          <LN lnClass="ZAAH" lnType="T_ZAAH" inst="3" prefix="">
+            <Private type="example-private-ln">ZAAH/3</Private>
+            <DOI name="NamPlt"><DAI name="lnNs"><Val>urn:example:private:ns:2025</Val></DAI></DOI>
             <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>
           </LN>
-          <LN lnClass="ZAAH" lnType="T_ZAAH" inst="4" prefix="" lnNs="urn:example:private:ns:2025">
-            <Private type="example-private-ln"><ext:Info cls="ZAAH" inst="4" /></Private>
+          <LN lnClass="ZAAH" lnType="T_ZAAH" inst="4" prefix="">
+            <Private type="example-private-ln">ZAAH/4</Private>
+            <DOI name="NamPlt"><DAI name="lnNs"><Val>urn:example:private:ns:2025</Val></DAI></DOI>
             <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>
           </LN>
-          <LN lnClass="ZAAH" lnType="T_ZAAH" inst="5" prefix="" lnNs="urn:example:private:ns:2025">
-            <Private type="example-private-ln"><ext:Info cls="ZAAH" inst="5" /></Private>
+          <LN lnClass="ZAAH" lnType="T_ZAAH" inst="5" prefix="">
+            <Private type="example-private-ln">ZAAH/5</Private>
+            <DOI name="NamPlt"><DAI name="lnNs"><Val>urn:example:private:ns:2025</Val></DAI></DOI>
             <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>
           </LN>
-          <LN lnClass="ZAAI" lnType="T_ZAAI" inst="1" prefix="" lnNs="urn:example:private:ns:2025">
-            <Private type="example-private-ln"><ext:Info cls="ZAAI" inst="1" /></Private>
+          <LN lnClass="ZAAI" lnType="T_ZAAI" inst="1" prefix="">
+            <Private type="example-private-ln">ZAAI/1</Private>
+            <DOI name="NamPlt"><DAI name="lnNs"><Val>urn:example:private:ns:2025</Val></DAI></DOI>
             <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>
           </LN>
-          <LN lnClass="ZAAI" lnType="T_ZAAI" inst="2" prefix="" lnNs="urn:example:private:ns:2025">
-            <Private type="example-private-ln"><ext:Info cls="ZAAI" inst="2" /></Private>
+          <LN lnClass="ZAAI" lnType="T_ZAAI" inst="2" prefix="">
+            <Private type="example-private-ln">ZAAI/2</Private>
+            <DOI name="NamPlt"><DAI name="lnNs"><Val>urn:example:private:ns:2025</Val></DAI></DOI>
             <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>
           </LN>
-          <LN lnClass="ZAAI" lnType="T_ZAAI" inst="3" prefix="" lnNs="urn:example:private:ns:2025">
-            <Private type="example-private-ln"><ext:Info cls="ZAAI" inst="3" /></Private>
+          <LN lnClass="ZAAI" lnType="T_ZAAI" inst="3" prefix="">
+            <Private type="example-private-ln">ZAAI/3</Private>
+            <DOI name="NamPlt"><DAI name="lnNs"><Val>urn:example:private:ns:2025</Val></DAI></DOI>
             <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>
           </LN>
-          <LN lnClass="ZAAI" lnType="T_ZAAI" inst="4" prefix="" lnNs="urn:example:private:ns:2025">
-            <Private type="example-private-ln"><ext:Info cls="ZAAI" inst="4" /></Private>
+          <LN lnClass="ZAAI" lnType="T_ZAAI" inst="4" prefix="">
+            <Private type="example-private-ln">ZAAI/4</Private>
+            <DOI name="NamPlt"><DAI name="lnNs"><Val>urn:example:private:ns:2025</Val></DAI></DOI>
             <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>
           </LN>
-          <LN lnClass="ZAAI" lnType="T_ZAAI" inst="5" prefix="" lnNs="urn:example:private:ns:2025">
-            <Private type="example-private-ln"><ext:Info cls="ZAAI" inst="5" /></Private>
+          <LN lnClass="ZAAI" lnType="T_ZAAI" inst="5" prefix="">
+            <Private type="example-private-ln">ZAAI/5</Private>
+            <DOI name="NamPlt"><DAI name="lnNs"><Val>urn:example:private:ns:2025</Val></DAI></DOI>
             <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>
           </LN>
-          <LN lnClass="ZAAJ" lnType="T_ZAAJ" inst="1" prefix="" lnNs="urn:example:private:ns:2025">
-            <Private type="example-private-ln"><ext:Info cls="ZAAJ" inst="1" /></Private>
+          <LN lnClass="ZAAJ" lnType="T_ZAAJ" inst="1" prefix="">
+            <Private type="example-private-ln">ZAAJ/1</Private>
+            <DOI name="NamPlt"><DAI name="lnNs"><Val>urn:example:private:ns:2025</Val></DAI></DOI>
             <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>
           </LN>
-          <LN lnClass="ZAAJ" lnType="T_ZAAJ" inst="2" prefix="" lnNs="urn:example:private:ns:2025">
-            <Private type="example-private-ln"><ext:Info cls="ZAAJ" inst="2" /></Private>
+          <LN lnClass="ZAAJ" lnType="T_ZAAJ" inst="2" prefix="">
+            <Private type="example-private-ln">ZAAJ/2</Private>
+            <DOI name="NamPlt"><DAI name="lnNs"><Val>urn:example:private:ns:2025</Val></DAI></DOI>
             <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>
           </LN>
-          <LN lnClass="ZAAJ" lnType="T_ZAAJ" inst="3" prefix="" lnNs="urn:example:private:ns:2025">
-            <Private type="example-private-ln"><ext:Info cls="ZAAJ" inst="3" /></Private>
+          <LN lnClass="ZAAJ" lnType="T_ZAAJ" inst="3" prefix="">
+            <Private type="example-private-ln">ZAAJ/3</Private>
+            <DOI name="NamPlt"><DAI name="lnNs"><Val>urn:example:private:ns:2025</Val></DAI></DOI>
             <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>
           </LN>
-          <LN lnClass="ZAAJ" lnType="T_ZAAJ" inst="4" prefix="" lnNs="urn:example:private:ns:2025">
-            <Private type="example-private-ln"><ext:Info cls="ZAAJ" inst="4" /></Private>
+          <LN lnClass="ZAAJ" lnType="T_ZAAJ" inst="4" prefix="">
+            <Private type="example-private-ln">ZAAJ/4</Private>
+            <DOI name="NamPlt"><DAI name="lnNs"><Val>urn:example:private:ns:2025</Val></DAI></DOI>
             <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>
           </LN>
-          <LN lnClass="ZAAJ" lnType="T_ZAAJ" inst="5" prefix="" lnNs="urn:example:private:ns:2025">
-            <Private type="example-private-ln"><ext:Info cls="ZAAJ" inst="5" /></Private>
+          <LN lnClass="ZAAJ" lnType="T_ZAAJ" inst="5" prefix="">
+            <Private type="example-private-ln">ZAAJ/5</Private>
+            <DOI name="NamPlt"><DAI name="lnNs"><Val>urn:example:private:ns:2025</Val></DAI></DOI>
             <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>
           </LN>
-          <LN lnClass="ZAAK" lnType="T_ZAAK" inst="1" prefix="" lnNs="urn:example:private:ns:2025">
-            <Private type="example-private-ln"><ext:Info cls="ZAAK" inst="1" /></Private>
+          <LN lnClass="ZAAK" lnType="T_ZAAK" inst="1" prefix="">
+            <Private type="example-private-ln">ZAAK/1</Private>
+            <DOI name="NamPlt"><DAI name="lnNs"><Val>urn:example:private:ns:2025</Val></DAI></DOI>
             <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>
           </LN>
-          <LN lnClass="ZAAK" lnType="T_ZAAK" inst="2" prefix="" lnNs="urn:example:private:ns:2025">
-            <Private type="example-private-ln"><ext:Info cls="ZAAK" inst="2" /></Private>
+          <LN lnClass="ZAAK" lnType="T_ZAAK" inst="2" prefix="">
+            <Private type="example-private-ln">ZAAK/2</Private>
+            <DOI name="NamPlt"><DAI name="lnNs"><Val>urn:example:private:ns:2025</Val></DAI></DOI>
             <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>
           </LN>
-          <LN lnClass="ZAAK" lnType="T_ZAAK" inst="3" prefix="" lnNs="urn:example:private:ns:2025">
-            <Private type="example-private-ln"><ext:Info cls="ZAAK" inst="3" /></Private>
+          <LN lnClass="ZAAK" lnType="T_ZAAK" inst="3" prefix="">
+            <Private type="example-private-ln">ZAAK/3</Private>
+            <DOI name="NamPlt"><DAI name="lnNs"><Val>urn:example:private:ns:2025</Val></DAI></DOI>
             <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>
           </LN>
-          <LN lnClass="ZAAK" lnType="T_ZAAK" inst="4" prefix="" lnNs="urn:example:private:ns:2025">
-            <Private type="example-private-ln"><ext:Info cls="ZAAK" inst="4" /></Private>
+          <LN lnClass="ZAAK" lnType="T_ZAAK" inst="4" prefix="">
+            <Private type="example-private-ln">ZAAK/4</Private>
+            <DOI name="NamPlt"><DAI name="lnNs"><Val>urn:example:private:ns:2025</Val></DAI></DOI>
             <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>
           </LN>
-          <LN lnClass="ZAAK" lnType="T_ZAAK" inst="5" prefix="" lnNs="urn:example:private:ns:2025">
-            <Private type="example-private-ln"><ext:Info cls="ZAAK" inst="5" /></Private>
+          <LN lnClass="ZAAK" lnType="T_ZAAK" inst="5" prefix="">
+            <Private type="example-private-ln">ZAAK/5</Private>
+            <DOI name="NamPlt"><DAI name="lnNs"><Val>urn:example:private:ns:2025</Val></DAI></DOI>
             <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>
           </LN>
-          <LN lnClass="ZAAL" lnType="T_ZAAL" inst="1" prefix="" lnNs="urn:example:private:ns:2025">
-            <Private type="example-private-ln"><ext:Info cls="ZAAL" inst="1" /></Private>
+          <LN lnClass="ZAAL" lnType="T_ZAAL" inst="1" prefix="">
+            <Private type="example-private-ln">ZAAL/1</Private>
+            <DOI name="NamPlt"><DAI name="lnNs"><Val>urn:example:private:ns:2025</Val></DAI></DOI>
             <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>
           </LN>
-          <LN lnClass="ZAAL" lnType="T_ZAAL" inst="2" prefix="" lnNs="urn:example:private:ns:2025">
-            <Private type="example-private-ln"><ext:Info cls="ZAAL" inst="2" /></Private>
+          <LN lnClass="ZAAL" lnType="T_ZAAL" inst="2" prefix="">
+            <Private type="example-private-ln">ZAAL/2</Private>
+            <DOI name="NamPlt"><DAI name="lnNs"><Val>urn:example:private:ns:2025</Val></DAI></DOI>
             <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>
           </LN>
-          <LN lnClass="ZAAL" lnType="T_ZAAL" inst="3" prefix="" lnNs="urn:example:private:ns:2025">
-            <Private type="example-private-ln"><ext:Info cls="ZAAL" inst="3" /></Private>
+          <LN lnClass="ZAAL" lnType="T_ZAAL" inst="3" prefix="">
+            <Private type="example-private-ln">ZAAL/3</Private>
+            <DOI name="NamPlt"><DAI name="lnNs"><Val>urn:example:private:ns:2025</Val></DAI></DOI>
             <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>
           </LN>
-          <LN lnClass="ZAAL" lnType="T_ZAAL" inst="4" prefix="" lnNs="urn:example:private:ns:2025">
-            <Private type="example-private-ln"><ext:Info cls="ZAAL" inst="4" /></Private>
+          <LN lnClass="ZAAL" lnType="T_ZAAL" inst="4" prefix="">
+            <Private type="example-private-ln">ZAAL/4</Private>
+            <DOI name="NamPlt"><DAI name="lnNs"><Val>urn:example:private:ns:2025</Val></DAI></DOI>
             <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>
           </LN>
-          <LN lnClass="ZAAL" lnType="T_ZAAL" inst="5" prefix="" lnNs="urn:example:private:ns:2025">
-            <Private type="example-private-ln"><ext:Info cls="ZAAL" inst="5" /></Private>
+          <LN lnClass="ZAAL" lnType="T_ZAAL" inst="5" prefix="">
+            <Private type="example-private-ln">ZAAL/5</Private>
+            <DOI name="NamPlt"><DAI name="lnNs"><Val>urn:example:private:ns:2025</Val></DAI></DOI>
             <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>
           </LN>
-          <LN lnClass="ZAAM" lnType="T_ZAAM" inst="1" prefix="" lnNs="urn:example:private:ns:2025">
-            <Private type="example-private-ln"><ext:Info cls="ZAAM" inst="1" /></Private>
+          <LN lnClass="ZAAM" lnType="T_ZAAM" inst="1" prefix="">
+            <Private type="example-private-ln">ZAAM/1</Private>
+            <DOI name="NamPlt"><DAI name="lnNs"><Val>urn:example:private:ns:2025</Val></DAI></DOI>
             <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>
           </LN>
-          <LN lnClass="ZAAM" lnType="T_ZAAM" inst="2" prefix="" lnNs="urn:example:private:ns:2025">
-            <Private type="example-private-ln"><ext:Info cls="ZAAM" inst="2" /></Private>
+          <LN lnClass="ZAAM" lnType="T_ZAAM" inst="2" prefix="">
+            <Private type="example-private-ln">ZAAM/2</Private>
+            <DOI name="NamPlt"><DAI name="lnNs"><Val>urn:example:private:ns:2025</Val></DAI></DOI>
             <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>
           </LN>
-          <LN lnClass="ZAAM" lnType="T_ZAAM" inst="3" prefix="" lnNs="urn:example:private:ns:2025">
-            <Private type="example-private-ln"><ext:Info cls="ZAAM" inst="3" /></Private>
+          <LN lnClass="ZAAM" lnType="T_ZAAM" inst="3" prefix="">
+            <Private type="example-private-ln">ZAAM/3</Private>
+            <DOI name="NamPlt"><DAI name="lnNs"><Val>urn:example:private:ns:2025</Val></DAI></DOI>
             <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>
           </LN>
-          <LN lnClass="ZAAM" lnType="T_ZAAM" inst="4" prefix="" lnNs="urn:example:private:ns:2025">
-            <Private type="example-private-ln"><ext:Info cls="ZAAM" inst="4" /></Private>
+          <LN lnClass="ZAAM" lnType="T_ZAAM" inst="4" prefix="">
+            <Private type="example-private-ln">ZAAM/4</Private>
+            <DOI name="NamPlt"><DAI name="lnNs"><Val>urn:example:private:ns:2025</Val></DAI></DOI>
             <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>
           </LN>
-          <LN lnClass="ZAAM" lnType="T_ZAAM" inst="5" prefix="" lnNs="urn:example:private:ns:2025">
-            <Private type="example-private-ln"><ext:Info cls="ZAAM" inst="5" /></Private>
+          <LN lnClass="ZAAM" lnType="T_ZAAM" inst="5" prefix="">
+            <Private type="example-private-ln">ZAAM/5</Private>
+            <DOI name="NamPlt"><DAI name="lnNs"><Val>urn:example:private:ns:2025</Val></DAI></DOI>
             <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>
           </LN>
-          <LN lnClass="ZAAN" lnType="T_ZAAN" inst="1" prefix="" lnNs="urn:example:private:ns:2025">
-            <Private type="example-private-ln"><ext:Info cls="ZAAN" inst="1" /></Private>
+          <LN lnClass="ZAAN" lnType="T_ZAAN" inst="1" prefix="">
+            <Private type="example-private-ln">ZAAN/1</Private>
+            <DOI name="NamPlt"><DAI name="lnNs"><Val>urn:example:private:ns:2025</Val></DAI></DOI>
             <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>
           </LN>
-          <LN lnClass="ZAAN" lnType="T_ZAAN" inst="2" prefix="" lnNs="urn:example:private:ns:2025">
-            <Private type="example-private-ln"><ext:Info cls="ZAAN" inst="2" /></Private>
+          <LN lnClass="ZAAN" lnType="T_ZAAN" inst="2" prefix="">
+            <Private type="example-private-ln">ZAAN/2</Private>
+            <DOI name="NamPlt"><DAI name="lnNs"><Val>urn:example:private:ns:2025</Val></DAI></DOI>
             <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>
           </LN>
-          <LN lnClass="ZAAN" lnType="T_ZAAN" inst="3" prefix="" lnNs="urn:example:private:ns:2025">
-            <Private type="example-private-ln"><ext:Info cls="ZAAN" inst="3" /></Private>
+          <LN lnClass="ZAAN" lnType="T_ZAAN" inst="3" prefix="">
+            <Private type="example-private-ln">ZAAN/3</Private>
+            <DOI name="NamPlt"><DAI name="lnNs"><Val>urn:example:private:ns:2025</Val></DAI></DOI>
             <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>
           </LN>
-          <LN lnClass="ZAAN" lnType="T_ZAAN" inst="4" prefix="" lnNs="urn:example:private:ns:2025">
-            <Private type="example-private-ln"><ext:Info cls="ZAAN" inst="4" /></Private>
+          <LN lnClass="ZAAN" lnType="T_ZAAN" inst="4" prefix="">
+            <Private type="example-private-ln">ZAAN/4</Private>
+            <DOI name="NamPlt"><DAI name="lnNs"><Val>urn:example:private:ns:2025</Val></DAI></DOI>
             <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>
           </LN>
-          <LN lnClass="ZAAN" lnType="T_ZAAN" inst="5" prefix="" lnNs="urn:example:private:ns:2025">
-            <Private type="example-private-ln"><ext:Info cls="ZAAN" inst="5" /></Private>
+          <LN lnClass="ZAAN" lnType="T_ZAAN" inst="5" prefix="">
+            <Private type="example-private-ln">ZAAN/5</Private>
+            <DOI name="NamPlt"><DAI name="lnNs"><Val>urn:example:private:ns:2025</Val></DAI></DOI>
             <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>
           </LN>
-          <LN lnClass="ZAAO" lnType="T_ZAAO" inst="1" prefix="" lnNs="urn:example:private:ns:2025">
-            <Private type="example-private-ln"><ext:Info cls="ZAAO" inst="1" /></Private>
+          <LN lnClass="ZAAO" lnType="T_ZAAO" inst="1" prefix="">
+            <Private type="example-private-ln">ZAAO/1</Private>
+            <DOI name="NamPlt"><DAI name="lnNs"><Val>urn:example:private:ns:2025</Val></DAI></DOI>
             <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>
           </LN>
-          <LN lnClass="ZAAO" lnType="T_ZAAO" inst="2" prefix="" lnNs="urn:example:private:ns:2025">
-            <Private type="example-private-ln"><ext:Info cls="ZAAO" inst="2" /></Private>
+          <LN lnClass="ZAAO" lnType="T_ZAAO" inst="2" prefix="">
+            <Private type="example-private-ln">ZAAO/2</Private>
+            <DOI name="NamPlt"><DAI name="lnNs"><Val>urn:example:private:ns:2025</Val></DAI></DOI>
             <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>
           </LN>
-          <LN lnClass="ZAAO" lnType="T_ZAAO" inst="3" prefix="" lnNs="urn:example:private:ns:2025">
-            <Private type="example-private-ln"><ext:Info cls="ZAAO" inst="3" /></Private>
+          <LN lnClass="ZAAO" lnType="T_ZAAO" inst="3" prefix="">
+            <Private type="example-private-ln">ZAAO/3</Private>
+            <DOI name="NamPlt"><DAI name="lnNs"><Val>urn:example:private:ns:2025</Val></DAI></DOI>
             <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>
           </LN>
-          <LN lnClass="ZAAO" lnType="T_ZAAO" inst="4" prefix="" lnNs="urn:example:private:ns:2025">
-            <Private type="example-private-ln"><ext:Info cls="ZAAO" inst="4" /></Private>
+          <LN lnClass="ZAAO" lnType="T_ZAAO" inst="4" prefix="">
+            <Private type="example-private-ln">ZAAO/4</Private>
+            <DOI name="NamPlt"><DAI name="lnNs"><Val>urn:example:private:ns:2025</Val></DAI></DOI>
             <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>
           </LN>
-          <LN lnClass="ZAAO" lnType="T_ZAAO" inst="5" prefix="" lnNs="urn:example:private:ns:2025">
-            <Private type="example-private-ln"><ext:Info cls="ZAAO" inst="5" /></Private>
+          <LN lnClass="ZAAO" lnType="T_ZAAO" inst="5" prefix="">
+            <Private type="example-private-ln">ZAAO/5</Private>
+            <DOI name="NamPlt"><DAI name="lnNs"><Val>urn:example:private:ns:2025</Val></DAI></DOI>
             <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>
           </LN>
-          <LN lnClass="ZAAP" lnType="T_ZAAP" inst="1" prefix="" lnNs="urn:example:private:ns:2025">
-            <Private type="example-private-ln"><ext:Info cls="ZAAP" inst="1" /></Private>
+          <LN lnClass="ZAAP" lnType="T_ZAAP" inst="1" prefix="">
+            <Private type="example-private-ln">ZAAP/1</Private>
+            <DOI name="NamPlt"><DAI name="lnNs"><Val>urn:example:private:ns:2025</Val></DAI></DOI>
             <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>
           </LN>
-          <LN lnClass="ZAAP" lnType="T_ZAAP" inst="2" prefix="" lnNs="urn:example:private:ns:2025">
-            <Private type="example-private-ln"><ext:Info cls="ZAAP" inst="2" /></Private>
+          <LN lnClass="ZAAP" lnType="T_ZAAP" inst="2" prefix="">
+            <Private type="example-private-ln">ZAAP/2</Private>
+            <DOI name="NamPlt"><DAI name="lnNs"><Val>urn:example:private:ns:2025</Val></DAI></DOI>
             <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>
           </LN>
-          <LN lnClass="ZAAP" lnType="T_ZAAP" inst="3" prefix="" lnNs="urn:example:private:ns:2025">
-            <Private type="example-private-ln"><ext:Info cls="ZAAP" inst="3" /></Private>
+          <LN lnClass="ZAAP" lnType="T_ZAAP" inst="3" prefix="">
+            <Private type="example-private-ln">ZAAP/3</Private>
+            <DOI name="NamPlt"><DAI name="lnNs"><Val>urn:example:private:ns:2025</Val></DAI></DOI>
             <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>
           </LN>
-          <LN lnClass="ZAAP" lnType="T_ZAAP" inst="4" prefix="" lnNs="urn:example:private:ns:2025">
-            <Private type="example-private-ln"><ext:Info cls="ZAAP" inst="4" /></Private>
+          <LN lnClass="ZAAP" lnType="T_ZAAP" inst="4" prefix="">
+            <Private type="example-private-ln">ZAAP/4</Private>
+            <DOI name="NamPlt"><DAI name="lnNs"><Val>urn:example:private:ns:2025</Val></DAI></DOI>
             <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>
           </LN>
-          <LN lnClass="ZAAP" lnType="T_ZAAP" inst="5" prefix="" lnNs="urn:example:private:ns:2025">
-            <Private type="example-private-ln"><ext:Info cls="ZAAP" inst="5" /></Private>
+          <LN lnClass="ZAAP" lnType="T_ZAAP" inst="5" prefix="">
+            <Private type="example-private-ln">ZAAP/5</Private>
+            <DOI name="NamPlt"><DAI name="lnNs"><Val>urn:example:private:ns:2025</Val></DAI></DOI>
             <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>
           </LN>
-          <LN lnClass="ZAAQ" lnType="T_ZAAQ" inst="1" prefix="" lnNs="urn:example:private:ns:2025">
-            <Private type="example-private-ln"><ext:Info cls="ZAAQ" inst="1" /></Private>
+          <LN lnClass="ZAAQ" lnType="T_ZAAQ" inst="1" prefix="">
+            <Private type="example-private-ln">ZAAQ/1</Private>
+            <DOI name="NamPlt"><DAI name="lnNs"><Val>urn:example:private:ns:2025</Val></DAI></DOI>
             <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>
           </LN>
-          <LN lnClass="ZAAQ" lnType="T_ZAAQ" inst="2" prefix="" lnNs="urn:example:private:ns:2025">
-            <Private type="example-private-ln"><ext:Info cls="ZAAQ" inst="2" /></Private>
+          <LN lnClass="ZAAQ" lnType="T_ZAAQ" inst="2" prefix="">
+            <Private type="example-private-ln">ZAAQ/2</Private>
+            <DOI name="NamPlt"><DAI name="lnNs"><Val>urn:example:private:ns:2025</Val></DAI></DOI>
             <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>
           </LN>
-          <LN lnClass="ZAAQ" lnType="T_ZAAQ" inst="3" prefix="" lnNs="urn:example:private:ns:2025">
-            <Private type="example-private-ln"><ext:Info cls="ZAAQ" inst="3" /></Private>
+          <LN lnClass="ZAAQ" lnType="T_ZAAQ" inst="3" prefix="">
+            <Private type="example-private-ln">ZAAQ/3</Private>
+            <DOI name="NamPlt"><DAI name="lnNs"><Val>urn:example:private:ns:2025</Val></DAI></DOI>
             <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>
           </LN>
-          <LN lnClass="ZAAQ" lnType="T_ZAAQ" inst="4" prefix="" lnNs="urn:example:private:ns:2025">
-            <Private type="example-private-ln"><ext:Info cls="ZAAQ" inst="4" /></Private>
+          <LN lnClass="ZAAQ" lnType="T_ZAAQ" inst="4" prefix="">
+            <Private type="example-private-ln">ZAAQ/4</Private>
+            <DOI name="NamPlt"><DAI name="lnNs"><Val>urn:example:private:ns:2025</Val></DAI></DOI>
             <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>
           </LN>
-          <LN lnClass="ZAAQ" lnType="T_ZAAQ" inst="5" prefix="" lnNs="urn:example:private:ns:2025">
-            <Private type="example-private-ln"><ext:Info cls="ZAAQ" inst="5" /></Private>
+          <LN lnClass="ZAAQ" lnType="T_ZAAQ" inst="5" prefix="">
+            <Private type="example-private-ln">ZAAQ/5</Private>
+            <DOI name="NamPlt"><DAI name="lnNs"><Val>urn:example:private:ns:2025</Val></DAI></DOI>
             <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>
           </LN>
-          <LN lnClass="ZAAR" lnType="T_ZAAR" inst="1" prefix="" lnNs="urn:example:private:ns:2025">
-            <Private type="example-private-ln"><ext:Info cls="ZAAR" inst="1" /></Private>
+          <LN lnClass="ZAAR" lnType="T_ZAAR" inst="1" prefix="">
+            <Private type="example-private-ln">ZAAR/1</Private>
+            <DOI name="NamPlt"><DAI name="lnNs"><Val>urn:example:private:ns:2025</Val></DAI></DOI>
             <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>
           </LN>
-          <LN lnClass="ZAAR" lnType="T_ZAAR" inst="2" prefix="" lnNs="urn:example:private:ns:2025">
-            <Private type="example-private-ln"><ext:Info cls="ZAAR" inst="2" /></Private>
+          <LN lnClass="ZAAR" lnType="T_ZAAR" inst="2" prefix="">
+            <Private type="example-private-ln">ZAAR/2</Private>
+            <DOI name="NamPlt"><DAI name="lnNs"><Val>urn:example:private:ns:2025</Val></DAI></DOI>
             <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>
           </LN>
-          <LN lnClass="ZAAR" lnType="T_ZAAR" inst="3" prefix="" lnNs="urn:example:private:ns:2025">
-            <Private type="example-private-ln"><ext:Info cls="ZAAR" inst="3" /></Private>
+          <LN lnClass="ZAAR" lnType="T_ZAAR" inst="3" prefix="">
+            <Private type="example-private-ln">ZAAR/3</Private>
+            <DOI name="NamPlt"><DAI name="lnNs"><Val>urn:example:private:ns:2025</Val></DAI></DOI>
             <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>
           </LN>
-          <LN lnClass="ZAAR" lnType="T_ZAAR" inst="4" prefix="" lnNs="urn:example:private:ns:2025">
-            <Private type="example-private-ln"><ext:Info cls="ZAAR" inst="4" /></Private>
+          <LN lnClass="ZAAR" lnType="T_ZAAR" inst="4" prefix="">
+            <Private type="example-private-ln">ZAAR/4</Private>
+            <DOI name="NamPlt"><DAI name="lnNs"><Val>urn:example:private:ns:2025</Val></DAI></DOI>
             <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>
           </LN>
-          <LN lnClass="ZAAR" lnType="T_ZAAR" inst="5" prefix="" lnNs="urn:example:private:ns:2025">
-            <Private type="example-private-ln"><ext:Info cls="ZAAR" inst="5" /></Private>
+          <LN lnClass="ZAAR" lnType="T_ZAAR" inst="5" prefix="">
+            <Private type="example-private-ln">ZAAR/5</Private>
+            <DOI name="NamPlt"><DAI name="lnNs"><Val>urn:example:private:ns:2025</Val></DAI></DOI>
             <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>
           </LN>
-          <LN lnClass="ZAAS" lnType="T_ZAAS" inst="1" prefix="" lnNs="urn:example:private:ns:2025">
-            <Private type="example-private-ln"><ext:Info cls="ZAAS" inst="1" /></Private>
+          <LN lnClass="ZAAS" lnType="T_ZAAS" inst="1" prefix="">
+            <Private type="example-private-ln">ZAAS/1</Private>
+            <DOI name="NamPlt"><DAI name="lnNs"><Val>urn:example:private:ns:2025</Val></DAI></DOI>
             <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>
           </LN>
-          <LN lnClass="ZAAS" lnType="T_ZAAS" inst="2" prefix="" lnNs="urn:example:private:ns:2025">
-            <Private type="example-private-ln"><ext:Info cls="ZAAS" inst="2" /></Private>
+          <LN lnClass="ZAAS" lnType="T_ZAAS" inst="2" prefix="">
+            <Private type="example-private-ln">ZAAS/2</Private>
+            <DOI name="NamPlt"><DAI name="lnNs"><Val>urn:example:private:ns:2025</Val></DAI></DOI>
             <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>
           </LN>
-          <LN lnClass="ZAAS" lnType="T_ZAAS" inst="3" prefix="" lnNs="urn:example:private:ns:2025">
-            <Private type="example-private-ln"><ext:Info cls="ZAAS" inst="3" /></Private>
+          <LN lnClass="ZAAS" lnType="T_ZAAS" inst="3" prefix="">
+            <Private type="example-private-ln">ZAAS/3</Private>
+            <DOI name="NamPlt"><DAI name="lnNs"><Val>urn:example:private:ns:2025</Val></DAI></DOI>
             <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>
           </LN>
-          <LN lnClass="ZAAS" lnType="T_ZAAS" inst="4" prefix="" lnNs="urn:example:private:ns:2025">
-            <Private type="example-private-ln"><ext:Info cls="ZAAS" inst="4" /></Private>
+          <LN lnClass="ZAAS" lnType="T_ZAAS" inst="4" prefix="">
+            <Private type="example-private-ln">ZAAS/4</Private>
+            <DOI name="NamPlt"><DAI name="lnNs"><Val>urn:example:private:ns:2025</Val></DAI></DOI>
             <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>
           </LN>
-          <LN lnClass="ZAAS" lnType="T_ZAAS" inst="5" prefix="" lnNs="urn:example:private:ns:2025">
-            <Private type="example-private-ln"><ext:Info cls="ZAAS" inst="5" /></Private>
+          <LN lnClass="ZAAS" lnType="T_ZAAS" inst="5" prefix="">
+            <Private type="example-private-ln">ZAAS/5</Private>
+            <DOI name="NamPlt"><DAI name="lnNs"><Val>urn:example:private:ns:2025</Val></DAI></DOI>
             <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>
           </LN>
-          <LN lnClass="ZAAT" lnType="T_ZAAT" inst="1" prefix="" lnNs="urn:example:private:ns:2025">
-            <Private type="example-private-ln"><ext:Info cls="ZAAT" inst="1" /></Private>
+          <LN lnClass="ZAAT" lnType="T_ZAAT" inst="1" prefix="">
+            <Private type="example-private-ln">ZAAT/1</Private>
+            <DOI name="NamPlt"><DAI name="lnNs"><Val>urn:example:private:ns:2025</Val></DAI></DOI>
             <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>
           </LN>
-          <LN lnClass="ZAAT" lnType="T_ZAAT" inst="2" prefix="" lnNs="urn:example:private:ns:2025">
-            <Private type="example-private-ln"><ext:Info cls="ZAAT" inst="2" /></Private>
+          <LN lnClass="ZAAT" lnType="T_ZAAT" inst="2" prefix="">
+            <Private type="example-private-ln">ZAAT/2</Private>
+            <DOI name="NamPlt"><DAI name="lnNs"><Val>urn:example:private:ns:2025</Val></DAI></DOI>
             <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>
           </LN>
-          <LN lnClass="ZAAT" lnType="T_ZAAT" inst="3" prefix="" lnNs="urn:example:private:ns:2025">
-            <Private type="example-private-ln"><ext:Info cls="ZAAT" inst="3" /></Private>
+          <LN lnClass="ZAAT" lnType="T_ZAAT" inst="3" prefix="">
+            <Private type="example-private-ln">ZAAT/3</Private>
+            <DOI name="NamPlt"><DAI name="lnNs"><Val>urn:example:private:ns:2025</Val></DAI></DOI>
             <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>
           </LN>
-          <LN lnClass="ZAAT" lnType="T_ZAAT" inst="4" prefix="" lnNs="urn:example:private:ns:2025">
-            <Private type="example-private-ln"><ext:Info cls="ZAAT" inst="4" /></Private>
+          <LN lnClass="ZAAT" lnType="T_ZAAT" inst="4" prefix="">
+            <Private type="example-private-ln">ZAAT/4</Private>
+            <DOI name="NamPlt"><DAI name="lnNs"><Val>urn:example:private:ns:2025</Val></DAI></DOI>
             <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>
           </LN>
-          <LN lnClass="ZAAT" lnType="T_ZAAT" inst="5" prefix="" lnNs="urn:example:private:ns:2025">
-            <Private type="example-private-ln"><ext:Info cls="ZAAT" inst="5" /></Private>
+          <LN lnClass="ZAAT" lnType="T_ZAAT" inst="5" prefix="">
+            <Private type="example-private-ln">ZAAT/5</Private>
+            <DOI name="NamPlt"><DAI name="lnNs"><Val>urn:example:private:ns:2025</Val></DAI></DOI>
             <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>
           </LN>
         </LDevice>
@@ -2900,6 +3000,7 @@
       <DA name="vendor" bType="VisString255" fc="DC" />
       <DA name="swRev" bType="VisString255" fc="DC" />
       <DA name="d" bType="VisString255" fc="DC" />
+      <DA name="lnNs" bType="VisString255" fc="EX" />
     </DOType>
     <DOType id="DPL_1" cdc="DPL">
       <DA name="vendor" bType="VisString255" fc="DC" />

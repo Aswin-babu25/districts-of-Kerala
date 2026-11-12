@@ -61,7 +61,8 @@ datasets = []  # (name, [fcda strings])
 
 def fcda(lnclass, inst, do, fc, da, prefix=""):
     p = f' prefix="{prefix}"' if prefix else ""
-    return (f'<FCDA ldInst="{LDINST}"{p} lnClass="{lnclass}" lnInst="{inst}" '
+    li = f' lnInst="{inst}"' if inst != "" else ""
+    return (f'<FCDA ldInst="{LDINST}"{p} lnClass="{lnclass}"{li} '
             f'fc="{fc}" doName="{do}" daName="{da}" />')
 
 
@@ -172,8 +173,9 @@ for i in range(1, a.std_mmxu + 1):
 # private LNs
 for cls in classes:
     for inst in range(1, a.insts + 1):
-        w(f'          <LN lnClass="{cls}" lnType="{ln_type(cls)}" inst="{inst}" prefix="" lnNs="{NS}">')
-        w(f'            <Private type="example-private-ln"><ext:Info cls="{cls}" inst="{inst}" /></Private>')
+        w(f'          <LN lnClass="{cls}" lnType="{ln_type(cls)}" inst="{inst}" prefix="">')
+        w(f'            <Private type="example-private-ln">{cls}/{inst}</Private>')
+        w(f'            <DOI name="NamPlt"><DAI name="lnNs"><Val>{NS}</Val></DAI></DOI>')
         w('            <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>')
         w('          </LN>')
 
@@ -206,6 +208,7 @@ w('    <DOType id="LPL_1" cdc="LPL">')
 w('      <DA name="vendor" bType="VisString255" fc="DC" />')
 w('      <DA name="swRev" bType="VisString255" fc="DC" />')
 w('      <DA name="d" bType="VisString255" fc="DC" />')
+w('      <DA name="lnNs" bType="VisString255" fc="EX" />')
 w('    </DOType>')
 w('    <DOType id="DPL_1" cdc="DPL">')
 w('      <DA name="vendor" bType="VisString255" fc="DC" />')
