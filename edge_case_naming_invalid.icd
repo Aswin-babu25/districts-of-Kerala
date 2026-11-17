@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SCL xmlns="http://www.iec.ch/61850/2003/SCL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.iec.ch/61850/2003/SCL SCL.xsd" version="2007" revision="B" release="4">
+  <Header id="EdgeCaseNaming_INVALID" version="1" revision="1" toolID="gen_edge_case_naming.py" nameStructure="IEDName" />
+  <Communication>
+    <SubNetwork name="subnetwork1" type="8-MMS">
+      <ConnectedAP iedName="PVTIED" apName="AP1">
+        <Address>
+          <P type="IP">10.0.0.3</P>
+          <P type="IP-SUBNET">255.255.255.0</P>
+          <P type="IP-GATEWAY">10.0.0.101</P>
+          <P type="OSI-TSEL">0001</P>
+          <P type="OSI-PSEL">00000001</P>
+          <P type="OSI-SSEL">0001</P>
+        </Address>
+      </ConnectedAP>
+    </SubNetwork>
+  </Communication>
+  <IED name="PVTIED" originalSclVersion="2007" originalSclRevision="B" originalSclRelease="4">
+    <Services nameLength="64">
+      <DynAssociation />
+      <ConfDataSet max="5" maxAttributes="20" modify="false" />
+      <ReportSettings cbName="Fix" datSet="Fix" rptID="Fix" optFields="Fix" bufTime="Fix" trgOps="Fix" intgPd="Fix" />
+      <ConfReportControl max="5" bufMode="both" bufConf="false" />
+    </Services>
+    <AccessPoint name="AP1">
+      <Server>
+        <Authentication />
+        <LDevice inst="LDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDXZ">
+          <LN0 lnClass="LLN0" lnType="T_LLN0" inst="">
+            <DataSet name="datasetNameAtMax32CharsBoundaryXQ">
+              <FCDA ldInst="LDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDXZ" lnClass="ZABC" prefix="PfxMaxLen11X" lnInst="1234567890123" fc="ST" doName="Beh" daName="stVal" />
+              <FCDA ldInst="LDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDXZ" lnClass="ZABC" prefix="PfxMaxLen11X" lnInst="1234567890123" fc="ST" doName="PrivDoNamXXXY" daName="stVal" />
+              <FCDA ldInst="LDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDXZ" lnClass="MMXU" lnInst="1" fc="MX" doName="PrivDoNamXXXY" daName="mag.subAttrNameAtTheDocumentedSixtyCharacterMaximumBoundaryXXXXXz" />
+            </DataSet>
+            <ReportControl name="rcbNameAtMax32CharsBoundaryXXXXXQ" datSet="datasetNameAtMax32CharsBoundaryXQ" rptID="LDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDXZ/LLN0.rcbNameAtMax32CharsBoundaryXXXXXQ" confRev="1" buffered="true" intgPd="10000" bufTime="100">
+              <TrgOps dchg="true" qchg="true" dupd="false" period="true" gi="true" />
+              <OptFields seqNum="true" timeStamp="true" dataSet="true" reasonCode="true" dataRef="true" entryID="true" configRef="true" bufOvfl="true" />
+              <RptEnabled max="1" />
+            </ReportControl>
+            <DOI name="Mod"><DAI name="ctlModel"><Val>status-only</Val></DAI></DOI>
+          </LN0>
+          <LN lnClass="ZABC" lnType="T_ZABC" inst="1234567890123" prefix="PfxMaxLen11X">
+            <Private type="example-private-ln">edge-case INVALID</Private>
+            <DOI name="NamPlt"><DAI name="lnNs"><Val>urn:example:private:ns:2025</Val></DAI></DOI>
+            <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>
+            <DOI name="PrivDoNamXXXY"><DAI name="stVal"><Val>true</Val></DAI></DOI>
+          </LN>
+          <LN lnClass="MMXU" lnType="T_MMXU" inst="1" prefix="">
+            <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>
+            <DOI name="PrivDoNamXXXY"><DAI name="mag"><DAI name="subAttrNameAtTheDocumentedSixtyCharacterMaximumBoundaryXXXXXz"><Val>0.0</Val></DAI></DAI></DOI>
+          </LN>
+        </LDevice>
+      </Server>
+    </AccessPoint>
+  </IED>
+  <DataTypeTemplates>
+    <LNodeType id="T_LLN0" lnClass="LLN0">
+      <DO name="Mod" type="ENC_Mod" />
+      <DO name="Beh" type="ENS_Beh" />
+      <DO name="NamPlt" type="LPL_1" />
+    </LNodeType>
+    <LNodeType id="T_ZABC" lnClass="ZABC">
+      <DO name="Beh" type="ENS_Beh" />
+      <DO name="NamPlt" type="LPL_1" />
+      <DO name="PrivDoNamXXXY" type="SPS_P" />
+    </LNodeType>
+    <LNodeType id="T_MMXU" lnClass="MMXU">
+      <DO name="Beh" type="ENS_Beh" />
+      <DO name="PrivDoNamXXXY" type="MV_SubDA" />
+    </LNodeType>
+    <DOType id="LPL_1" cdc="LPL">
+      <DA name="vendor" bType="VisString255" fc="DC" />
+      <DA name="lnNs" bType="VisString255" fc="EX" />
+    </DOType>
+    <DOType id="ENS_Beh" cdc="ENS">
+      <DA name="stVal" bType="Enum" type="BehaviourModeKind" fc="ST" dchg="true" />
+      <DA name="q" bType="Quality" fc="ST" qchg="true" />
+      <DA name="t" bType="Timestamp" fc="ST" />
+    </DOType>
+    <DOType id="ENC_Mod" cdc="ENC">
+      <DA name="stVal" bType="Enum" type="BehaviourModeKind" fc="ST" dchg="true" />
+      <DA name="q" bType="Quality" fc="ST" qchg="true" />
+      <DA name="t" bType="Timestamp" fc="ST" />
+      <DA name="ctlModel" bType="Enum" type="CtlModelKind" fc="CF" dchg="true" />
+    </DOType>
+    <DOType id="SPS_P" cdc="SPS">
+      <DA name="stVal" bType="BOOLEAN" fc="ST" dchg="true" />
+      <DA name="q" bType="Quality" fc="ST" qchg="true" />
+      <DA name="t" bType="Timestamp" fc="ST" />
+    </DOType>
+    <DOType id="MV_SubDA" cdc="MV">
+      <DA name="mag" bType="Struct" type="AnalogueValue_SubDA" fc="MX" dchg="true" />
+      <DA name="q" bType="Quality" fc="MX" qchg="true" />
+      <DA name="t" bType="Timestamp" fc="MX" />
+    </DOType>
+    <DAType id="AnalogueValue_SubDA">
+      <BDA name="subAttrNameAtTheDocumentedSixtyCharacterMaximumBoundaryXXXXXz" bType="FLOAT32" />
+    </DAType>
+    <EnumType id="BehaviourModeKind">
+      <EnumVal ord="1">on</EnumVal>
+      <EnumVal ord="2">blocked</EnumVal>
+      <EnumVal ord="3">test</EnumVal>
+      <EnumVal ord="4">test/blocked</EnumVal>
+      <EnumVal ord="5">off</EnumVal>
+    </EnumType>
+    <EnumType id="CtlModelKind">
+      <EnumVal ord="0">status-only</EnumVal>
+      <EnumVal ord="1">direct-with-normal-security</EnumVal>
+      <EnumVal ord="2">sbo-with-normal-security</EnumVal>
+      <EnumVal ord="3">direct-with-enhanced-security</EnumVal>
+      <EnumVal ord="4">sbo-with-enhanced-security</EnumVal>
+    </EnumType>
+  </DataTypeTemplates>
+</SCL>
