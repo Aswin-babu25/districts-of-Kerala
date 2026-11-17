@@ -125,7 +125,7 @@ def build(out_path, ld, prefix, lninst, doname, subda, cbname, dsname, tag):
     a_('          </LN>')
     a_('          <LN lnClass="MMXU" lnType="T_MMXU" inst="1" prefix="">')
     a_('            <DOI name="Beh"><DAI name="stVal"><Val>on</Val></DAI></DOI>')
-    a_(f'            <DOI name="{doname}"><DAI name="mag"><DAI name="{subda}"><Val>0.0</Val></DAI></DAI></DOI>')
+    a_(f'            <DOI name="{doname}"><DAI name="mag"><SDI name="{subda}"><Val>0.0</Val></SDI></DAI></DOI>')
     a_('          </LN>')
     a_('        </LDevice>')
     a_('      </Server>')
