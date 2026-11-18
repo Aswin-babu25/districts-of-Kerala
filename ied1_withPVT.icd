@@ -1,0 +1,1176 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<SCL xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sxy="http://www.iec.ch/61850/2003/SCLcoordinates" xsi:schemaLocation="http://www.iec.ch/61850/2003/SCL SCL.xsd" version="2007" revision="B" release="4" xmlns:cbs="http://www.schneider-electric.com/TSF/CBS/Privates" xmlns:eComm="http://www.abb.com/61850/2015/SCL_ABBCommunication" xmlns:eGEG500="http://www.gedigitalenergy.com/multilin" xmlns:esel="http://www.selinc.com/2006/61850" xmlns="http://www.iec.ch/61850/2003/SCL">
+  <Header id="project456" version="1" revision="1" toolID="ASE61850 SCL Manager V5.64-Beta" nameStructure="IEDName" />
+  <Communication>
+    <SubNetwork name="subnetwork1" type="8-MMS">
+      <Text>Station Bus</Text>
+      <BitRate unit="b/s">10</BitRate>
+      <ConnectedAP iedName="ied1" apName="accessPoint1" redProt="none">
+        <Address>
+          <P type="IP">10.0.0.3</P>
+          <P type="IP-SUBNET">255.255.255.0</P>
+          <P type="IP-GATEWAY">10.0.0.101</P>
+          <P type="OSI-TSEL">0001</P>
+          <P type="OSI-PSEL">00000001</P>
+          <P type="OSI-SSEL">0001</P>
+        </Address>
+      </ConnectedAP>
+    </SubNetwork>
+  </Communication>
+  <IED name="ied1" engRight="full" originalSclRevision="B" originalSclVersion="2007" originalSclRelease="4" owner="project437">
+    <Services nameLength="64">
+      <DynAssociation />
+      <ConfDataSet max="20" maxAttributes="50" modify="true" />
+      <ConfReportControl max="20" bufMode="both" bufConf="false" />
+      <SettingGroups />
+      <ConfLNs fixPrefix="false" fixLnInst="false" />
+      <GOOSE max="20" fixedOffs="false" />
+      <GSSE max="20" />
+      <SupSubscription maxGo="0" maxSv="0" />
+    </Services>
+    <AccessPoint name="accessPoint1" desc="">
+      <Server>
+        <Authentication />
+        <LDevice inst="lDevice1" desc="">
+          <LN0 lnClass="LLN0" lnType="LLN01" inst="">
+            <DataSet name="dataset1" desc="">
+              <FCDA ldInst="lDevice1" lnClass="FSCH" fc="ST" lnInst="1" doName="NxtStrTm" />
+              <FCDA ldInst="lDevice1" lnClass="FSCC" fc="ST" lnInst="1" doName="ActSchdRef" />
+              <FCDA ldInst="lDevice1" lnClass="QSDA" fc="ST" lnInst="1" doName="DDD" daName="stVal" />
+            </DataSet>
+            <DataSet name="dataset2" desc="">
+              <FCDA ldInst="lDevice1" lnClass="FSCC" fc="ST" lnInst="1" doName="Beh" daName="stVal" />
+              <FCDA ldInst="lDevice1" lnClass="FSCC" fc="ST" lnInst="1" doName="ActSchdRef" />
+              <FCDA ldInst="lDevice1" lnClass="FSCC" fc="SP" lnInst="1" doName="CtlEnt" daName="setSrcRef" />
+            </DataSet>
+            <ReportControl name="rcb1" confRev="1" datSet="dataset1" rptID="ied1lDevice1/LLN0.rcb1" buffered="true">
+              <TrgOps dchg="true" qchg="true" />
+              <OptFields seqNum="true" timeStamp="true" dataSet="true" reasonCode="true" />
+              <RptEnabled max="5" desc="" />
+            </ReportControl>
+            <ReportControl name="urcb" confRev="1" datSet="dataset1" rptID="ied1lDevice1/LLN0.rcb2">
+              <TrgOps dchg="true" qchg="true" />
+              <OptFields seqNum="true" timeStamp="true" dataSet="true" reasonCode="true" />
+              <RptEnabled max="5" desc="" />
+            </ReportControl>
+            <DOI name="NamPlt" desc="">
+              <DAI name="ldNs" desc="">
+                <Val>IEC 61850-7-4:2010</Val>
+              </DAI>
+            </DOI>
+            <DOI name="Beh" desc="">
+              <DAI name="stVal">
+                <Val>on</Val>
+              </DAI>
+            </DOI>
+            <DOI name="Health" desc="">
+              <DAI name="stVal">
+                <Val>Ok</Val>
+              </DAI>
+            </DOI>
+            <DOI name="Mod" desc="">
+              <DAI name="stVal">
+                <Val>on</Val>
+              </DAI>
+              <DAI name="ctlModel">
+                <Val>status-only</Val>
+              </DAI>
+            </DOI>
+          </LN0>
+          <LN lnClass="FSCH" lnType="FSCH1" inst="1" prefix="">
+            <DataSet name="dataset1" desc="">
+              <FCDA ldInst="lDevice1" lnClass="FSCC" fc="ST" lnInst="1" doName="Beh" daName="stVal" />
+              <FCDA ldInst="lDevice1" lnClass="FSCC" fc="ST" lnInst="1" doName="ActSchdRef" />
+            </DataSet>
+            <ReportControl name="rcb1" confRev="1" datSet="dataset1" rptID="ied1lDevice1/FSCH1.rcb1" buffered="true" indexed="true" intgPd="60000" bufTime="2" desc="">
+              <TrgOps dchg="true" qchg="true" dupd="false" period="true" gi="true" />
+              <OptFields seqNum="true" timeStamp="true" dataSet="true" reasonCode="true" dataRef="true" bufOvfl="true" entryID="true" configRef="true" />
+            </ReportControl>
+            <DOI name="Beh" desc="">
+              <DAI name="stVal">
+                <Val>on</Val>
+              </DAI>
+            </DOI>
+            <DOI name="SchdSt" desc="">
+              <DAI name="stVal">
+                <Val>Not ready</Val>
+              </DAI>
+            </DOI>
+            <DOI name="EnaReq" desc="">
+              <DAI name="ctlModel">
+                <Val>status-only</Val>
+              </DAI>
+            </DOI>
+            <DOI name="DsaReq" desc="">
+              <DAI name="ctlModel">
+                <Val>status-only</Val>
+              </DAI>
+            </DOI>
+          </LN>
+          <LN lnClass="FSCC" lnType="FSCC1" inst="1" prefix="">
+            <DOI name="Beh" desc="">
+              <DAI name="stVal">
+                <Val>on</Val>
+              </DAI>
+            </DOI>
+          </LN>
+          <LN lnClass="LTRK" lnType="LTRK1" inst="1" prefix="">
+            <DataSet name="dataset1" desc="">
+              <FCDA ldInst="lDevice1" lnClass="LTRK" fc="ST" lnInst="1" doName="Beh" daName="stVal" />
+              <FCDA ldInst="lDevice1" lnClass="LTRK" fc="ST" lnInst="1" doName="Beh" daName="q" />
+              <FCDA ldInst="lDevice1" lnClass="LTRK" fc="SR" lnInst="1" doName="SpcTrk" />
+              <FCDA ldInst="lDevice1" lnClass="LTRK" fc="SR" lnInst="1" doName="BacTrk" daName="serviceType" />
+              <FCDA ldInst="lDevice1" lnClass="LTRK" fc="SR" lnInst="1" doName="UsvcbTrk" daName="smpMod" />
+            </DataSet>
+            <DOI name="Beh" desc="">
+              <DAI name="stVal">
+                <Val>on</Val>
+              </DAI>
+            </DOI>
+          </LN>
+          <LN lnClass="ANCR" lnType="ANCR1" inst="1" prefix="">
+            <DOI name="Beh" desc="">
+              <DAI name="stVal">
+                <Val>on</Val>
+              </DAI>
+            </DOI>
+            <DOI name="ColChg" desc="">
+              <DAI name="ctlModel">
+                <Val>status-only</Val>
+              </DAI>
+            </DOI>
+            <DOI name="ParColMod" desc="">
+              <DAI name="setVal">
+                <Val>Master/Slave</Val>
+              </DAI>
+            </DOI>
+          </LN>
+          <LN lnClass="MFLK" lnType="MFLK1" inst="1" prefix="">
+            <DOI name="Beh" desc="">
+              <DAI name="stVal">
+                <Val>on</Val>
+              </DAI>
+            </DOI>
+          </LN>
+          <LN lnClass="MHAN" lnType="MHAN1" inst="1" prefix="">
+            <DOI name="Beh" desc="">
+              <DAI name="stVal">
+                <Val>on</Val>
+              </DAI>
+            </DOI>
+            <DOI name="HaWatt" desc="">
+              <DAI name="maxPts" desc="" valImport="false" valKind="Set">
+                <Val>11</Val>
+              </DAI>
+            </DOI>
+          </LN>
+          <LN lnClass="PDIF" lnType="PDIF1" inst="1" prefix="">
+            <DOI name="OpCntRs" desc="">
+              <DAI name="ctlModel">
+                <Val>status-only</Val>
+              </DAI>
+            </DOI>
+            <DOI name="Beh" desc="">
+              <DAI name="stVal">
+                <Val>on</Val>
+              </DAI>
+            </DOI>
+          </LN>
+          <LN lnClass="LTIM" lnType="LTIM3" inst="1" prefix="">
+            <DOI name="Beh" desc="">
+              <DAI name="stVal">
+                <Val>on</Val>
+              </DAI>
+            </DOI>
+            <DOI name="StrWeekDay" desc="">
+              <DAI name="setVal">
+                <Val>Monday</Val>
+              </DAI>
+            </DOI>
+          </LN>
+          <LN lnClass="LTMS" lnType="LTMS3" inst="1" prefix="">
+            <DOI name="Beh" desc="">
+              <DAI name="stVal">
+                <Val>on</Val>
+              </DAI>
+            </DOI>
+            <DOI name="TmSrcTyp" desc="">
+              <DAI name="stVal">
+                <Val>Unknown</Val>
+              </DAI>
+            </DOI>
+          </LN>
+          <LN lnClass="ATCC" lnType="ATCC1" inst="1" prefix="">
+            <DOI name="Beh" desc="">
+              <DAI name="stVal">
+                <Val>on</Val>
+              </DAI>
+            </DOI>
+          </LN>
+          <LN lnClass="CSWI" lnType="CSWI7" inst="1" prefix="">
+            <DOI name="CmdBlk" desc="">
+              <DAI name="ctlModel" valImport="false">
+                <Val>sbo-with-normal-security</Val>
+              </DAI>
+            </DOI>
+            <DOI name="OpCntRs" desc="">
+              <DAI name="ctlModel" valImport="false">
+                <Val>direct-with-enhanced-security</Val>
+              </DAI>
+            </DOI>
+            <DOI name="Beh" desc="">
+              <DAI name="stVal">
+                <Val>on</Val>
+              </DAI>
+            </DOI>
+            <DOI name="Pos" desc="">
+              <DAI name="ctlModel">
+                <Val>status-only</Val>
+              </DAI>
+            </DOI>
+          </LN>
+          <LN lnClass="QSDA" lnType="QSDA1" inst="1" prefix="">
+            <DOI name="Beh" desc="">
+              <DAI name="stVal">
+                <Val>on</Val>
+              </DAI>
+            </DOI>
+            <DOI name="DDD" desc="">
+              <DAI name="ctlModel">
+                <Val>status-only</Val>
+              </DAI>
+            </DOI>
+          </LN>
+          <LN lnClass="QSDA" lnType="QSDA1" inst="2" prefix="">
+            <DOI name="Beh" desc="">
+              <DAI name="stVal">
+                <Val>on</Val>
+              </DAI>
+            </DOI>
+            <DOI name="DDD" desc="">
+              <DAI name="ctlModel">
+                <Val>status-only</Val>
+              </DAI>
+            </DOI>
+          </LN>
+        </LDevice>
+      </Server>
+    </AccessPoint>
+  </IED>
+  <DataTypeTemplates>
+    <LNodeType id="LLN01" lnClass="LLN0">
+      <DO name="NamPlt" type="LPL_6_NamPlt" />
+      <DO name="Beh" type="ENS_24_Beh" />
+      <DO name="Health" type="ENS_5_Health" />
+      <DO name="Mod" type="ENC_28_Mod" />
+      <DO name="InRef" type="ORG_3_InRef" />
+      <DO name="MltLev" type="SPG_5_MltLev" />
+    </LNodeType>
+    <LNodeType id="FSCH1" lnClass="FSCH">
+      <DO name="Beh" type="ENS_24_Beh" />
+      <DO name="SchdSt" type="ENS_1_SchdSt" />
+      <DO name="NxtStrTm" type="TCS_1_NxtStrTm" />
+      <DO name="SchdEnaErr" type="ENS_1_SchdSt" />
+      <DO name="EnaReq" type="SPC_1_EnaReq" />
+      <DO name="DsaReq" type="SPC_1_EnaReq" />
+      <DO name="NumEntr" type="ING_1_NumEntr" />
+      <DO name="SchdIntv" type="ING_1_NumEntr" />
+      <DO name="SchdReuse" type="SPG_5_MltLev" />
+    </LNodeType>
+    <LNodeType id="FSCC1" lnClass="FSCC">
+      <DO name="Beh" type="ENS_24_Beh" />
+      <DO name="ActSchdRef" type="ORS_1_ActSchdRef" />
+      <DO name="CtlEnt" type="ORG_1_CtlEnt" />
+    </LNodeType>
+    <LNodeType id="LTRK1" lnClass="LTRK">
+      <DO name="Beh" type="ENS_24_Beh" />
+      <DO name="SpcTrk" type="CTS_5_SpcTrk" />
+      <DO name="BacTrk" type="CTS_1_BacTrk" />
+      <DO name="GenTrk" type="CST_4_GenTrk" />
+      <DO name="UrcbTrk" type="UTS_4_UrcbTrk" />
+      <DO name="BrcbTrk" type="BTS_4_BrcbTrk" />
+      <DO name="LocbTrk" type="LTS_2_LocbTrk" />
+      <DO name="UsvcbTrk" type="NTS_1_UsvcbTrk" />
+    </LNodeType>
+    <LNodeType id="ANCR1" lnClass="ANCR">
+      <DO name="OpCntRs" type="INC_7_OpCntRs" />
+      <DO name="Beh" type="ENS_24_Beh" />
+      <DO name="AWatt" type="MV_1_AWatt" />
+      <DO name="VolResoPt" type="CMV_1_VolResoPt" />
+      <DO name="ColTapPos" type="ISC_1_ColTapPos" />
+      <DO name="ColPos" type="APC_1_ColPos" />
+      <DO name="ColChg" type="BAC_1_ColChg" />
+      <DO name="ParColMod" type="ENG_1_ParColMod" />
+    </LNodeType>
+    <LNodeType id="MFLK1" lnClass="MFLK">
+      <DO name="Beh" type="ENS_24_Beh" />
+      <DO name="PPPdmWav" type="HDEL_1_PPPdmWav" />
+      <DO name="PhPdmWav" type="HWYE_1_PhPdmWav" />
+    </LNodeType>
+    <LNodeType id="MHAN1" lnClass="MHAN">
+      <DO name="Beh" type="ENS_24_Beh" />
+      <DO name="HaWatt" type="HMV_1_HaWatt" />
+    </LNodeType>
+    <LNodeType id="PDIF1" lnClass="PDIF">
+      <DO name="OpCntRs" type="INC_7_OpCntRs" />
+      <DO name="Beh" type="ENS_24_Beh" />
+      <DO name="TmASt" type="CSD_1_TmASt" />
+      <DO name="Op" type="ACT_16_Op" />
+      <DO name="TmACrv" type="CURVE_1_TmACrv" />
+      <DO name="TmAChr" type="CSG_1_TmAChr" />
+    </LNodeType>
+    <LNodeType id="LTIM3" lnClass="LTIM">
+      <DO name="Beh" type="ENS_24_Beh" />
+      <DO name="TmDT" type="SPS_2_TmDT" />
+      <DO name="TmOfsTmm" type="ING_1_NumEntr" />
+      <DO name="TmUseDT" type="SPG_5_MltLev" />
+      <DO name="TmChgDT" type="TSG_4_TmChgDT" />
+      <DO name="StrWeekDay" type="ENG_1_StrWeekDay" />
+    </LNodeType>
+    <LNodeType id="LTMS3" lnClass="LTMS">
+      <DO name="Beh" type="ENS_24_Beh" />
+      <DO name="TmSrc" type="VSS_3_TmSrc" />
+      <DO name="TmSrcTyp" type="ENS_2_TmSrcTyp" />
+      <DO name="TmSrcSet" type="VSG_1_TmSrcSet" />
+    </LNodeType>
+    <LNodeType id="ATCC1" lnClass="ATCC">
+      <DO name="Beh" type="ENS_24_Beh" />
+      <DO name="BlkLV" type="ASG_1_BlkLV" />
+    </LNodeType>
+    <LNodeType id="CSWI7" lnClass="CSWI">
+      <DO name="CmdBlk" type="SPC_1_CmdBlk" />
+      <DO name="OpCntRs" type="INC_9_OpCntRs" />
+      <DO name="ClcNxtTmms" type="INS_1_ClcNxtTmms" />
+      <DO name="Beh" type="ENS_24_Beh" />
+      <DO name="Pos" type="DPC_3_Pos" />
+    </LNodeType>
+    <LNodeType id="QSDA1" lnClass="QSDA">
+      <DO name="Beh" type="ENS_1_Beh" />
+      <DO name="DDD" type="DPC_1_DDD" />
+    </LNodeType>
+    <DOType id="LPL_6_NamPlt" cdc="LPL">
+      <DA name="vendor" bType="VisString255" fc="DC" />
+      <DA name="swRev" bType="VisString255" fc="DC" />
+      <DA name="ldNs" bType="VisString255" fc="EX" />
+      <DA name="configRev" bType="VisString255" fc="DC" />
+    </DOType>
+    <DOType id="ENS_24_Beh" cdc="ENS">
+      <DA name="stVal" type="BehaviourModeKind" bType="Enum" fc="ST" dchg="true" />
+      <DA name="q" bType="Quality" fc="ST" qchg="true" />
+      <DA name="t" bType="Timestamp" fc="ST" />
+    </DOType>
+    <DOType id="ENS_5_Health" cdc="ENS">
+      <DA name="stVal" type="HealthKind" bType="Enum" fc="ST" dchg="true" />
+      <DA name="q" bType="Quality" fc="ST" qchg="true" />
+      <DA name="t" bType="Timestamp" fc="ST" />
+    </DOType>
+    <DOType id="ENC_28_Mod" cdc="ENC">
+      <DA name="stVal" type="BehaviourModeKind" bType="Enum" fc="ST" dchg="true" />
+      <DA name="q" bType="Quality" fc="ST" qchg="true" />
+      <DA name="t" bType="Timestamp" fc="ST" />
+      <DA name="ctlModel" type="CtlModelKind" bType="Enum" fc="CF" dchg="true" />
+    </DOType>
+    <DOType id="ORG_3_InRef" cdc="ORG">
+      <DA name="setSrcRef" bType="ObjRef" fc="SP" dchg="true" />
+      <DA name="setTstCB" bType="ObjRef" fc="SP" dchg="true" />
+    </DOType>
+    <DOType id="SPG_5_MltLev" cdc="SPG">
+      <DA name="setVal" bType="BOOLEAN" fc="SP" dchg="true" />
+    </DOType>
+    <DOType id="ENS_1_SchdSt" cdc="ENS">
+      <DA name="stVal" type="ScheduleStateKind" bType="Enum" fc="ST" dchg="true" />
+      <DA name="q" bType="Quality" fc="ST" qchg="true" />
+      <DA name="t" bType="Timestamp" fc="ST" />
+    </DOType>
+    <DOType id="TCS_1_NxtStrTm" cdc="TCS">
+      <DA name="stVal" bType="Timestamp" fc="ST" dchg="true" />
+      <DA name="q" bType="Quality" fc="ST" qchg="true" />
+      <DA name="t" bType="Timestamp" fc="ST" />
+    </DOType>
+    <DOType id="SPC_1_EnaReq" cdc="SPC">
+      <DA name="stVal" bType="BOOLEAN" fc="ST" dchg="true" />
+      <DA name="q" bType="Quality" fc="ST" qchg="true" />
+      <DA name="t" bType="Timestamp" fc="ST" />
+      <DA name="ctlModel" type="CtlModelKind" bType="Enum" fc="CF" dchg="true" />
+    </DOType>
+    <DOType id="ING_1_NumEntr" cdc="ING">
+      <DA name="setVal" bType="INT32" fc="SP" dchg="true" />
+    </DOType>
+    <DOType id="ORS_1_ActSchdRef" cdc="ORS">
+      <DA name="stVal" bType="ObjRef" fc="ST" dchg="true" />
+      <DA name="q" bType="Quality" fc="ST" qchg="true" />
+      <DA name="t" bType="Timestamp" fc="ST" />
+    </DOType>
+    <DOType id="ORG_1_CtlEnt" cdc="ORG">
+      <DA name="setSrcRef" bType="ObjRef" fc="SP" dchg="true" />
+    </DOType>
+    <DOType id="CTS_5_SpcTrk" cdc="CTS">
+      <DA name="objRef" bType="ObjRef" fc="SR" dupd="true" />
+      <DA name="serviceType" type="ServiceType" bType="Enum" fc="SR" />
+      <DA name="errorCode" type="ServiceError" bType="Enum" fc="SR" />
+      <DA name="t" bType="Timestamp" fc="SR" />
+      <DA name="ctlVal" bType="BOOLEAN" fc="SR" />
+      <DA name="origin" type="Originator_1" bType="Struct" fc="SR" />
+      <DA name="ctlNum" bType="INT8U" fc="SR" />
+      <DA name="T" bType="Timestamp" fc="SR" />
+      <DA name="Test" bType="BOOLEAN" fc="SR" />
+      <DA name="Check" bType="Check" fc="SR" />
+      <DA name="respAddCause" type="AddCause" bType="Enum" fc="SR" />
+    </DOType>
+    <DOType id="CTS_1_BacTrk" cdc="CTS">
+      <DA name="objRef" bType="ObjRef" desc="Reference of the control object that is being controlled." fc="SR" dupd="true" />
+      <DA name="serviceType" type="ServiceType" bType="Enum" desc="Type of the tracked service" fc="SR" />
+      <DA name="errorCode" type="ServiceError" bType="Enum" desc="See error associated to the service that is specified by serviceType; value no-error for successful service" fc="SR" />
+      <DA name="t" bType="Timestamp" desc="TimeStamp of the completion of the service. If the instance of the CDC is logged or reported using the buffered reporting model, t shall be identical to the EntryTime of the associated Entry." fc="SR" />
+      <DA name="ctlVal" bType="Tcmd" desc="Tap changer Raise / Lower" fc="SR" />
+      <DA name="origin" type="Originator_1" bType="Struct" fc="SR" />
+      <DA name="ctlNum" bType="INT8U" fc="SR" />
+      <DA name="T" bType="Timestamp" fc="SR" />
+      <DA name="Test" bType="BOOLEAN" fc="SR" />
+      <DA name="Check" bType="Check" fc="SR" />
+      <DA name="respAddCause" type="AddCause" bType="Enum" desc="AddCause" fc="SR" />
+    </DOType>
+    <DOType id="CST_4_GenTrk" cdc="CST">
+      <DA name="objRef" bType="ObjRef" fc="SR" dupd="true" />
+      <DA name="serviceType" type="ServiceNameKind" bType="Enum" fc="SR" />
+      <DA name="errorCode" type="ServiceError" bType="Enum" fc="SR" />
+      <DA name="t" bType="Timestamp" fc="SR" />
+    </DOType>
+    <DOType id="UTS_4_UrcbTrk" cdc="UTS">
+      <DA name="objRef" bType="ObjRef" fc="SR" dupd="true" />
+      <DA name="serviceType" type="ServiceNameKind" bType="Enum" fc="SR" />
+      <DA name="errorCode" type="ServiceError" bType="Enum" fc="SR" />
+      <DA name="t" bType="Timestamp" fc="SR" />
+      <DA name="rptID" bType="VisString129" fc="SR" />
+      <DA name="rptEna" bType="BOOLEAN" fc="SR" />
+      <DA name="resv" bType="BOOLEAN" fc="SR" />
+      <DA name="datSet" bType="ObjRef" fc="SR" />
+      <DA name="confRev" bType="INT32U" fc="SR" />
+      <DA name="optFlds" bType="OptFlds" fc="SR" />
+      <DA name="bufTm" bType="INT32U" fc="SR" />
+      <DA name="sqNum" bType="INT8U" fc="SR" />
+      <DA name="trgOps" bType="TrgOps" fc="SR" />
+      <DA name="intgPd" bType="INT32U" fc="SR" />
+      <DA name="gi" bType="BOOLEAN" fc="SR" />
+    </DOType>
+    <DOType id="BTS_4_BrcbTrk" cdc="BTS">
+      <DA name="objRef" bType="ObjRef" fc="SR" dupd="true" />
+      <DA name="serviceType" type="ServiceNameKind" bType="Enum" fc="SR" />
+      <DA name="errorCode" type="ServiceError" bType="Enum" fc="SR" />
+      <DA name="t" bType="Timestamp" fc="SR" />
+      <DA name="rptID" bType="VisString129" fc="SR" />
+      <DA name="rptEna" bType="BOOLEAN" fc="SR" />
+      <DA name="datSet" bType="ObjRef" fc="SR" />
+      <DA name="confRev" bType="INT32U" fc="SR" />
+      <DA name="optFlds" bType="OptFlds" fc="SR" />
+      <DA name="bufTm" bType="INT32U" fc="SR" />
+      <DA name="sqNum" bType="INT16U" fc="SR" />
+      <DA name="trgOps" bType="TrgOps" fc="SR" />
+      <DA name="intgPd" bType="INT32U" fc="SR" />
+      <DA name="gi" bType="BOOLEAN" fc="SR" />
+      <DA name="purgeBuf" bType="BOOLEAN" fc="SR" />
+      <DA name="entryID" bType="EntryID" fc="SR" />
+      <DA name="timeOfEntry" bType="EntryTime" fc="SR" />
+    </DOType>
+    <DOType id="LTS_2_LocbTrk" cdc="LTS">
+      <DA name="objRef" bType="ObjRef" fc="SR" dupd="true" />
+      <DA name="serviceType" type="ServiceNameKind" bType="Enum" fc="SR" />
+      <DA name="errorCode" type="ServiceError" bType="Enum" fc="SR" />
+      <DA name="t" bType="Timestamp" fc="SR" />
+      <DA name="logEna" bType="BOOLEAN" fc="SR" />
+      <DA name="logRef" bType="ObjRef" fc="SR" />
+      <DA name="datSet" bType="ObjRef" fc="SR" />
+      <DA name="oldEntrTm" bType="EntryTime" fc="SR" />
+      <DA name="newEntrTm" bType="EntryTime" fc="SR" />
+      <DA name="oldEnt" bType="EntryID" fc="SR" />
+      <DA name="newEnt" bType="EntryID" fc="SR" />
+      <DA name="trgOps" bType="TrgOps" fc="SR" />
+      <DA name="intgPd" bType="INT32U" fc="SR" />
+    </DOType>
+    <DOType id="NTS_1_UsvcbTrk" cdc="NTS">
+      <DA name="objRef" bType="ObjRef" fc="SR" dupd="true" />
+      <DA name="serviceType" type="ServiceNameKind" bType="Enum" fc="SR" />
+      <DA name="errorCode" type="ServiceError" bType="Enum" fc="SR" />
+      <DA name="t" bType="Timestamp" fc="SR" />
+      <DA name="svEna" bType="BOOLEAN" fc="SR" />
+      <DA name="resv" bType="BOOLEAN" fc="SR" />
+      <DA name="usvID" bType="VisString129" fc="SR" />
+      <DA name="datSet" bType="ObjRef" fc="SR" />
+      <DA name="confRev" bType="INT32U" fc="SR" />
+      <DA name="smpMod" type="SamplingModeKind" bType="Enum" fc="SR" />
+      <DA name="smpRate" bType="INT16U" fc="SR" />
+      <DA name="optFlds" bType="SvOptFlds" fc="SR" />
+      <DA name="dstAddress" bType="PhyComAddr" fc="SR" />
+    </DOType>
+    <DOType id="INC_7_OpCntRs" cdc="INC">
+      <DA name="stVal" bType="INT32" fc="ST" dchg="true" />
+      <DA name="q" bType="Quality" fc="ST" qchg="true" />
+      <DA name="t" bType="Timestamp" fc="ST" />
+      <DA name="ctlModel" type="CtlModelKind" bType="Enum" fc="CF" dchg="true" />
+      <DA name="units" type="Unit_1" bType="Struct" fc="CF" dchg="true" />
+    </DOType>
+    <DOType id="MV_1_AWatt" cdc="MV">
+      <DA name="mag" type="AnalogueValue_1" bType="Struct" fc="MX" dchg="true" />
+      <DA name="q" bType="Quality" fc="MX" qchg="true" />
+      <DA name="t" bType="Timestamp" fc="MX" />
+      <DA name="dbRef" bType="FLOAT32" fc="CF" dchg="true" />
+      <DA name="zeroDbRef" bType="FLOAT32" fc="CF" dchg="true" />
+    </DOType>
+    <DOType id="CMV_1_VolResoPt" cdc="CMV">
+      <DA name="cVal" type="SIPROTEC5_DAType_Vector_mag_V09.20.01_V09.20.01" bType="Struct" fc="MX" dchg="true" />
+      <DA name="q" bType="Quality" fc="MX" qchg="true" />
+      <DA name="t" bType="Timestamp" fc="MX" />
+      <DA name="dbRef" bType="FLOAT32" fc="CF" dchg="true" />
+      <DA name="zeroDbRef" bType="FLOAT32" fc="CF" dchg="true" />
+      <DA name="dbAngRef" bType="FLOAT32" fc="CF" dchg="true" />
+    </DOType>
+    <DOType id="ISC_1_ColTapPos" cdc="ISC">
+      <DA name="valWTr" type="ValWithTrans_1" bType="Struct" fc="ST" dchg="true" />
+      <DA name="q" bType="Quality" fc="ST" qchg="true" />
+      <DA name="t" bType="Timestamp" fc="ST" />
+      <DA name="opRcvd" bType="BOOLEAN" fc="OR" dchg="true" />
+      <DA name="opOk" bType="BOOLEAN" fc="OR" dchg="true" />
+      <DA name="tOpOk" bType="Timestamp" fc="OR" />
+      <DA name="blkEna" bType="BOOLEAN" fc="BL" />
+      <DA name="ctlModel" type="CtlModelKind" bType="Enum" fc="CF" dchg="true" />
+    </DOType>
+    <DOType id="APC_1_ColPos" cdc="APC">
+      <DA name="mxVal" type="AnalogueValue_1" bType="Struct" fc="MX" dchg="true" />
+      <DA name="q" bType="Quality" fc="MX" qchg="true" />
+      <DA name="t" bType="Timestamp" fc="MX" />
+      <DA name="ctlModel" type="CtlModelKind" bType="Enum" fc="CF" dchg="true" />
+      <DA name="dbRef" bType="FLOAT32" fc="CF" dchg="true" />
+    </DOType>
+    <DOType id="BAC_1_ColChg" cdc="BAC">
+      <DA name="mxVal" type="AnalogueValue_1" bType="Struct" fc="MX" dchg="true" />
+      <DA name="q" bType="Quality" fc="MX" qchg="true" />
+      <DA name="t" bType="Timestamp" fc="MX" />
+      <DA name="persistent" bType="BOOLEAN" fc="CF" dchg="true" />
+      <DA name="ctlModel" type="CtlModelKind" bType="Enum" fc="CF" dchg="true" />
+      <DA name="db" bType="INT32U" fc="CF" dchg="true" />
+      <DA name="dbRef" bType="FLOAT32" fc="CF" dchg="true" />
+    </DOType>
+    <DOType id="ENG_1_ParColMod" cdc="ENG">
+      <DA name="setVal" type="ParallelCoilModeKind" bType="Enum" fc="SP" dchg="true" />
+    </DOType>
+    <DOType id="HDEL_1_PPPdmWav" cdc="HDEL">
+      <SDO name="phsAHar" type="CMV_2_phsAHar" />
+      <DA name="numHar" bType="INT16U" fc="CF" dchg="true" />
+      <DA name="numCyc" bType="INT16U" fc="CF" dchg="true" />
+      <DA name="evalTm" bType="INT16U" fc="CF" dchg="true" />
+      <DA name="frequency" bType="FLOAT32" fc="CF" dchg="true" />
+      <DA name="maxPts" bType="INT16U" fc="CF" dchg="true" />
+    </DOType>
+    <DOType id="CMV_2_phsAHar" cdc="CMV">
+      <DA name="cVal" type="SIPROTEC5_DAType_Vector_mag_V09.20.01_V09.20.01" bType="Struct" fc="MX" dchg="true" />
+      <DA name="q" bType="Quality" fc="MX" qchg="true" />
+      <DA name="t" bType="Timestamp" fc="MX" />
+    </DOType>
+    <DOType id="HWYE_1_PhPdmWav" cdc="HWYE">
+      <SDO name="phsAHar" type="CMV_2_phsAHar" />
+      <DA name="numHar" bType="INT16U" fc="CF" dchg="true" />
+      <DA name="numCyc" bType="INT16U" fc="CF" dchg="true" />
+      <DA name="evalTm" bType="INT16U" fc="CF" dchg="true" />
+      <DA name="frequency" bType="FLOAT32" fc="CF" dchg="true" />
+      <DA name="maxPts" bType="INT16U" fc="CF" dchg="true" />
+    </DOType>
+    <DOType id="HMV_1_HaWatt" cdc="HMV">
+      <SDO name="har" type="CMV_2_phsAHar" />
+      <DA name="numHar" bType="INT16U" fc="CF" dchg="true" />
+      <DA name="numCyc" bType="INT16U" fc="CF" dchg="true" />
+      <DA name="evalTm" bType="INT16U" fc="CF" dchg="true" />
+      <DA name="frequency" bType="FLOAT32" fc="CF" dchg="true" />
+      <DA name="maxPts" bType="INT16U" fc="CF" dchg="true" />
+    </DOType>
+    <DOType id="CSD_1_TmASt" cdc="CSD">
+      <DA name="xUnits" type="Unit_2" bType="Struct" fc="DC" />
+      <DA name="xD" bType="VisString255" fc="DC" />
+      <DA name="yUnits" type="Unit_2" bType="Struct" fc="DC" />
+      <DA name="yD" bType="VisString255" fc="DC" />
+      <DA name="numPts" bType="INT16U" fc="DC" />
+      <DA name="crvPts" type="Point_1" bType="Struct" fc="DC" />
+      <DA name="maxPts" bType="INT16U" fc="CF" dchg="true" />
+    </DOType>
+    <DOType id="ACT_16_Op" cdc="ACT">
+      <DA name="general" bType="BOOLEAN" fc="ST" dchg="true" />
+      <DA name="q" bType="Quality" fc="ST" qchg="true" />
+      <DA name="t" bType="Timestamp" fc="ST" />
+    </DOType>
+    <DOType id="CURVE_1_TmACrv" cdc="CURVE">
+      <DA name="setCharact" type="CurveCharKind" bType="Enum" fc="SP" dchg="true" />
+      <DA name="setParA" bType="FLOAT32" fc="SP" dchg="true" />
+      <DA name="setParB" bType="FLOAT32" fc="SP" dchg="true" />
+      <DA name="setParC" bType="FLOAT32" fc="SP" dchg="true" />
+      <DA name="setParD" bType="FLOAT32" fc="SP" dchg="true" />
+      <DA name="setParE" bType="FLOAT32" fc="SP" dchg="true" />
+      <DA name="setParF" bType="FLOAT32" fc="SP" dchg="true" />
+    </DOType>
+    <DOType id="CSG_1_TmAChr" cdc="CSG">
+      <DA name="pointZ" bType="FLOAT32" fc="SP" dchg="true" />
+      <DA name="numPts" bType="INT16U" fc="SP" dchg="true" />
+      <DA name="crvPts" type="Point_1" bType="Struct" fc="SP" dchg="true" />
+      <DA name="xUnits" type="Unit_2" bType="Struct" fc="CF" dchg="true" />
+      <DA name="yUnits" type="Unit_2" bType="Struct" fc="CF" dchg="true" />
+      <DA name="maxPts" bType="INT16U" fc="CF" dchg="true" />
+      <DA name="xD" bType="VisString255" fc="DC" />
+      <DA name="yD" bType="VisString255" fc="DC" />
+    </DOType>
+    <DOType id="SPS_2_TmDT" cdc="SPS">
+      <DA name="stVal" bType="BOOLEAN" fc="ST" dchg="true" />
+      <DA name="q" bType="Quality" fc="ST" qchg="true" />
+      <DA name="t" bType="Timestamp" fc="ST" />
+    </DOType>
+    <DOType id="TSG_4_TmChgDT" cdc="TSG">
+      <DA name="setTm" bType="Timestamp" fc="SP" dchg="true" />
+      <DA name="setCal" type="CalendarTime_1" bType="Struct" fc="SP" dchg="true" />
+    </DOType>
+    <DOType id="ENG_1_StrWeekDay" cdc="ENG">
+      <DA name="setVal" type="StrWeekDayKind" bType="Enum" fc="SP" dchg="true" />
+      <DA name="d" bType="VisString255" fc="DC" />
+    </DOType>
+    <DOType id="VSS_3_TmSrc" cdc="VSS">
+      <DA name="stVal" bType="VisString255" fc="ST" dchg="true" />
+      <DA name="q" bType="Quality" fc="ST" qchg="true" />
+      <DA name="t" bType="Timestamp" fc="ST" />
+    </DOType>
+    <DOType id="ENS_2_TmSrcTyp" cdc="ENS">
+      <DA name="stVal" type="ClockSourceKind" bType="Enum" fc="ST" dchg="true" />
+      <DA name="q" bType="Quality" fc="ST" qchg="true" />
+      <DA name="t" bType="Timestamp" fc="ST" />
+    </DOType>
+    <DOType id="VSG_1_TmSrcSet" cdc="VSG">
+      <DA name="setVal" bType="VisString255" fc="SP" dchg="true" />
+    </DOType>
+    <DOType id="ASG_1_BlkLV" cdc="ASG">
+      <DA name="setMag" type="AnalogueValue_1" bType="Struct" fc="SP" dchg="true" />
+    </DOType>
+    <DOType id="SPC_1_CmdBlk" cdc="SPC">
+      <DA name="SBO" bType="VisString129" fc="CO" />
+      <DA name="SBOw" type="SBOw_1" bType="Struct" fc="CO" />
+      <DA name="Oper" type="Oper_1" bType="Struct" fc="CO" />
+      <DA name="Cancel" type="Cancel_BOOLEAN" bType="Struct" fc="CO" />
+      <DA name="stVal" bType="BOOLEAN" fc="ST" dchg="true" />
+      <DA name="q" bType="Quality" fc="ST" qchg="true" />
+      <DA name="t" bType="Timestamp" fc="ST" />
+      <DA name="ctlModel" type="CtlModelKind" bType="Enum" fc="CF" dchg="true" />
+      <DA name="operTimeout" bType="INT32U" fc="CF" dchg="true" />
+    </DOType>
+    <DOType id="INC_9_OpCntRs" cdc="INC">
+      <DA name="Oper" type="Oper_1" bType="Struct" fc="CO" />
+      <DA name="Cancel" type="Cancel_BOOLEAN" bType="Struct" fc="CO" />
+      <DA name="stVal" bType="INT32" fc="ST" dchg="true" />
+      <DA name="q" bType="Quality" fc="ST" qchg="true" />
+      <DA name="t" bType="Timestamp" fc="ST" />
+      <DA name="ctlModel" type="CtlModelKind" bType="Enum" fc="CF" dchg="true" />
+      <DA name="minVal" bType="INT32" fc="CF" dchg="true" />
+      <DA name="maxVal" bType="INT32" fc="CF" dchg="true" />
+      <DA name="stepSize" bType="INT32U" fc="CF" dchg="true" />
+      <DA name="units" type="Unit_1" bType="Struct" fc="CF" dchg="true" />
+    </DOType>
+    <DOType id="INS_1_ClcNxtTmms" cdc="INS">
+      <DA name="stVal" bType="INT32" fc="ST" dchg="true" />
+      <DA name="q" bType="Quality" fc="ST" qchg="true" />
+      <DA name="t" bType="Timestamp" fc="ST" />
+    </DOType>
+    <DOType id="DPC_3_Pos" cdc="DPC">
+      <DA name="stVal" bType="Dbpos" fc="ST" dchg="true" />
+      <DA name="q" bType="Quality" fc="ST" qchg="true" />
+      <DA name="t" bType="Timestamp" fc="ST" />
+      <DA name="ctlModel" type="CtlModelKind" bType="Enum" fc="CF" dchg="true" />
+    </DOType>
+    <DOType id="ENS_1_Beh" cdc="ENS">
+      <DA name="stVal" type="BehaviourModeKind" bType="Enum" fc="ST" dchg="true" />
+      <DA name="q" bType="Quality" fc="ST" qchg="true" />
+      <DA name="t" bType="Timestamp" fc="ST" />
+    </DOType>
+    <DOType id="DPC_1_DDD" cdc="DPC">
+      <DA name="stVal" bType="Dbpos" fc="ST" dchg="true" />
+      <DA name="q" bType="Quality" fc="ST" qchg="true" />
+      <DA name="t" bType="Timestamp" fc="ST" />
+      <DA name="ctlModel" type="CtlModelKind" bType="Enum" fc="CF" dchg="true" />
+    </DOType>
+    <DAType id="Originator_1">
+      <BDA name="orCat" type="OriginatorCategoryKind" bType="Enum" />
+      <BDA name="orIdent" bType="Octet64" />
+    </DAType>
+    <DAType id="Unit_1">
+      <BDA name="SIUnit" type="SIUnitKind" bType="Enum" />
+      <BDA name="multiplier" type="MultiplierKind" bType="Enum" />
+    </DAType>
+    <DAType id="AnalogueValue_1">
+      <BDA name="f" bType="FLOAT32" />
+    </DAType>
+    <DAType id="SIPROTEC5_DAType_Vector_mag_V09.20.01_V09.20.01">
+      <BDA name="mag" type="SIPROTEC5_DAType_AnalogValue_FLOAT32_V09.20.01_V09.20.01" bType="Struct" />
+    </DAType>
+    <DAType id="SIPROTEC5_DAType_AnalogValue_FLOAT32_V09.20.01_V09.20.01">
+      <BDA name="f" bType="FLOAT32" valKind="Set">
+        <Val>0</Val>
+      </BDA>
+    </DAType>
+    <DAType id="ValWithTrans_1">
+      <BDA name="posVal" bType="INT8" />
+    </DAType>
+    <DAType id="Unit_2">
+      <BDA name="SIUnit" type="SIUnitKind" bType="Enum" />
+    </DAType>
+    <DAType id="Point_1">
+      <BDA name="xVal" bType="FLOAT32" />
+      <BDA name="yVal" bType="FLOAT32" />
+    </DAType>
+    <DAType id="CalendarTime_1">
+      <BDA name="occ" bType="INT16U" />
+      <BDA name="occType" type="OccurrenceKind" bType="Enum" />
+      <BDA name="occPer" type="PeriodKind" bType="Enum" />
+      <BDA name="weekDay" type="WeekdayKind" bType="Enum" />
+      <BDA name="month" type="MonthKind" bType="Enum" />
+      <BDA name="day" bType="INT8U" />
+      <BDA name="hr" bType="INT8U" />
+      <BDA name="mn" bType="INT8U" />
+    </DAType>
+    <DAType id="SBOw_1">
+      <BDA name="ctlVal" bType="BOOLEAN" />
+      <BDA name="operTm" bType="Timestamp" />
+      <BDA name="origin" type="Originator_1" bType="Struct" />
+      <BDA name="ctlNum" bType="INT8U" />
+      <BDA name="T" bType="Timestamp" />
+      <BDA name="Test" bType="BOOLEAN" />
+      <BDA name="Check" bType="Check" />
+    </DAType>
+    <DAType id="Oper_1">
+      <BDA name="ctlVal" type="AnalogueValue_1" bType="Struct" />
+      <BDA name="operTm" bType="Timestamp" />
+      <BDA name="origin" type="Originator_1" bType="Struct" />
+      <BDA name="ctlNum" bType="INT8U" />
+      <BDA name="T" bType="Timestamp" />
+      <BDA name="Test" bType="BOOLEAN" />
+      <BDA name="Check" bType="Check" />
+    </DAType>
+    <DAType id="Cancel_BOOLEAN">
+      <BDA name="ctlVal" bType="BOOLEAN" />
+      <BDA name="origin" type="Originator_1" bType="Struct" />
+      <BDA name="ctlNum" bType="INT8U" />
+      <BDA name="T" bType="Timestamp" />
+      <BDA name="Test" bType="BOOLEAN" />
+      <ProtNs>IEC 61850-8-1:2003</ProtNs>
+    </DAType>
+    <EnumType id="BehaviourModeKind">
+      <EnumVal ord="1">on</EnumVal>
+      <EnumVal ord="2">blocked</EnumVal>
+      <EnumVal ord="3">test</EnumVal>
+      <EnumVal ord="4">test/blocked</EnumVal>
+      <EnumVal ord="5">off</EnumVal>
+    </EnumType>
+    <EnumType id="HealthKind">
+      <EnumVal ord="1">Ok</EnumVal>
+      <EnumVal ord="2">Warning</EnumVal>
+      <EnumVal ord="3">Alarm</EnumVal>
+    </EnumType>
+    <EnumType id="CtlModelKind">
+      <EnumVal ord="0">status-only</EnumVal>
+      <EnumVal ord="1">direct-with-normal-security</EnumVal>
+      <EnumVal ord="2">sbo-with-normal-security</EnumVal>
+      <EnumVal ord="3">direct-with-enhanced-security</EnumVal>
+      <EnumVal ord="4">sbo-with-enhanced-security</EnumVal>
+    </EnumType>
+    <EnumType id="ScheduleStateKind">
+      <EnumVal ord="1">Not ready</EnumVal>
+      <EnumVal ord="2">Start Time required</EnumVal>
+      <EnumVal ord="3">Ready</EnumVal>
+      <EnumVal ord="4">Running</EnumVal>
+    </EnumType>
+    <EnumType id="ServiceType" desc="Time synchronisation acc IEC 61850-9-2">
+      <EnumVal ord="0">Unknown</EnumVal>
+      <EnumVal ord="1">Associate</EnumVal>
+      <EnumVal ord="2">Abort</EnumVal>
+      <EnumVal ord="3">Release</EnumVal>
+      <EnumVal ord="4">GetServerDirectory</EnumVal>
+      <EnumVal ord="5">GetLogicalDeviceDirectory</EnumVal>
+      <EnumVal ord="6">GetAllDataValues</EnumVal>
+      <EnumVal ord="7">GetDataValues</EnumVal>
+      <EnumVal ord="8">SetDataValues</EnumVal>
+      <EnumVal ord="9">GetDataDirectory</EnumVal>
+      <EnumVal ord="10">GetDataDefinition</EnumVal>
+      <EnumVal ord="11">GetDataSetValues</EnumVal>
+      <EnumVal ord="12">SetDataSetValues</EnumVal>
+      <EnumVal ord="13">CreateDataSet</EnumVal>
+      <EnumVal ord="14">DeleteDataSet</EnumVal>
+      <EnumVal ord="15">GetDataSetDirectory</EnumVal>
+      <EnumVal ord="16">SelectActiveSG</EnumVal>
+      <EnumVal ord="17">SelectEditSG</EnumVal>
+      <EnumVal ord="18">SetEditSGValue</EnumVal>
+      <EnumVal ord="19">ConfirmEditSGValues</EnumVal>
+      <EnumVal ord="20">GetEditSGValue</EnumVal>
+      <EnumVal ord="21">GetSGCBValues</EnumVal>
+      <EnumVal ord="22">Report</EnumVal>
+      <EnumVal ord="23">GetBRCBValues</EnumVal>
+      <EnumVal ord="24">SetBRCBValues</EnumVal>
+      <EnumVal ord="25">GetURCBValues</EnumVal>
+      <EnumVal ord="26">SetURCBValues</EnumVal>
+      <EnumVal ord="27">GetLCBValues</EnumVal>
+      <EnumVal ord="28">SetLCBValues</EnumVal>
+      <EnumVal ord="29">QueryLogByTime</EnumVal>
+      <EnumVal ord="30">QueryLogAfter</EnumVal>
+      <EnumVal ord="31">GetLogStatus</EnumVal>
+      <EnumVal ord="32">SendGOOSEMessage</EnumVal>
+      <EnumVal ord="33">GetGoCBValues</EnumVal>
+      <EnumVal ord="34">SetGoCBValues</EnumVal>
+      <EnumVal ord="35">GetGoReference</EnumVal>
+      <EnumVal ord="36">GetGOOSEElementNumber</EnumVal>
+      <EnumVal ord="37">SendMSVMessage</EnumVal>
+      <EnumVal ord="38">GetMSVCBValues</EnumVal>
+      <EnumVal ord="39">SetMSVCBValues</EnumVal>
+      <EnumVal ord="40">SendUSVMessage</EnumVal>
+      <EnumVal ord="41">GetUSVCBValues</EnumVal>
+      <EnumVal ord="42">SetUSVCBValues</EnumVal>
+      <EnumVal ord="43">Select</EnumVal>
+      <EnumVal ord="44">SelectWithValue</EnumVal>
+      <EnumVal ord="45">Cancel</EnumVal>
+      <EnumVal ord="46">Operate</EnumVal>
+      <EnumVal ord="47">CommandTermination</EnumVal>
+      <EnumVal ord="48">TimeActivatedOperate</EnumVal>
+      <EnumVal ord="49">GetFile</EnumVal>
+      <EnumVal ord="50">SetFile</EnumVal>
+      <EnumVal ord="51">DeleteFile</EnumVal>
+      <EnumVal ord="52">GetFileAttributValues</EnumVal>
+      <EnumVal ord="53">TimeSynchronisation</EnumVal>
+      <EnumVal ord="54">InternalChange</EnumVal>
+    </EnumType>
+    <EnumType id="ServiceError" desc="Time synchronisation acc IEC 61850-9-2">
+      <EnumVal ord="0">no-error</EnumVal>
+      <EnumVal ord="1">instance-not-available</EnumVal>
+      <EnumVal ord="2">instance-in-use</EnumVal>
+      <EnumVal ord="3">access-violation</EnumVal>
+      <EnumVal ord="4">access-not-allowed-in-current-state</EnumVal>
+      <EnumVal ord="5">parameter-value-inappropriate</EnumVal>
+      <EnumVal ord="6">parameter-value-inconsistent</EnumVal>
+      <EnumVal ord="7">class-not-supported</EnumVal>
+      <EnumVal ord="8">instance-locked-by-other-client</EnumVal>
+      <EnumVal ord="9">control-must-be-selected</EnumVal>
+      <EnumVal ord="10">type-conflict</EnumVal>
+      <EnumVal ord="11">failed-due-to-communications-constraint</EnumVal>
+      <EnumVal ord="12">failed-due-to-server-constraint</EnumVal>
+    </EnumType>
+    <EnumType id="OriginatorCategoryKind" desc="Time synchronisation acc IEC 61850-9-2">
+      <EnumVal ord="0">not-supported</EnumVal>
+      <EnumVal ord="1">bay-control</EnumVal>
+      <EnumVal ord="2">station-control</EnumVal>
+      <EnumVal ord="3">remote-control</EnumVal>
+      <EnumVal ord="4">automatic-bay</EnumVal>
+      <EnumVal ord="5">automatic-station</EnumVal>
+      <EnumVal ord="6">automatic-remote</EnumVal>
+      <EnumVal ord="7">maintenance</EnumVal>
+      <EnumVal ord="8">process</EnumVal>
+    </EnumType>
+    <EnumType id="AddCause" desc="Time synchronisation acc IEC 61850-9-2">
+      <EnumVal ord="0">Unknown</EnumVal>
+      <EnumVal ord="1">Not-supported</EnumVal>
+      <EnumVal ord="2">Blocked-by-switching-hierarchy</EnumVal>
+      <EnumVal ord="3">Select-failed</EnumVal>
+      <EnumVal ord="4">Invalid-position</EnumVal>
+      <EnumVal ord="5">Position-reached</EnumVal>
+      <EnumVal ord="6">Parameter-change-in-execution</EnumVal>
+      <EnumVal ord="7">Step-limit</EnumVal>
+      <EnumVal ord="8">Blocked-by-Mode</EnumVal>
+      <EnumVal ord="9">Blocked-by-process</EnumVal>
+      <EnumVal ord="10">Blocked-by-interlocking</EnumVal>
+      <EnumVal ord="11">Blocked-by-synchrocheck</EnumVal>
+      <EnumVal ord="12">Command-already-in-execution</EnumVal>
+      <EnumVal ord="13">Blocked-by-health</EnumVal>
+      <EnumVal ord="14">1-of-n-control</EnumVal>
+      <EnumVal ord="15">Abortion-by-cancel</EnumVal>
+      <EnumVal ord="16">Time-limit-over</EnumVal>
+      <EnumVal ord="17">Abortion-by-trip</EnumVal>
+      <EnumVal ord="18">Object-not-selected</EnumVal>
+      <EnumVal ord="19"> Object-already-selected </EnumVal>
+      <EnumVal ord="20">No-access-authority</EnumVal>
+      <EnumVal ord="21">Ended-with-overshoot</EnumVal>
+      <EnumVal ord="22">Abortion-due-to-deviation</EnumVal>
+      <EnumVal ord="23">Abortion-by-communication-loss </EnumVal>
+      <EnumVal ord="24">Blocked-by-command</EnumVal>
+      <EnumVal ord="25">None</EnumVal>
+      <EnumVal ord="26">Locked-by-other-client</EnumVal>
+      <EnumVal ord="27">Inconsistent-parameters</EnumVal>
+    </EnumType>
+    <EnumType id="ServiceNameKind" desc="Time synchronisation acc IEC 61850-9-2">
+      <EnumVal ord="0">Unknown</EnumVal>
+      <EnumVal ord="1">Associate</EnumVal>
+      <EnumVal ord="2">Abort</EnumVal>
+      <EnumVal ord="3">Release</EnumVal>
+      <EnumVal ord="4">GetServerDirectory</EnumVal>
+      <EnumVal ord="5">GetLogicalDeviceDirectory</EnumVal>
+      <EnumVal ord="6">GetAllDataValues</EnumVal>
+      <EnumVal ord="7">GetDataValues</EnumVal>
+      <EnumVal ord="8">SetDataValues</EnumVal>
+      <EnumVal ord="9">GetDataDirectory</EnumVal>
+      <EnumVal ord="10">GetDataDefinition</EnumVal>
+      <EnumVal ord="11">GetDataSetValues</EnumVal>
+      <EnumVal ord="12">SetDataSetValues</EnumVal>
+      <EnumVal ord="13">CreateDataSet</EnumVal>
+      <EnumVal ord="14">DeleteDataSet</EnumVal>
+      <EnumVal ord="15">GetDataSetDirectory</EnumVal>
+      <EnumVal ord="16">SelectActiveSG</EnumVal>
+      <EnumVal ord="17">SelectEditSG</EnumVal>
+      <EnumVal ord="18">SetEditSGValue</EnumVal>
+      <EnumVal ord="19">ConfirmEditSGValues</EnumVal>
+      <EnumVal ord="20">GetEditSGValue</EnumVal>
+      <EnumVal ord="21">GetSGCBValues</EnumVal>
+      <EnumVal ord="22">Report</EnumVal>
+      <EnumVal ord="23">GetBRCBValues</EnumVal>
+      <EnumVal ord="24">SetBRCBValues</EnumVal>
+      <EnumVal ord="25">GetURCBValues</EnumVal>
+      <EnumVal ord="26">SetURCBValues</EnumVal>
+      <EnumVal ord="27">GetLCBValues</EnumVal>
+      <EnumVal ord="28">SetLCBValues</EnumVal>
+      <EnumVal ord="29">QueryLogByTime</EnumVal>
+      <EnumVal ord="30">QueryLogAfter</EnumVal>
+      <EnumVal ord="31">GetLogStatusValues</EnumVal>
+      <EnumVal ord="32">SendGOOSEMessage</EnumVal>
+      <EnumVal ord="33">GetGoCBValues</EnumVal>
+      <EnumVal ord="34">SetGoCBValues</EnumVal>
+      <EnumVal ord="35">GetGoReference</EnumVal>
+      <EnumVal ord="36">GetGOOSEElementNumber</EnumVal>
+      <EnumVal ord="37">SendMSVMessage</EnumVal>
+      <EnumVal ord="38">GetMSVCBValues</EnumVal>
+      <EnumVal ord="39">SetMSVCBValues</EnumVal>
+      <EnumVal ord="40">SendUSVMessage</EnumVal>
+      <EnumVal ord="41">GetUSVCBValues</EnumVal>
+      <EnumVal ord="42">SetUSVCBValues</EnumVal>
+      <EnumVal ord="43">Select</EnumVal>
+      <EnumVal ord="44">SelectWithValue</EnumVal>
+      <EnumVal ord="45">Cancel</EnumVal>
+      <EnumVal ord="46">Operate</EnumVal>
+      <EnumVal ord="47">CommandTermination</EnumVal>
+      <EnumVal ord="48">TimeActivatedOperate</EnumVal>
+      <EnumVal ord="49">GetFile</EnumVal>
+      <EnumVal ord="50">SetFile</EnumVal>
+      <EnumVal ord="51">DeleteFile</EnumVal>
+      <EnumVal ord="52">GetFileAttributeValues</EnumVal>
+      <EnumVal ord="53">TimeSynchronization</EnumVal>
+      <EnumVal ord="54">InternalChange</EnumVal>
+      <EnumVal ord="55">GetLogicalNodeDirectory</EnumVal>
+      <EnumVal ord="56">GetMsvReference</EnumVal>
+      <EnumVal ord="57">GetMSVElementNumber</EnumVal>
+    </EnumType>
+    <EnumType id="SamplingModeKind" desc="Time synchronisation acc IEC 61850-9-2">
+      <EnumVal ord="0">SamplesPerPeriod</EnumVal>
+      <EnumVal ord="1">SamplesPerSecond</EnumVal>
+      <EnumVal ord="2">SecondsPerSample</EnumVal>
+    </EnumType>
+    <EnumType id="SIUnitKind" desc="Time synchronisation acc IEC 61850-9-2">
+      <EnumVal ord="1" />
+      <EnumVal ord="2">m</EnumVal>
+      <EnumVal ord="3">kg</EnumVal>
+      <EnumVal ord="4">s</EnumVal>
+      <EnumVal ord="5">A</EnumVal>
+      <EnumVal ord="6">K</EnumVal>
+      <EnumVal ord="7">mol</EnumVal>
+      <EnumVal ord="8">cd</EnumVal>
+      <EnumVal ord="9">deg</EnumVal>
+      <EnumVal ord="10">rad</EnumVal>
+      <EnumVal ord="11">sr</EnumVal>
+      <EnumVal ord="21">Gy</EnumVal>
+      <EnumVal ord="22">Bq</EnumVal>
+      <EnumVal ord="23">°C</EnumVal>
+      <EnumVal ord="24">Sv</EnumVal>
+      <EnumVal ord="25">F</EnumVal>
+      <EnumVal ord="26">C</EnumVal>
+      <EnumVal ord="27">S</EnumVal>
+      <EnumVal ord="28">H</EnumVal>
+      <EnumVal ord="29">V</EnumVal>
+      <EnumVal ord="30">ohm</EnumVal>
+      <EnumVal ord="31">J</EnumVal>
+      <EnumVal ord="32">N</EnumVal>
+      <EnumVal ord="33">Hz</EnumVal>
+      <EnumVal ord="34">lx</EnumVal>
+      <EnumVal ord="35">Lm</EnumVal>
+      <EnumVal ord="36">Wb</EnumVal>
+      <EnumVal ord="37">T</EnumVal>
+      <EnumVal ord="38">W</EnumVal>
+      <EnumVal ord="39">Pa</EnumVal>
+      <EnumVal ord="41">m²</EnumVal>
+      <EnumVal ord="42">m³</EnumVal>
+      <EnumVal ord="43">m/s</EnumVal>
+      <EnumVal ord="44">m/s²</EnumVal>
+      <EnumVal ord="45">m³/s</EnumVal>
+      <EnumVal ord="46">m/m³</EnumVal>
+      <EnumVal ord="47">M</EnumVal>
+      <EnumVal ord="48">kg/m³</EnumVal>
+      <EnumVal ord="49">m²/s</EnumVal>
+      <EnumVal ord="50">W/m K</EnumVal>
+      <EnumVal ord="51">J/K</EnumVal>
+      <EnumVal ord="52">ppm</EnumVal>
+      <EnumVal ord="53">1/s</EnumVal>
+      <EnumVal ord="54">rad/s</EnumVal>
+      <EnumVal ord="55">W/m²</EnumVal>
+      <EnumVal ord="56">J/m²</EnumVal>
+      <EnumVal ord="57">S/m</EnumVal>
+      <EnumVal ord="58">K/s</EnumVal>
+      <EnumVal ord="59">Pa/s</EnumVal>
+      <EnumVal ord="60">J/kg K</EnumVal>
+      <EnumVal ord="61">VA</EnumVal>
+      <EnumVal ord="62">Watts</EnumVal>
+      <EnumVal ord="63">VAr</EnumVal>
+      <EnumVal ord="64">phi</EnumVal>
+      <EnumVal ord="65">cos(phi)</EnumVal>
+      <EnumVal ord="66">Vs</EnumVal>
+      <EnumVal ord="67">V²</EnumVal>
+      <EnumVal ord="68">As</EnumVal>
+      <EnumVal ord="69">A²</EnumVal>
+      <EnumVal ord="70">A²t</EnumVal>
+      <EnumVal ord="71">VAh</EnumVal>
+      <EnumVal ord="72">Wh</EnumVal>
+      <EnumVal ord="73">VArh</EnumVal>
+      <EnumVal ord="74">V/Hz</EnumVal>
+      <EnumVal ord="75">Hz/s</EnumVal>
+      <EnumVal ord="76">char</EnumVal>
+      <EnumVal ord="77">char/s</EnumVal>
+      <EnumVal ord="78">kgm²</EnumVal>
+      <EnumVal ord="79">dB</EnumVal>
+      <EnumVal ord="80">J/Wh</EnumVal>
+      <EnumVal ord="81">W/s</EnumVal>
+      <EnumVal ord="82">l/s</EnumVal>
+      <EnumVal ord="83">dBm</EnumVal>
+      <EnumVal ord="84">h</EnumVal>
+      <EnumVal ord="85">min</EnumVal>
+      <EnumVal ord="86">Ohm/m</EnumVal>
+      <EnumVal ord="87">percent/s</EnumVal>
+    </EnumType>
+    <EnumType id="MultiplierKind" desc="Time synchronisation acc IEC 61850-9-2">
+      <EnumVal ord="-24">y</EnumVal>
+      <EnumVal ord="-21">z</EnumVal>
+      <EnumVal ord="-18">a</EnumVal>
+      <EnumVal ord="-15">f</EnumVal>
+      <EnumVal ord="-12">p</EnumVal>
+      <EnumVal ord="-9">n</EnumVal>
+      <EnumVal ord="-6">µ</EnumVal>
+      <EnumVal ord="-3">m</EnumVal>
+      <EnumVal ord="-2">c</EnumVal>
+      <EnumVal ord="-1">d</EnumVal>
+      <EnumVal ord="0" />
+      <EnumVal ord="1">da</EnumVal>
+      <EnumVal ord="2">h</EnumVal>
+      <EnumVal ord="3">k</EnumVal>
+      <EnumVal ord="6">M</EnumVal>
+      <EnumVal ord="9">G</EnumVal>
+      <EnumVal ord="12">T</EnumVal>
+      <EnumVal ord="15">P</EnumVal>
+      <EnumVal ord="18">E</EnumVal>
+      <EnumVal ord="21">Z</EnumVal>
+      <EnumVal ord="24">Y</EnumVal>
+    </EnumType>
+    <EnumType id="ParallelCoilModeKind" desc="Time synchronisation acc IEC 61850-9-2">
+      <EnumVal ord="1">Master/Slave</EnumVal>
+      <EnumVal ord="2">Master/Slave with fixed slave position</EnumVal>
+      <EnumVal ord="3">Master/Slave with variable slave position</EnumVal>
+      <EnumVal ord="4">Parallel operation without communication</EnumVal>
+    </EnumType>
+    <EnumType id="CurveCharKind" desc="Time synchronisation acc IEC 61850-9-2">
+      <EnumVal ord="0">None</EnumVal>
+      <EnumVal ord="1">ANSI Extremely Inverse</EnumVal>
+      <EnumVal ord="2">ANSI Very Inverse</EnumVal>
+      <EnumVal ord="3">ANSI Normal Inverse</EnumVal>
+      <EnumVal ord="4">ANSI Moderate Inverse</EnumVal>
+      <EnumVal ord="5">ANSI Definite Time</EnumVal>
+      <EnumVal ord="6">Long-Time Extremely Inverse</EnumVal>
+      <EnumVal ord="7">Long-Time Very Inverse</EnumVal>
+      <EnumVal ord="8">Long-Time Inverse</EnumVal>
+      <EnumVal ord="9">IEC Normal Inverse</EnumVal>
+      <EnumVal ord="10">IEC Very Inverse</EnumVal>
+      <EnumVal ord="11">IEC Inverse</EnumVal>
+      <EnumVal ord="12">IEC Extremely Inverse</EnumVal>
+      <EnumVal ord="13">IEC Short-Time Inverse</EnumVal>
+      <EnumVal ord="14">IEC Long-Time Inverse</EnumVal>
+      <EnumVal ord="15">IEC Definite Time</EnumVal>
+      <EnumVal ord="16">Reserved</EnumVal>
+      <EnumVal ord="17">Polynom 1</EnumVal>
+      <EnumVal ord="18">Polynom 2</EnumVal>
+      <EnumVal ord="19">Polynom 3</EnumVal>
+      <EnumVal ord="20">Polynom 4</EnumVal>
+      <EnumVal ord="21">Polynom 5</EnumVal>
+      <EnumVal ord="22">Polynom 6</EnumVal>
+      <EnumVal ord="23">Polynom 7</EnumVal>
+      <EnumVal ord="24">Polynom 8</EnumVal>
+      <EnumVal ord="25">Polynom 9</EnumVal>
+      <EnumVal ord="26">Polynom 10</EnumVal>
+      <EnumVal ord="27">Polynom 11</EnumVal>
+      <EnumVal ord="28">Polynom 12</EnumVal>
+      <EnumVal ord="29">Polynom 13</EnumVal>
+      <EnumVal ord="30">Polynom 14</EnumVal>
+      <EnumVal ord="31">Polynom 15</EnumVal>
+      <EnumVal ord="32">Polynom 16</EnumVal>
+      <EnumVal ord="33">Multiline 1</EnumVal>
+      <EnumVal ord="34">Multiline 2</EnumVal>
+      <EnumVal ord="35">Multiline 3</EnumVal>
+      <EnumVal ord="36">Multiline 4</EnumVal>
+      <EnumVal ord="37">Multiline 5</EnumVal>
+      <EnumVal ord="38">Multiline 6</EnumVal>
+      <EnumVal ord="39">Multiline 7</EnumVal>
+      <EnumVal ord="40">Multiline 8</EnumVal>
+      <EnumVal ord="41">Multiline 9</EnumVal>
+      <EnumVal ord="42">Multiline 10</EnumVal>
+      <EnumVal ord="43">Multiline 11</EnumVal>
+      <EnumVal ord="44">Multiline 12</EnumVal>
+      <EnumVal ord="45">Multiline 13</EnumVal>
+      <EnumVal ord="46">Multiline 14</EnumVal>
+      <EnumVal ord="47">Multiline 15</EnumVal>
+      <EnumVal ord="48">Multiline 16</EnumVal>
+    </EnumType>
+    <EnumType id="OccurrenceKind" desc="Time synchronisation acc IEC 61850-9-2">
+      <EnumVal ord="0">Time</EnumVal>
+      <EnumVal ord="1">WeekDay</EnumVal>
+      <EnumVal ord="2">WeekOfYear</EnumVal>
+      <EnumVal ord="3">DayOfMonth</EnumVal>
+      <EnumVal ord="4">DayOfYear</EnumVal>
+      <EnumVal ord="5">NONE</EnumVal>
+    </EnumType>
+    <EnumType id="PeriodKind" desc="Time synchronisation acc IEC 61850-9-2">
+      <EnumVal ord="0">Hour</EnumVal>
+      <EnumVal ord="1">Day</EnumVal>
+      <EnumVal ord="2">Week</EnumVal>
+      <EnumVal ord="3">Month</EnumVal>
+      <EnumVal ord="4">Year</EnumVal>
+    </EnumType>
+    <EnumType id="WeekdayKind" desc="Time synchronisation acc IEC 61850-9-2">
+      <EnumVal ord="0">reserved</EnumVal>
+      <EnumVal ord="1">Monday</EnumVal>
+      <EnumVal ord="2">Tuesday</EnumVal>
+      <EnumVal ord="3">Wednesday</EnumVal>
+      <EnumVal ord="4">Thursday</EnumVal>
+      <EnumVal ord="5">Friday</EnumVal>
+      <EnumVal ord="6">Saturday</EnumVal>
+      <EnumVal ord="7">Sunday</EnumVal>
+    </EnumType>
+    <EnumType id="MonthKind" desc="Time synchronisation acc IEC 61850-9-2">
+      <EnumVal ord="0">reserved</EnumVal>
+      <EnumVal ord="1">January</EnumVal>
+      <EnumVal ord="2">February</EnumVal>
+      <EnumVal ord="3">March</EnumVal>
+      <EnumVal ord="4">April</EnumVal>
+      <EnumVal ord="5">May</EnumVal>
+      <EnumVal ord="6">June</EnumVal>
+      <EnumVal ord="7">July</EnumVal>
+      <EnumVal ord="8">August</EnumVal>
+      <EnumVal ord="9">September</EnumVal>
+      <EnumVal ord="10">October</EnumVal>
+      <EnumVal ord="11">November</EnumVal>
+      <EnumVal ord="12">December</EnumVal>
+    </EnumType>
+    <EnumType id="StrWeekDayKind" desc="Time synchronisation acc IEC 61850-9-2">
+      <EnumVal ord="1">Monday</EnumVal>
+      <EnumVal ord="2">Tuesday</EnumVal>
+      <EnumVal ord="3">Wednesday</EnumVal>
+      <EnumVal ord="4">Thursday</EnumVal>
+      <EnumVal ord="5">Friday</EnumVal>
+      <EnumVal ord="6">Saturday</EnumVal>
+      <EnumVal ord="7">Sunday</EnumVal>
+    </EnumType>
+    <EnumType id="ClockSourceKind" desc="Behaviour or mode (BehaviourModeKind enumeration)">
+      <EnumVal ord="1">Unknown</EnumVal>
+      <EnumVal ord="2">SNTP</EnumVal>
+      <EnumVal ord="3">PTP</EnumVal>
+      <EnumVal ord="4">IRIG-B</EnumVal>
+      <EnumVal ord="5">Substation internal</EnumVal>
+    </EnumType>
+  </DataTypeTemplates>
+</SCL>
